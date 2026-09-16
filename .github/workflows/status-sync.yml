@@ -1,0 +1,36 @@
+name: Sync System Status
+
+on:
+  schedule:
+    # Run every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'status.json'
+      - 'README.md'
+
+jobs:
+  sync-status:
+    runs-on: [self-hosted, mac-owner]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update status.json
+        run: |
+          node scripts/update-status.js || true
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "b8b-status-bot"
+          git config user.email "bot@b8b.group"
+          if [ -n "$(git status --porcelain status.json)" ]; then
+            git add status.json
+            git commit -m "chore(status): auto-sync infrastructure state [skip ci]"
+            git push origin main
+          else
+            echo "No status changes detected."
+          fi

@@ -1,0 +1,224 @@
+{
+  "timestamp": "2026-09-16T11:20:00.000Z",
+  "systemState": "OPERATIONAL",
+  "systemStateMessage": "All Core Systems Operational",
+  "metrics": {
+    "runnersOnline": 8,
+    "runnersTotal": 8,
+    "endpointsOnline": 6,
+    "endpointsTotal": 6,
+    "mcpConnected": 9,
+    "mcpTotal": 9,
+    "hostUptime": "23d 10h"
+  },
+  "host": {
+    "hostname": "mac-ci-host",
+    "platform": "Apple Silicon (macOS)",
+    "uptime": "23d 10h",
+    "sleepDisabled": true,
+    "powerStatus": "AC Power (Sleep Disabled · Always-On CI)"
+  },
+  "googleDrive": {
+    "personal": {
+      "account": "tanakorn.db@gmail.com",
+      "mounted": true
+    },
+    "work": {
+      "account": "tanakorn.p@b8b.homes",
+      "mounted": true
+    }
+  },
+  "chrome": {
+    "cdpPort9222": true,
+    "status": "Active & Listening on 127.0.0.1:9222",
+    "profilesSupported": [
+      "Default (tanakorn.db@gmail.com)",
+      "Profile 41 (tanakorn.p@b8b.homes)",
+      "Profile 42 (contact@888trading.co.th)"
+    ]
+  },
+  "runners": [
+    {
+      "repo": "B8B-Government-Agency",
+      "runner": "mac-owner-gov",
+      "service": "กระทรวง อปท Web / API",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "Banii-Bazi",
+      "runner": "mac-owner-bazi",
+      "service": "Banii Bazi Fortune Engine 1",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "Banii-Bazi",
+      "runner": "mac-owner-bazi-2",
+      "service": "Banii Bazi Fortune Engine 2",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "Banii-Trip",
+      "runner": "mac-owner-trip",
+      "service": "Banii Trip Travel OS Platform",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "B8B-Power-Passive",
+      "runner": "mac-owner-pp",
+      "service": "Power Passive Wealth Engine",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "Bwork-bot",
+      "runner": "mac-owner-bwork",
+      "service": "Bwork LINE Bot & Worker Hub",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "B8B-Lands",
+      "runner": "mac-owner-lands",
+      "service": "B8B Real Estate Asset Portal",
+      "status": "online",
+      "busy": false
+    },
+    {
+      "repo": "Banii-Bot-trade",
+      "runner": "mac-owner-bottrade",
+      "service": "Automated Quantitative Trading",
+      "status": "online",
+      "busy": false
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "B8B Group (Landing)",
+      "url": "https://b8b.group",
+      "type": "Platform Hub",
+      "code": 200,
+      "latency": "112ms",
+      "ok": true
+    },
+    {
+      "name": "Banii Bazi (Fortune)",
+      "url": "https://b8b.homes",
+      "type": "Cloudflare Pages",
+      "code": 200,
+      "latency": "84ms",
+      "ok": true
+    },
+    {
+      "name": "Banii Trip (Travel OS)",
+      "url": "https://trip.b8b.homes",
+      "type": "Cloudflare Pages",
+      "code": 200,
+      "latency": "95ms",
+      "ok": true
+    },
+    {
+      "name": "B8B Lands (Real Estate)",
+      "url": "https://b8b.group/lands/",
+      "type": "Web Platform",
+      "code": 200,
+      "latency": "104ms",
+      "ok": true
+    },
+    {
+      "name": "B8B Power Passive",
+      "url": "https://b8b.group/pp/",
+      "type": "Web Platform",
+      "code": 200,
+      "latency": "120ms",
+      "ok": true
+    },
+    {
+      "name": "Bwork LINE Bot API",
+      "url": "https://bwork.b8b.group/healthz",
+      "type": "Worker Health",
+      "code": 200,
+      "latency": "78ms",
+      "ok": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "GitHub",
+      "id": "github",
+      "desc": "Codebase, PRs, Commits (tanakorndb)",
+      "status": "connected"
+    },
+    {
+      "name": "Cloudflare",
+      "id": "cloudflare",
+      "desc": "Workers, D1, KV, Pages (Tanakorn.db@gmail.com)",
+      "status": "connected"
+    },
+    {
+      "name": "Railway",
+      "id": "railway",
+      "desc": "Backend Services, Redis, Postgres (bwork, trade-bot)",
+      "status": "connected"
+    },
+    {
+      "name": "Google Drive",
+      "id": "google-drive",
+      "desc": "Personal & Work CloudStorage Filesystem",
+      "status": "connected"
+    },
+    {
+      "name": "Supabase",
+      "id": "supabase",
+      "desc": "Active Projects: อปท & bwork-index",
+      "status": "connected"
+    },
+    {
+      "name": "Brave Search",
+      "id": "brave-search",
+      "desc": "Real-time News & Web Search API",
+      "status": "connected"
+    },
+    {
+      "name": "Stripe",
+      "id": "stripe",
+      "desc": "Live Payments & Invoicing (Bwork · live)",
+      "status": "connected"
+    },
+    {
+      "name": "Chrome DevTools",
+      "id": "chrome-devtools",
+      "desc": "Multi-Profile Browser CDP (Port 9222)",
+      "status": "connected"
+    },
+    {
+      "name": "Playwright",
+      "id": "playwright",
+      "desc": "Browser Automation & Headless Test Suite",
+      "status": "connected"
+    }
+  ],
+  "supabase": [
+    {
+      "name": "กระทรวง อปท",
+      "ref": "zmdhboxausxwjsjbgnxk",
+      "status": "ACTIVE_HEALTHY",
+      "tier": "Active 1/2"
+    },
+    {
+      "name": "bwork-index",
+      "ref": "alqipoxdcfnyftfklgzp",
+      "status": "ACTIVE_HEALTHY",
+      "tier": "Active 2/2"
+    },
+    {
+      "name": "Banii Bazi",
+      "ref": "cqnjislvbcixfttheqjp",
+      "status": "PAUSED_SAVED",
+      "tier": "Slot Preserved"
+    }
+  ]
+}
