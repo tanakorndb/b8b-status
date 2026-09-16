@@ -1,16 +1,7 @@
-name: Sync System Status
+name: Sync System Status (Manual Only)
 
 on:
-  schedule:
-    # Run every 30 minutes
-    - cron: '*/30 * * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'status.json'
-      - 'README.md'
 
 jobs:
   sync-status:
@@ -29,7 +20,7 @@ jobs:
           git config user.email "bot@b8b.group"
           if [ -n "$(git status --porcelain status.json)" ]; then
             git add status.json
-            git commit -m "chore(status): auto-sync infrastructure state [skip ci]"
+            git commit -m "chore(status): manual sync infrastructure state [skip ci]"
             git push origin main
           else
             echo "No status changes detected."
