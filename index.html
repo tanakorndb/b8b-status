@@ -770,7 +770,10 @@
           </div>
           <div class="mt-4 pt-2 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
             <span class="text-[11px] text-slate-500">${e.type}</span>
-            <span class="font-mono text-emerald-400">${e.latency || '< 100ms'}</span>
+            <div class="flex items-center gap-2">
+              ${e.ssl && e.ssl.daysLeft ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono" title="ผู้รับรอง: ${e.ssl.issuer || 'CA'} (หมดอายุใน ${e.ssl.daysLeft} วัน)">🔒 SSL ${e.ssl.daysLeft} วัน</span>` : ''}
+              <span class="font-mono text-emerald-400">${e.latency || '< 100ms'}</span>
+            </div>
           </div>
         </div>
       `).join('');

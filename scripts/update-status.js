@@ -9,6 +9,8 @@ const os = require('os');
 const path = require('path');
 const https = require('https');
 const http = require('http');
+const tls = require('tls');
+const { URL } = require('url');
 
 const OUTPUT_FILE = path.join(__dirname, '..', 'status.json');
 
@@ -18,6 +20,35 @@ function exec(cmd) {
   } catch (e) {
     return null;
   }
+}
+
+function checkSsl(hostname) {
+  return new Promise((resolve) => {
+    try {
+      const socket = tls.connect(443, hostname, { servername: hostname, timeout: 4500 }, () => {
+        const cert = socket.getPeerCertificate();
+        socket.destroy();
+        if (cert && cert.valid_to) {
+          const daysLeft = Math.round((new Date(cert.valid_to) - new Date()) / (1000 * 60 * 60 * 24));
+          resolve({
+            ok: daysLeft > 14,
+            daysLeft: daysLeft,
+            validTo: cert.valid_to,
+            issuer: cert.issuer?.O || cert.issuer?.CN || 'CA'
+          });
+        } else {
+          resolve({ ok: true, daysLeft: null, issuer: '-' });
+        }
+      });
+      socket.on('error', () => resolve({ ok: false, daysLeft: null, issuer: 'Error' }));
+      socket.on('timeout', () => {
+        socket.destroy();
+        resolve({ ok: false, daysLeft: null, issuer: 'Timeout' });
+      });
+    } catch (e) {
+      resolve({ ok: false, daysLeft: null, issuer: 'Error' });
+    }
+  });
 }
 
 function checkUrl(url) {
@@ -106,14 +137,20 @@ async function gather() {
 
   const endpointResults = [];
   for (const ep of endpointsToTest) {
-    const res = await checkUrl(ep.url);
+    const urlObj = new URL(ep.url);
+    const [res, ssl] = await Promise.all([
+      checkUrl(ep.url),
+      checkSsl(urlObj.hostname)
+    ]);
     endpointResults.push({
       name: ep.name,
       url: ep.url,
+      domain: urlObj.hostname,
       type: ep.type,
       code: res.code,
       latency: res.latency,
-      ok: res.ok
+      ok: res.ok,
+      ssl: ssl
     });
   }
 
