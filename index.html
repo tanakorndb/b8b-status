@@ -6,6 +6,7 @@
   <title>B8B Cloud AI · Status & Infrastructure</title>
   <meta name="description" content="Real-time operational status of B8B Cloud AI Infrastructure, GitHub Runners, and Web Endpoints">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟢</text></svg>">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -57,6 +58,7 @@
 </head>
 <body class="text-slate-200 min-h-screen flex flex-col font-sans antialiased selection:bg-emerald-500 selection:text-white">
 
+  <!-- Navigation Header -->
   <header class="border-b border-white/5 sticky top-0 z-50 bg-[#070a11]/80 backdrop-blur-md">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
@@ -87,8 +89,10 @@
     </div>
   </header>
 
+  <!-- Main Content Area -->
   <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 py-8 space-y-8">
 
+    <!-- Global State Banner -->
     <section class="glass-card rounded-2xl p-6 relative overflow-hidden border border-emerald-500/20">
       <div class="absolute -right-16 -top-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
       
@@ -117,7 +121,9 @@
       </div>
     </section>
 
+    <!-- Key Metrics Ribbon (4 Cards) -->
     <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- 1. Runners -->
       <div class="glass-card p-5 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>GitHub Runners</span>
@@ -133,6 +139,7 @@
         </div>
       </div>
 
+      <!-- 2. Endpoints -->
       <div class="glass-card p-5 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>Public Endpoints</span>
@@ -148,6 +155,7 @@
         </div>
       </div>
 
+      <!-- 3. AI & MCP -->
       <div class="glass-card p-5 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>MCP Servers</span>
@@ -163,6 +171,7 @@
         </div>
       </div>
 
+      <!-- 4. Host Uptime -->
       <div class="glass-card p-5 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>Host System Uptime</span>
@@ -179,6 +188,7 @@
       </div>
     </section>
 
+    <!-- Filter & Navigation Tabs -->
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar text-xs">
         <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3 py-1.5 rounded-lg bg-white/10 text-white font-medium">All Overview</button>
@@ -186,6 +196,7 @@
         <button onclick="switchTab('endpoints')" id="tab-endpoints" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">Web Sites (6)</button>
         <button onclick="switchTab('mcp')" id="tab-mcp" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">AI & MCP (9)</button>
         <button onclick="switchTab('storage')" id="tab-storage" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">Cloud & DB</button>
+        <button onclick="switchTab('trust')" id="tab-trust" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Trust & Safety</button>
       </div>
 
       <div class="relative text-xs">
@@ -193,6 +204,7 @@
       </div>
     </div>
 
+    <!-- Section 1: GitHub Runners -->
     <section id="section-runners" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
@@ -202,9 +214,12 @@
         <span class="text-xs text-slate-500">Auto-Managed via LaunchAgents</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="runnersContainer"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="runnersContainer">
+        <!-- Rendered via JS -->
+      </div>
     </section>
 
+    <!-- Section 2: Production Web Endpoints -->
     <section id="section-endpoints" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
@@ -214,9 +229,12 @@
         <span class="text-xs text-slate-500">Live HTTP Checks</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="endpointsContainer"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="endpointsContainer">
+        <!-- Rendered via JS -->
+      </div>
     </section>
 
+    <!-- Section 3: AI & MCP Servers -->
     <section id="section-mcp" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
@@ -226,9 +244,12 @@
         <span class="text-xs text-slate-500">Unified 9 Servers</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="mcpContainer"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="mcpContainer">
+        <!-- Rendered via JS -->
+      </div>
     </section>
 
+    <!-- Section 4: Cloud Storage, Supabase & Chrome -->
     <section id="section-storage" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
@@ -238,11 +259,29 @@
         <span class="text-xs text-slate-500">Cloud Storage & CDP</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="storageContainer"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="storageContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Section 5: Trust & Security Verification (LINE, Google, Stripe) -->
+    <section id="section-trust" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          Bwork Trust & Security Verification
+        </h2>
+        <span class="text-xs text-slate-500">LINE Blue Shield · Google OAuth · Stripe</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="trustContainer">
+        <!-- Rendered via JS -->
+      </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="border-t border-white/5 py-8 mt-12 text-center text-xs text-slate-500">
     <div class="max-w-6xl mx-auto px-4 space-y-2">
       <p>B8B Cloud AI Infrastructure · Powered by macOS Apple Silicon CI Host & Netlify</p>
@@ -250,6 +289,7 @@
     </div>
   </footer>
 
+  <!-- Toast Notification -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition duration-300 px-4 py-2.5 rounded-xl bg-emerald-500 text-white font-medium text-xs shadow-2xl flex items-center space-x-2">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -260,7 +300,9 @@
   <script>
     let globalData = null;
     let countdownSec = 30;
+    let timer = null;
 
+    // Fallback static data in case of offline / local file
     const fallbackData = {
       timestamp: new Date().toISOString(),
       systemState: "OPERATIONAL",
@@ -320,7 +362,54 @@
         { name: "กระทรวง อปท", ref: "zmdhboxausxwjsjbgnxk", status: "ACTIVE_HEALTHY", tier: "Active 1/2" },
         { name: "bwork-index", ref: "alqipoxdcfnyftfklgzp", status: "ACTIVE_HEALTHY", tier: "Active 2/2" },
         { name: "Banii Bazi", ref: "cqnjislvbcixfttheqjp", status: "PAUSED_SAVED", tier: "Slot Preserved" }
-      ]
+      ],
+      trustAndVerification: {
+        summary: "LINE & Google Reviews Pending · Stripe Active",
+        bwork: {
+          line: {
+            name: "LINE Official Account (@bwork)",
+            target: "Blue Shield (บัญชีรับรอง)",
+            currentBadge: "Grey Shield (บัญชีทั่วไป)",
+            status: "UNDER_REVIEW",
+            statusLabel: "รอสายยืนยันตัวตน (5-10 วันทำการ)",
+            applicationRef: "002434229",
+            submittedDate: "2026-09-14 14:20",
+            entity: "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด (0105559126054)",
+            contactPhone: "062-928-6289",
+            actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย",
+            badgeColor: "amber"
+          },
+          google: {
+            name: "Google Cloud OAuth (bwork-bot)",
+            target: "Verified App / Sensitive Scopes Approval",
+            brandingStatus: "VERIFIED",
+            brandingLabel: "แบรนด์และโลโก้ผ่านการอนุมัติแล้ว",
+            dataAccessStatus: "UNDER_REVIEW",
+            dataAccessLabel: "อยู่ระหว่างการตรวจสิทธิ์ (3-5 วันทำการ)",
+            scopes: ["calendar.events", "calendar.readonly", "drive.file"],
+            submittedDate: "2026-09-14 19:40",
+            demoVideo: "https://youtu.be/Khzz_76OfoE",
+            interimShield: "GOOGLE_VERIFIED=0 (แสดงจอแนะนำความปลอดภัย 3 ขั้นตอน)",
+            actionRequired: "รออีเมลผลการตรวจจาก Google Trust & Safety (ห้ามแก้ไขคอนโซลระหว่างรอ)",
+            badgeColor: "amber"
+          },
+          stripe: {
+            name: "Stripe Live Payments (Bwork · live)",
+            status: "VERIFIED_ACTIVE",
+            statusLabel: "เปิดรับเงินและโอนเข้าบัญชีแล้ว 100%",
+            chargesEnabled: true,
+            payoutsEnabled: true,
+            payoutSchedule: "Automatic Daily (rolling 7 days)",
+            badgeColor: "emerald"
+          },
+          googleMaps: {
+            name: "Google Maps Routes API",
+            status: "ACTIVE",
+            statusLabel: "คำนวณเวลาเดินทางพร้อมใช้ (HTTP 200)",
+            badgeColor: "emerald"
+          }
+        }
+      }
     };
 
     async function fetchStatus(isManual = false) {
@@ -328,10 +417,12 @@
       if (refreshIcon) refreshIcon.classList.add('rotate-180');
 
       try {
+        // Try to fetch status.json (relative path for Netlify & static server)
         const res = await fetch(`./status.json?t=${Date.now()}`);
         if (res.ok) {
           globalData = await res.json();
         } else {
+          // Fallback to local server API or fallback object
           const localApi = await fetch(`http://127.0.0.1:8888/api/status?t=${Date.now()}`).catch(() => null);
           if (localApi && localApi.ok) {
             globalData = await localApi.json();
@@ -340,6 +431,7 @@
           }
         }
       } catch (err) {
+        console.warn('Network fetch error, using embedded fallback data', err);
         if (!globalData) globalData = fallbackData;
       }
 
@@ -356,14 +448,17 @@
     function renderUI(data) {
       if (!data) return;
 
+      // Update Header
       const timeStr = new Date(data.timestamp || Date.now()).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
       document.getElementById('lastSyncTime').textContent = timeStr;
 
+      // Update Metrics
       document.getElementById('metricRunners').textContent = `${data.metrics?.runnersOnline || 8} / ${data.metrics?.runnersTotal || 8}`;
       document.getElementById('metricEndpoints').textContent = `${data.metrics?.endpointsOnline || 6} / ${data.metrics?.endpointsTotal || 6}`;
       document.getElementById('metricMcp').textContent = `${data.metrics?.mcpConnected || 9}`;
       document.getElementById('metricUptime').textContent = data.host?.uptime ? data.host.uptime.split(' ')[0] : '23d+';
 
+      // 1. Render Runners
       const runnersHtml = (data.runners || []).map(r => `
         <div class="glass-card p-4 rounded-xl flex items-center justify-between border-l-4 border-l-emerald-500 item-row">
           <div class="space-y-1">
@@ -383,6 +478,7 @@
       `).join('');
       document.getElementById('runnersContainer').innerHTML = runnersHtml;
 
+      // 2. Render Endpoints
       const endpointsHtml = (data.endpoints || []).map(e => `
         <div class="glass-card p-4 rounded-xl flex flex-col justify-between border-l-4 ${e.ok ? 'border-l-emerald-500' : 'border-l-rose-500'} item-row">
           <div class="space-y-1.5">
@@ -405,6 +501,7 @@
       `).join('');
       document.getElementById('endpointsContainer').innerHTML = endpointsHtml;
 
+      // 3. Render MCP
       const mcpHtml = (data.mcpServers || []).map(m => `
         <div class="glass-card p-3.5 rounded-xl flex items-center justify-between item-row">
           <div class="space-y-0.5 pr-2">
@@ -419,7 +516,9 @@
       `).join('');
       document.getElementById('mcpContainer').innerHTML = mcpHtml;
 
+      // 4. Render Storage & Cloud
       const storageHtml = `
+        <!-- Supabase -->
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
             <span>⚡ Supabase Database Clusters</span>
@@ -440,6 +539,7 @@
           </div>
         </div>
 
+        <!-- Google Drive -->
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
             <span>📁 Google Drive Sync (macOS)</span>
@@ -465,6 +565,7 @@
           </div>
         </div>
 
+        <!-- Chrome Automation -->
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
             <span>🌐 Chrome Automation Hub</span>
@@ -483,8 +584,140 @@
         </div>
       `;
       document.getElementById('storageContainer').innerHTML = storageHtml;
+
+      // 5. Render Trust & Verification (Bwork)
+      const trust = (data.trustAndVerification && data.trustAndVerification.bwork) ? data.trustAndVerification.bwork : fallbackData.trustAndVerification.bwork;
+      const trustHtml = `
+        <!-- LINE Official Account Verification -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-white text-sm">LINE Official Account</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold">UNDER REVIEW</span>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">@bwork</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Target Badge:</span>
+                <span class="text-sky-400 font-semibold flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5 fill-current text-sky-400" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                  Blue Shield (บัญชีรับรอง)
+                </span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Current Badge:</span>
+                <span class="text-slate-300">Grey Shield (บัญชีทั่วไป)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Application Ref:</span>
+                <span class="text-slate-200 font-mono font-medium">${trust.line.applicationRef || '002434229'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Submitted Date:</span>
+                <span class="text-slate-300">${trust.line.submittedDate || '14 ก.ย. 2569'}</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1 text-[11px]">
+              <div class="font-medium flex items-center gap-1">
+                <span>📞 Next Action: รอสายโทรยืนยันตัวตน</span>
+              </div>
+              <p class="text-amber-200/80 leading-relaxed">
+                LINE Thailand จะโทรเข้ามาที่เบอร์ <strong class="text-white font-mono">${trust.line.contactPhone}</strong> เพื่อบันทึกเสียงยืนยันตัวตนกับหนังสือรับรองบริษัท (ระยะเวลาตรวจ 5-10 วันทำการ)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Cloud OAuth Verification -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-white text-sm">Google OAuth Security</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold">UNDER REVIEW</span>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">bwork-bot</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Branding & Logo:</span>
+                <span class="text-emerald-400 font-medium">✅ Verified & Published</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Data Access (Scopes):</span>
+                <span class="text-amber-400 font-medium">⏳ Under Review</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Demo Video:</span>
+                <a href="${trust.google.demoVideo}" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">YouTube (Unlisted) ↗</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Interim Shield:</span>
+                <span class="text-slate-300 font-mono">GOOGLE_VERIFIED=0</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1 text-[11px]">
+              <div class="font-medium flex items-center gap-1">
+                <span>🛡️ Protocol: คุ้มครองผู้ใช้งานด้วยคำแนะนำ 3 ขั้นตอน</span>
+              </div>
+              <p class="text-amber-200/80 leading-relaxed">
+                ${trust.google.actionRequired || 'รออีเมลผลตรวจจาก Google Trust & Safety (ห้ามแก้ไขข้อมูลใน Cloud Console ระหว่างรอเพื่อไม่ให้รีเซ็ตคิว)'}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stripe Live Merchant & Ecosystem -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-emerald-500">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-white text-sm">Stripe & Ecosystem</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">100% ACTIVE</span>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">Live Mode</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Stripe Charges:</span>
+                <span class="text-emerald-400 font-medium">✅ Enabled (บัตร & พร้อมเพย์)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Stripe Payouts:</span>
+                <span class="text-emerald-400 font-medium">✅ Automatic Daily</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Google Maps Routes:</span>
+                <span class="text-emerald-400 font-medium">✅ 200 OK (เดินทาง)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Launch Readiness:</span>
+                <span class="text-emerald-400 font-medium">Ready for 29 Sep 2026</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 space-y-1 text-[11px]">
+              <div class="font-medium flex items-center gap-1">
+                <span>💳 ระบบการเงินและโครงสร้างพื้นฐานสมบูรณ์</span>
+              </div>
+              <p class="text-emerald-200/80 leading-relaxed">
+                คีย์ลับและ Webhook บน Railway เชื่อมต่อชุดจริง บัญชีธนาคารยืนยันเรียบร้อย พร้อมรองรับการเปิดตัว
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById('trustContainer').innerHTML = trustHtml;
     }
 
+    // Tab Switching
     function switchTab(tab) {
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('bg-white/10', 'text-white');
@@ -496,7 +729,7 @@
         activeBtn.classList.remove('text-slate-400');
       }
 
-      const sections = ['runners', 'endpoints', 'mcp', 'storage'];
+      const sections = ['runners', 'endpoints', 'mcp', 'storage', 'trust'];
       if (tab === 'all') {
         sections.forEach(s => document.getElementById(`section-${s}`).style.display = 'block');
       } else {
@@ -506,6 +739,7 @@
       }
     }
 
+    // Filter Items
     function filterItems() {
       const q = document.getElementById('filterInput').value.toLowerCase();
       document.querySelectorAll('.item-row').forEach(row => {
@@ -514,6 +748,7 @@
       });
     }
 
+    // Copy Markdown Report
     function copyMarkdownReport() {
       if (!globalData) return;
       const d = globalData;
@@ -526,6 +761,11 @@
 - **GitHub Runners**: ${d.metrics?.runnersOnline || 8} / ${d.metrics?.runnersTotal || 8} Online
 - **Web Endpoints**: ${d.metrics?.endpointsOnline || 6} / ${d.metrics?.endpointsTotal || 6} (100% Up)
 - **MCP Servers**: ${d.metrics?.mcpConnected || 9} Connected
+
+### 🛡️ Trust & Security Verification (Bwork)
+- LINE Official Account: ⏳ UNDER REVIEW (Ref: 002434229 · รอสายยืนยันตัวตน 062-928-6289)
+- Google Cloud OAuth: ⏳ UNDER REVIEW (Branding Verified ✅ · Scopes Under Review · Demo Video Submitted)
+- Stripe Live Merchant: 🟢 VERIFIED & ACTIVE (Charges & Payouts 100% Ready)
 
 ### 🏃 GitHub Actions Runners (8/8 Online)
 ${(d.runners || []).map(r => `- [${r.runner}] ${r.repo} : 🟢 ${r.status} (busy: ${r.busy})`).join('\n')}
@@ -559,6 +799,7 @@ ${(d.supabase || []).map(s => `- ${s.name} (${s.ref}) : ${s.status} [${s.tier}]`
       }, 3000);
     }
 
+    // Auto-refresh countdown
     setInterval(() => {
       countdownSec--;
       const el = document.getElementById('autoRefreshCountdown');
@@ -568,6 +809,7 @@ ${(d.supabase || []).map(s => `- ${s.name} (${s.ref}) : ${s.status} [${s.tier}]`
       }
     }, 1000);
 
+    // Initial Load
     fetchStatus();
   </script>
 </body>

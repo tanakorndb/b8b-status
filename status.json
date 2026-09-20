@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-16T11:20:00.000Z",
+  "timestamp": "2026-09-20T02:43:16.857Z",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "All Core Systems Operational",
   "metrics": {
@@ -7,16 +7,16 @@
     "runnersTotal": 8,
     "endpointsOnline": 6,
     "endpointsTotal": 6,
-    "mcpConnected": 9,
+    "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "23d 10h"
+    "hostUptime": "0d 1h 28m"
   },
   "host": {
-    "hostname": "mac-ci-host",
-    "platform": "Apple Silicon (macOS)",
-    "uptime": "23d 10h",
+    "hostname": "MacBook-Pro-2.local",
+    "platform": "macOS Apple Silicon (CI Server)",
+    "uptime": "0d 1h 28m",
     "sleepDisabled": true,
-    "powerStatus": "AC Power (Sleep Disabled · Always-On CI)"
+    "powerStatus": "AC Power (Sleep Disabled · Always-On)"
   },
   "googleDrive": {
     "personal": {
@@ -29,12 +29,11 @@
     }
   },
   "chrome": {
-    "cdpPort9222": true,
-    "status": "Active & Listening on 127.0.0.1:9222",
+    "cdpPort9222": false,
     "profilesSupported": [
-      "Default (tanakorn.db@gmail.com)",
-      "Profile 41 (tanakorn.p@b8b.homes)",
-      "Profile 42 (contact@888trading.co.th)"
+      "Default (tanakorn.db)",
+      "Profile 41 (tanakorn.p)",
+      "Profile 42 (888trading)"
     ]
   },
   "runners": [
@@ -43,6 +42,7 @@
       "runner": "mac-owner-gov",
       "service": "กระทรวง อปท Web / API",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -50,6 +50,7 @@
       "runner": "mac-owner-bazi",
       "service": "Banii Bazi Fortune Engine 1",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -57,6 +58,7 @@
       "runner": "mac-owner-bazi-2",
       "service": "Banii Bazi Fortune Engine 2",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -64,6 +66,7 @@
       "runner": "mac-owner-trip",
       "service": "Banii Trip Travel OS Platform",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -71,6 +74,7 @@
       "runner": "mac-owner-pp",
       "service": "Power Passive Wealth Engine",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -78,6 +82,7 @@
       "runner": "mac-owner-bwork",
       "service": "Bwork LINE Bot & Worker Hub",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -85,6 +90,7 @@
       "runner": "mac-owner-lands",
       "service": "B8B Real Estate Asset Portal",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     },
     {
@@ -92,6 +98,7 @@
       "runner": "mac-owner-bottrade",
       "service": "Automated Quantitative Trading",
       "status": "online",
+      "launchAgent": true,
       "busy": false
     }
   ],
@@ -101,7 +108,7 @@
       "url": "https://b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "112ms",
+      "latency": "140ms",
       "ok": true
     },
     {
@@ -109,7 +116,7 @@
       "url": "https://b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "84ms",
+      "latency": "586ms",
       "ok": true
     },
     {
@@ -117,7 +124,7 @@
       "url": "https://trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "95ms",
+      "latency": "112ms",
       "ok": true
     },
     {
@@ -125,7 +132,7 @@
       "url": "https://b8b.group/lands/",
       "type": "Web Platform",
       "code": 200,
-      "latency": "104ms",
+      "latency": "82ms",
       "ok": true
     },
     {
@@ -133,7 +140,7 @@
       "url": "https://b8b.group/pp/",
       "type": "Web Platform",
       "code": 200,
-      "latency": "120ms",
+      "latency": "100ms",
       "ok": true
     },
     {
@@ -141,7 +148,7 @@
       "url": "https://bwork.b8b.group/healthz",
       "type": "Worker Health",
       "code": 200,
-      "latency": "78ms",
+      "latency": "547ms",
       "ok": true
     }
   ],
@@ -192,7 +199,7 @@
       "name": "Chrome DevTools",
       "id": "chrome-devtools",
       "desc": "Multi-Profile Browser CDP (Port 9222)",
-      "status": "connected"
+      "status": "ready"
     },
     {
       "name": "Playwright",
@@ -220,5 +227,56 @@
       "status": "PAUSED_SAVED",
       "tier": "Slot Preserved"
     }
-  ]
+  ],
+  "trustAndVerification": {
+    "summary": "LINE & Google Reviews Pending · Stripe Active",
+    "bwork": {
+      "line": {
+        "name": "LINE Official Account (@bwork)",
+        "target": "Blue Shield (บัญชีรับรอง)",
+        "currentBadge": "Grey Shield (บัญชีทั่วไป)",
+        "status": "UNDER_REVIEW",
+        "statusLabel": "รอสายยืนยันตัวตน (5-10 วันทำการ)",
+        "applicationRef": "002434229",
+        "submittedDate": "2026-09-14 14:20",
+        "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด (0105559126054)",
+        "contactPhone": "062-928-6289",
+        "actionRequired": "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย",
+        "badgeColor": "amber"
+      },
+      "google": {
+        "name": "Google Cloud OAuth (bwork-bot)",
+        "target": "Verified App / Sensitive Scopes Approval",
+        "brandingStatus": "VERIFIED",
+        "brandingLabel": "แบรนด์และโลโก้ผ่านการอนุมัติแล้ว",
+        "dataAccessStatus": "UNDER_REVIEW",
+        "dataAccessLabel": "อยู่ระหว่างการตรวจสิทธิ์ (3-5 วันทำการ)",
+        "scopes": [
+          "calendar.events",
+          "calendar.readonly",
+          "drive.file"
+        ],
+        "submittedDate": "2026-09-14 19:40",
+        "demoVideo": "https://youtu.be/Khzz_76OfoE",
+        "interimShield": "GOOGLE_VERIFIED=0 (แสดงจอแนะนำความปลอดภัย 3 ขั้นตอน)",
+        "actionRequired": "รออีเมลผลการตรวจจาก Google Trust & Safety (ห้ามแก้ไขคอนโซลระหว่างรอ)",
+        "badgeColor": "amber"
+      },
+      "stripe": {
+        "name": "Stripe Live Payments (Bwork · live)",
+        "status": "VERIFIED_ACTIVE",
+        "statusLabel": "เปิดรับเงินและโอนเข้าบัญชีแล้ว 100%",
+        "chargesEnabled": true,
+        "payoutsEnabled": true,
+        "payoutSchedule": "Automatic Daily (rolling 7 days)",
+        "badgeColor": "emerald"
+      },
+      "googleMaps": {
+        "name": "Google Maps Routes API",
+        "status": "ACTIVE",
+        "statusLabel": "คำนวณเวลาเดินทางพร้อมใช้ (HTTP 200)",
+        "badgeColor": "emerald"
+      }
+    }
+  }
 }

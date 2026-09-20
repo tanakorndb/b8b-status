@@ -44,6 +44,7 @@ async function gather() {
   console.log('Gathering B8B Infrastructure status...');
   const now = new Date().toISOString();
 
+  // Host info
   const uptimeDays = Math.floor(os.uptime() / 86400);
   const uptimeHours = Math.floor((os.uptime() % 86400) / 3600);
   const uptimeMins = Math.floor((os.uptime() % 3600) / 60);
@@ -52,12 +53,15 @@ async function gather() {
   const pmset = exec('pmset -g');
   if (pmset && pmset.includes('SleepDisabled\t\t1')) sleepDisabled = true;
 
+  // Google Drive
   const drivePersonal = fs.existsSync('/Users/user/GoogleDrive-tanakorn.db');
   const driveWork = fs.existsSync('/Users/user/GoogleDrive-tanakorn.p');
 
+  // Chrome Port 9222
   const chromeCdp = exec('curl -s http://127.0.0.1:9222/json/version');
   const isChromeCdp = !!(chromeCdp && chromeCdp.includes('Browser'));
 
+  // GitHub Action Runners
   const repos = [
     { repo: 'B8B-Government-Agency', name: 'mac-owner-gov', service: 'กระทรวง อปท Web / API' },
     { repo: 'Banii-Bazi', name: 'mac-owner-bazi', service: 'Banii Bazi Fortune Engine 1' },
@@ -83,6 +87,7 @@ async function gather() {
     });
   }
 
+  // Endpoints
   const endpointsToTest = [
     { name: 'B8B Group (Landing)', url: 'https://b8b.group', type: 'Platform Hub' },
     { name: 'Banii Bazi (Fortune)', url: 'https://b8b.homes', type: 'Cloudflare Pages' },
@@ -105,6 +110,7 @@ async function gather() {
     });
   }
 
+  // MCP Servers
   const mcps = [
     { name: 'GitHub', id: 'github', desc: 'Codebase, PRs, Commits (tanakorndb)', status: 'connected' },
     { name: 'Cloudflare', id: 'cloudflare', desc: 'Workers, D1, KV, Pages (Tanakorn.db@gmail.com)', status: 'connected' },
@@ -117,11 +123,61 @@ async function gather() {
     { name: 'Playwright', id: 'playwright', desc: 'Browser Automation & Headless Test Suite', status: 'connected' }
   ];
 
+  // Supabase
   const supabase = [
     { name: 'กระทรวง อปท', ref: 'zmdhboxausxwjsjbgnxk', status: 'ACTIVE_HEALTHY', tier: 'Active 1/2' },
     { name: 'bwork-index', ref: 'alqipoxdcfnyftfklgzp', status: 'ACTIVE_HEALTHY', tier: 'Active 2/2' },
     { name: 'Banii Bazi', ref: 'cqnjislvbcixfttheqjp', status: 'PAUSED_SAVED', tier: 'Slot Preserved' }
   ];
+
+  // Bwork Trust & Compliance Verification
+  const trustAndVerification = {
+    summary: "LINE & Google Reviews Pending · Stripe Active",
+    bwork: {
+      line: {
+        name: "LINE Official Account (@bwork)",
+        target: "Blue Shield (บัญชีรับรอง)",
+        currentBadge: "Grey Shield (บัญชีทั่วไป)",
+        status: "UNDER_REVIEW",
+        statusLabel: "รอสายยืนยันตัวตน (5-10 วันทำการ)",
+        applicationRef: "002434229",
+        submittedDate: "2026-09-14 14:20",
+        entity: "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด (0105559126054)",
+        contactPhone: "062-928-6289",
+        actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย",
+        badgeColor: "amber"
+      },
+      google: {
+        name: "Google Cloud OAuth (bwork-bot)",
+        target: "Verified App / Sensitive Scopes Approval",
+        brandingStatus: "VERIFIED",
+        brandingLabel: "แบรนด์และโลโก้ผ่านการอนุมัติแล้ว",
+        dataAccessStatus: "UNDER_REVIEW",
+        dataAccessLabel: "อยู่ระหว่างการตรวจสิทธิ์ (3-5 วันทำการ)",
+        scopes: ["calendar.events", "calendar.readonly", "drive.file"],
+        submittedDate: "2026-09-14 19:40",
+        demoVideo: "https://youtu.be/Khzz_76OfoE",
+        interimShield: "GOOGLE_VERIFIED=0 (แสดงจอแนะนำความปลอดภัย 3 ขั้นตอน)",
+        actionRequired: "รออีเมลผลการตรวจจาก Google Trust & Safety (ห้ามแก้ไขคอนโซลระหว่างรอ)",
+        badgeColor: "amber"
+      },
+      stripe: {
+        name: "Stripe Live Payments (Bwork · live)",
+        status: "VERIFIED_ACTIVE",
+        statusLabel: "เปิดรับเงินและโอนเข้าบัญชีแล้ว 100%",
+        chargesEnabled: true,
+        payoutsEnabled: true,
+        payoutSchedule: "Automatic Daily (rolling 7 days)",
+        badgeColor: "emerald"
+      },
+      googleMaps: {
+        name: "Google Maps Routes API",
+        status: "ACTIVE",
+        statusLabel: "คำนวณเวลาเดินทางพร้อมใช้ (HTTP 200)",
+        badgeColor: "emerald"
+      }
+    }
+  };
 
   const result = {
     timestamp: now,
@@ -154,7 +210,8 @@ async function gather() {
     runners: runnersList,
     endpoints: endpointResults,
     mcpServers: mcps,
-    supabase: supabase
+    supabase: supabase,
+    trustAndVerification: trustAndVerification
   };
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(result, null, 2), 'utf8');

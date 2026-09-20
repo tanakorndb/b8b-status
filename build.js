@@ -27,7 +27,7 @@ function checkUrl(url) {
         latency: `${latency}ms`
       });
     });
-    req.on('error', () => {
+    req.on('error', (err) => {
       resolve({ code: 'ERR', ok: false, latency: '-' });
     });
     req.on('timeout', () => {
