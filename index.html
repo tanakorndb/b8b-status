@@ -1036,8 +1036,8 @@
             <span class="text-xs text-slate-500 font-mono">Local Subnet: 192.168.1.0/24 · Core: 10.10.10.0/24</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5">
-            <!-- MikroTik -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3.5">
+            <!-- 1. MikroTik -->
             <div class="glass-card p-4 rounded-xl border border-red-500/20 bg-red-500/[0.02] space-y-2.5 item-row">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
@@ -1045,8 +1045,8 @@
                     MT
                   </div>
                   <div>
-                    <h4 class="text-xs font-bold text-white">MikroTik Routerboard</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.1 · 10.10.10.1</span>
+                    <h4 class="text-xs font-bold text-white">MikroTik Router</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.1</span>
                   </div>
                 </div>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 font-mono font-bold">
@@ -1060,11 +1060,11 @@
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">การแจก IP:</span>
-                  <span class="font-mono text-emerald-400">DHCP Master (10.10.10.1)</span>
+                  <span class="font-mono text-emerald-400">DHCP Master</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">พอร์ตจัดการ:</span>
-                  <span class="font-mono text-sky-400">WinBox 8291 · 443 · 53</span>
+                  <span class="font-mono text-sky-400">WinBox 8291 · 443</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">MAC Address:</span>
@@ -1073,12 +1073,48 @@
               </div>
             </div>
 
-            <!-- UniFi Cloud Key Gen2 Plus -->
+            <!-- 2. Ubiquiti Infrastructure / Switch (192.168.1.3) -->
+            <div class="glass-card p-4 rounded-xl border border-amber-500/20 bg-amber-500/[0.02] space-y-2.5 item-row">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
+                    SW
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Ubiquiti Infra / Switch</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.3</span>
+                  </div>
+                </div>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 font-mono font-bold" title="L2 Present / รอเชื่อมกับ Cloud Key">
+                  PENDING SETUP
+                </span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">บทบาท:</span>
+                  <span class="font-medium text-amber-300 text-right">PoE Switch / Device</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">สถานะ L2/L3:</span>
+                  <span class="font-mono text-amber-400">ARP Active · ICMP Silent</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">ผู้ผลิตฮาร์ดแวร์:</span>
+                  <span class="font-medium text-white">Ubiquiti Inc.</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">MAC Address:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">fc:ec:da:e8:7a:88</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. UniFi Cloud Key Gen2 Plus (192.168.1.143) -->
             <div class="glass-card p-4 rounded-xl border border-sky-500/20 bg-sky-500/[0.02] space-y-2.5 item-row">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
                   <div class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">
-                    UB
+                    UCK
                   </div>
                   <div>
                     <h4 class="text-xs font-bold text-white">UniFi Cloud Key Plus</h4>
@@ -1086,21 +1122,21 @@
                   </div>
                 </div>
                 <a href="https://192.168.1.143" target="_blank" class="text-[9px] px-2 py-0.5 rounded-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-mono font-bold transition">
-                  CONTROLLER ↗
+                  SETUP ↗
                 </a>
               </div>
               <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">บทบาท:</span>
-                  <span class="font-medium text-right">Central Wi-Fi & NVR</span>
+                  <span class="font-medium text-right">Controller & NVR</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">ระบบปฏิบัติการ:</span>
-                  <span class="font-mono text-white">UniFi OS (Debian 11)</span>
+                  <span class="text-slate-500">Storage / OS:</span>
+                  <span class="font-mono text-white">SSD 512GB · UniFi OS</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">พอร์ตจัดการ:</span>
-                  <span class="font-mono text-sky-400">443 · 8080 · 8443 · SSH</span>
+                  <span class="text-slate-500">สถานะติดตั้ง:</span>
+                  <span class="font-mono text-amber-300">isSetup: false (รอเซ็ตอัป)</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">MAC Address:</span>
@@ -1109,7 +1145,7 @@
               </div>
             </div>
 
-            <!-- UniFi Access Points -->
+            <!-- 4. UniFi Access Points (192.168.1.4, 192.168.1.5) -->
             <div class="glass-card p-4 rounded-xl border border-indigo-500/20 bg-indigo-500/[0.02] space-y-2.5 item-row">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
@@ -1117,35 +1153,35 @@
                     AP
                   </div>
                   <div>
-                    <h4 class="text-xs font-bold text-white">UniFi AP #1 & #2</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.4 · 192.168.1.5</span>
+                    <h4 class="text-xs font-bold text-white">UniFi 6 Lite (Dual AP)</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.4 · .5</span>
                   </div>
                 </div>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">
-                  DUAL AP MESH
+                  PENDING ADOPTION
                 </span>
               </div>
               <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
                 <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">สัญญาณ:</span>
-                  <span class="font-medium text-emerald-400">Seamless Roaming</span>
+                  <span class="text-slate-500">โฮสต์ชื่อ:</span>
+                  <span class="font-mono text-white text-[10px]">U6-Lite-F2 · inroom</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">คลื่นความถี่:</span>
-                  <span class="font-mono text-slate-300">2.4GHz + 5GHz Dual-Band</span>
+                  <span class="font-mono text-slate-300">Wi-Fi 6 (802.11ax)</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
                   <span class="text-slate-500">การเชื่อมต่อ:</span>
-                  <span class="font-mono text-slate-300">Inform to Cloud Key</span>
+                  <span class="font-mono text-amber-300">รอ Adopt เข้า Cloud Key</span>
                 </div>
                 <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">Firmware OS:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">Dropbear SSH (Linux)</span>
+                  <span class="text-slate-500">Firmware:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">v6.6.55 (Dropbear SSH)</span>
                 </div>
               </div>
             </div>
 
-            <!-- Tailscale Mesh -->
+            <!-- 5. Tailscale Mesh -->
             <div class="glass-card p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.02] space-y-2.5 item-row">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
@@ -1271,6 +1307,19 @@
               </div>
 
               <div class="space-y-2 text-xs">
+                <!-- Step 0: Setup Cloud Key & Adopt Devices -->
+                <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-semibold text-white flex items-center gap-1.5">
+                      <span class="text-amber-400 font-bold">0.</span> ตั้งค่า Cloud Key & Adopt อุปกรณ์
+                    </span>
+                    <span class="text-amber-300 font-mono text-[11px]">เร่งด่วน ⚠️</span>
+                  </div>
+                  <p class="text-[11px] text-slate-300 leading-relaxed">
+                    เปิด <a href="https://192.168.1.143" target="_blank" class="text-sky-400 font-semibold underline">https://192.168.1.143</a> เพื่อทำ Initial Setup ของ <strong>UCK G2 Plus</strong> จากนั้นกด <strong>Adopt</strong> อุปกรณ์ AP ทั้ง 2 ตัว (<code class="text-indigo-300">192.168.1.4</code>, <code class="text-indigo-300">192.168.1.5</code>) และตัวอุปกรณ์เครือข่าย <code class="text-amber-300">192.168.1.3</code> ให้เข้าสู่ระบบ
+                  </p>
+                </div>
+
                 <!-- Band Steering -->
                 <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
                   <div class="flex items-center justify-between">
