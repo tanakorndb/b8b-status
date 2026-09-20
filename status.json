@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-20T09:54:10.528Z",
-  "timestampThai": "20 ก.ย. 2569 เวลา 16:54:11 น.",
+  "timestamp": "2026-09-20T10:15:30.542Z",
+  "timestampThai": "20 ก.ย. 2569 เวลา 17:15:31 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
@@ -10,26 +10,28 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "0d 8h 39m",
-    "hostUptimeThai": "0 วัน 8 ชั่วโมง 39 นาที",
-    "hostVitals": "SSD 186Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "186Gi",
-    "swapUsage": "1480.94M",
+    "hostUptime": "0d 9h 0m",
+    "hostUptimeThai": "0 วัน 9 ชั่วโมง 0 นาที",
+    "hostVitals": "SSD 187Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "187Gi",
+    "swapUsage": "1464.94M",
     "battery": "80%",
-    "cpuLoad": "5.39, 4.92, 5.03",
+    "cpuLoad": "2.56, 3.57, 3.64",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "52ms"
+    "pingLatency": "20ms"
   },
   "network": {
     "downloadMbps": 81.9,
     "uploadMbps": 193.7,
     "pingMs": "29ms",
-    "responsivenessRpm": 18.4,
-    "testedAt": "2026-09-20T09:48:40Z",
-    "testedAtThai": "20 ก.ย. 2569 เวลา 16:48 น.",
-    "testServer": "Apple Edge (sgsin4-edge-fx-031.aaplimg.com)",
+    "dnsPingMs": "16ms",
+    "responsivenessRpm": 21.2,
+    "testedAt": "2026-09-20T10:08:50Z",
+    "testedAtThai": "20 ก.ย. 2569 เวลา 17:08 น.",
+    "testServer": "Apple Edge CDN (sgsin4-edge-fx-030.aaplimg.com)",
     "interface": "Wi-Fi (en0 · 802.11n 2.4GHz)",
-    "signalDbm": "-62 dBm",
+    "detected5G": "Channel 44 (5GHz Wi-Fi 6 802.11ax · 40MHz)",
+    "signalDbm": "-59 dBm",
     "isp": "TRUE INTERNET CORPORATION CO. LTD.",
     "publicIp": "115.87.58.146",
     "city": "Bangkok",
@@ -37,6 +39,17 @@
     "colo": "BKK",
     "localIp": "192.168.1.126",
     "gatewayIp": "192.168.1.1",
+    "hostOptimizations": {
+      "dnsServers": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "203.144.207.29"
+      ],
+      "dnsLookupMs": 2.1,
+      "ipv6Mode": "Link-Local Only (Solicit Timeouts Disabled)",
+      "tcpWindowScale": "4MB Auto-Tuning (net.inet.tcp.autorcvbufmax)",
+      "tailscaleMagicDns": "Active (Supplemental utun4)"
+    },
     "devices": [
       {
         "name": "MikroTik Routerboard",
@@ -46,7 +59,7 @@
         "mac": "dc:2c:6e:d7:e3:c5",
         "vendor": "Routerboard.com (MikroTik)",
         "ports": "WinBox (8291), WebFig (443), DNS (53)",
-        "role": "NAT Gateway, DHCP Server, Traffic Management"
+        "role": "NAT Gateway, DHCP Master, Bandwidth & Routing Engine"
       },
       {
         "name": "UniFi Cloud Key Gen2 Plus",
@@ -54,8 +67,8 @@
         "ip": "192.168.1.143",
         "mac": "78:45:58:de:bb:29",
         "vendor": "Ubiquiti Inc",
-        "ports": "Web Console (443), Inform (8080), Controller (8443)",
-        "role": "Centralized Wi-Fi & UniFi Protect NVR Management"
+        "ports": "Web Console (443), Inform (8080), Network v10.5.67",
+        "role": "Centralized Wi-Fi Controller & UniFi Protect NVR"
       },
       {
         "name": "UniFi Access Point #1",
@@ -63,8 +76,8 @@
         "ip": "192.168.1.4",
         "mac": "78:45:58:4b:5a:e8",
         "vendor": "Ubiquiti Inc",
-        "ports": "Inform (8080), SSH (22)",
-        "role": "Dual-Band Wi-Fi Coverage Zone 1"
+        "ports": "Inform (8080), Dropbear SSH (22)",
+        "role": "Dual-Band Wi-Fi 6 AP Coverage Zone 1"
       },
       {
         "name": "UniFi Access Point #2",
@@ -72,8 +85,8 @@
         "ip": "192.168.1.5",
         "mac": "78:45:58:4e:f1:d0",
         "vendor": "Ubiquiti Inc",
-        "ports": "Inform (8080), SSH (22)",
-        "role": "Dual-Band Wi-Fi Coverage Zone 2"
+        "ports": "Inform (8080), Dropbear SSH (22)",
+        "role": "Dual-Band Wi-Fi 6 AP Coverage Zone 2"
       },
       {
         "name": "Tailscale Mesh Node",
@@ -81,7 +94,7 @@
         "ip": "100.126.177.124",
         "vendor": "Tailscale (WireGuard)",
         "ports": "Encrypted UDP Tunnel",
-        "role": "Zero-Trust Remote Access to CI & Cloud"
+        "role": "Zero-Trust Remote Access to CI & Cloud Nodes"
       }
     ]
   },
@@ -89,19 +102,19 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "0d 8h 39m",
-    "uptimeThai": "0 วัน 8 ชั่วโมง 39 นาที",
+    "uptime": "0d 9h 0m",
+    "uptimeThai": "0 วัน 9 ชั่วโมง 0 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "5.39",
-      "4.92",
-      "5.03"
+      "2.56",
+      "3.57",
+      "3.64"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "1480.94M",
-    "diskAvailable": "186Gi",
+    "swapUsed": "1464.94M",
+    "diskAvailable": "187Gi",
     "diskUsedPercent": "80%"
   },
   "googleDrive": {
@@ -195,7 +208,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "100ms",
+      "latency": "175ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -210,7 +223,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "131ms",
+      "latency": "210ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -225,7 +238,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "84ms",
+      "latency": "73ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -240,7 +253,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "110ms",
+      "latency": "70ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -255,7 +268,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "94ms",
+      "latency": "116ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -270,7 +283,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "500ms",
+      "latency": "406ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -358,7 +371,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "20 ก.ย. 2569 เวลา 16:54:11 น.",
+    "lastSyncThai": "20 ก.ย. 2569 เวลา 17:15:31 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
