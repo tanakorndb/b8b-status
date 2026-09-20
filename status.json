@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-20T10:16:30.276Z",
-  "timestampThai": "20 ก.ย. 2569 เวลา 17:16:31 น.",
+  "timestamp": "2026-09-20T10:51:37.112Z",
+  "timestampThai": "20 ก.ย. 2569 เวลา 17:51:37 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
@@ -10,15 +10,15 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "0d 9h 1m",
-    "hostUptimeThai": "0 วัน 9 ชั่วโมง 1 นาที",
-    "hostVitals": "SSD 187Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "187Gi",
-    "swapUsage": "1464.94M",
+    "hostUptime": "0d 9h 36m",
+    "hostUptimeThai": "0 วัน 9 ชั่วโมง 36 นาที",
+    "hostVitals": "SSD 189Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "189Gi",
+    "swapUsage": "2733.50M",
     "battery": "80%",
-    "cpuLoad": "2.23, 3.31, 3.53",
+    "cpuLoad": "3.81, 5.04, 4.41",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "26ms"
+    "pingLatency": "24ms"
   },
   "network": {
     "downloadMbps": 81.9,
@@ -102,19 +102,19 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "0d 9h 1m",
-    "uptimeThai": "0 วัน 9 ชั่วโมง 1 นาที",
+    "uptime": "0d 9h 36m",
+    "uptimeThai": "0 วัน 9 ชั่วโมง 36 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "2.23",
-      "3.31",
-      "3.53"
+      "3.81",
+      "5.04",
+      "4.41"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "1464.94M",
-    "diskAvailable": "187Gi",
+    "swapUsed": "2733.50M",
+    "diskAvailable": "189Gi",
     "diskUsedPercent": "80%"
   },
   "googleDrive": {
@@ -208,7 +208,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "96ms",
+      "latency": "89ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -223,7 +223,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "121ms",
+      "latency": "93ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -238,7 +238,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "75ms",
+      "latency": "63ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -253,7 +253,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "76ms",
+      "latency": "90ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -268,7 +268,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "150ms",
+      "latency": "67ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -283,7 +283,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "441ms",
+      "latency": "336ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -371,7 +371,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "20 ก.ย. 2569 เวลา 17:16:31 น.",
+    "lastSyncThai": "20 ก.ย. 2569 เวลา 17:51:37 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
