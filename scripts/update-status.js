@@ -130,59 +130,110 @@ async function gather() {
     { name: 'Banii Bazi', ref: 'cqnjislvbcixfttheqjp', status: 'PAUSED_SAVED', tier: 'Slot Preserved' }
   ];
 
+  // Thai Date formatting helper
+  const nowDate = new Date();
+  const thaiMonthsShort = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+  const thaiMonthsFull = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+  
+  const thaiYear = nowDate.getFullYear() + 543;
+  const thaiDateShort = `${nowDate.getDate()} ${thaiMonthsShort[nowDate.getMonth()]} ${thaiYear}`;
+  const thaiTimeStr = nowDate.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Bangkok' });
+  const timestampThai = `${thaiDateShort} เวลา ${thaiTimeStr} น.`;
+
+  const hostUptimeThai = `${uptimeDays} วัน ${uptimeHours} ชั่วโมง ${uptimeMins} นาที`;
+
   // Bwork Trust & Compliance Verification
+  const lineSubmitTime = new Date('2026-09-14T14:20:00+07:00');
+  const googleSubmitTime = new Date('2026-09-14T19:40:00+07:00');
+  const launchTime = new Date('2026-09-29T00:00:00+07:00');
+
+  const lineDaysElapsed = Math.max(1, Math.floor((nowDate - lineSubmitTime) / (1000 * 60 * 60 * 24)));
+  const googleDaysElapsed = Math.max(1, Math.floor((nowDate - googleSubmitTime) / (1000 * 60 * 60 * 24)));
+  const daysToLaunch = Math.max(0, Math.ceil((launchTime - nowDate) / (1000 * 60 * 60 * 24)));
+
   const trustAndVerification = {
-    summary: "LINE & Google Reviews Pending · Stripe Active",
+    summary: "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
+    lastSyncThai: timestampThai,
     bwork: {
       line: {
-        name: "LINE Official Account (@bwork)",
-        target: "Blue Shield (บัญชีรับรอง)",
+        name: "LINE Official Account (@bwork / @254yglkl)",
+        accountName: "Bwork",
+        basicId: "@254yglkl",
+        premiumId: "@bwork",
+        target: "Blue Shield (บัญชีรับรอง / Verified Account)",
         currentBadge: "Grey Shield (บัญชีทั่วไป)",
         status: "UNDER_REVIEW",
-        statusLabel: "รอสายยืนยันตัวตน (5-10 วันทำการ)",
+        statusLabel: "อยู่ระหว่างการตรวจสอบ (รอสายยืนยันตัวตน)",
+        statusTag: "รอรับสาย 5–10 วันทำการ",
         applicationRef: "002434229",
         submittedDate: "2026-09-14 14:20",
-        entity: "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด (0105559126054)",
+        submittedDateThai: "14 ก.ย. 2569 เวลา 14:20 น.",
+        daysInReview: lineDaysElapsed,
+        daysInReviewText: `ยื่นมาแล้ว ${lineDaysElapsed} วัน (กรอบเวลาปกติ 5–10 วันทำการ)`,
+        entity: "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด",
+        entityRegNo: "0105559126054",
         contactPhone: "062-928-6289",
-        actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย",
+        applicantName: "ธนกร ปทุมรัตนเดชากร",
+        applicantEmail: "tanakorn.db@gmail.com",
+        actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย ที่เบอร์ 062-928-6289",
+        benefits: "ปลดล็อกค้นหาชื่อ Bwork บนแอป LINE, ยิงแอดเพิ่มเพื่อนได้, ปลดคำเตือนความเสี่ยงทั้งหมด",
         badgeColor: "amber"
       },
       google: {
-        name: "Google Cloud OAuth (bwork-bot)",
+        name: "Google Cloud OAuth (โปรเจกต์: bwork-bot)",
+        projectName: "bwork-bot",
+        clientId: "bwork-bot-web",
         target: "Verified App / Sensitive Scopes Approval",
         brandingStatus: "VERIFIED",
         brandingLabel: "แบรนด์และโลโก้ผ่านการอนุมัติแล้ว",
+        brandingDateThai: "13 ก.ย. 2569",
         dataAccessStatus: "UNDER_REVIEW",
-        dataAccessLabel: "อยู่ระหว่างการตรวจสิทธิ์ (3-5 วันทำการ)",
-        scopes: ["calendar.events", "calendar.readonly", "drive.file"],
+        dataAccessLabel: "อยู่ระหว่างการตรวจสิทธิ์ Sensitive Scopes",
+        statusTag: "รอผลตรวจ 3–5 วันทำการ",
+        scopes: ["calendar.events (Sensitive)", "calendar.readonly (Sensitive)", "drive.file (Non-sensitive)"],
         submittedDate: "2026-09-14 19:40",
+        submittedDateThai: "14 ก.ย. 2569 เวลา 19:40 น.",
+        daysInReview: googleDaysElapsed,
+        daysInReviewText: `ยื่นมาแล้ว ${googleDaysElapsed} วัน (กรอบเวลาปกติ 3–5 วันทำการ)`,
         demoVideo: "https://youtu.be/Khzz_76OfoE",
-        interimShield: "GOOGLE_VERIFIED=0 (แสดงจอแนะนำความปลอดภัย 3 ขั้นตอน)",
-        actionRequired: "รออีเมลผลการตรวจจาก Google Trust & Safety (ห้ามแก้ไขคอนโซลระหว่างรอ)",
+        demoVideoDuration: "2:16 นาที (ภาษาอังกฤษ)",
+        interimShield: "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
+        actionRequired: "รออีเมลผลตรวจจาก Google Trust & Safety (ห้ามกดยื่นซ้ำหรือแก้ไขคอนโซลระหว่างรอตรวจ)",
+        adminEmail: "tanakorn.db@gmail.com",
         badgeColor: "amber"
       },
       stripe: {
         name: "Stripe Live Payments (Bwork · live)",
+        accountId: "acct_1UA07DKEZmbugLFd",
         status: "VERIFIED_ACTIVE",
-        statusLabel: "เปิดรับเงินและโอนเข้าบัญชีแล้ว 100%",
+        statusLabel: "อนุมัติสมบูรณ์ 100% (รับเงิน & โอนเข้าบัญชี)",
         chargesEnabled: true,
         payoutsEnabled: true,
-        payoutSchedule: "Automatic Daily (rolling 7 days)",
+        payoutSchedule: "Automatic Daily (Rolling 7 วัน)",
+        supportedMethods: ["บัตรเครดิต/เดบิต (Visa, Mastercard, JCB)", "PromptPay QR Code"],
         badgeColor: "emerald"
       },
       googleMaps: {
-        name: "Google Maps Routes API",
+        name: "Google Maps Platform",
+        service: "Routes API & Geocoding",
         status: "ACTIVE",
-        statusLabel: "คำนวณเวลาเดินทางพร้อมใช้ (HTTP 200)",
+        statusLabel: "พร้อมใช้งานคำนวณเวลาเดินทาง (HTTP 200 OK)",
         badgeColor: "emerald"
+      },
+      launch: {
+        launchDate: "2026-09-29T00:00:00+07:00",
+        launchDateThai: "29 กันยายน 2569 เวลา 00:00 น.",
+        daysRemaining: daysToLaunch,
+        launchCountdownText: `อีก ${daysToLaunch} วันเปิดตัวอย่างเป็นทางการ`
       }
     }
   };
 
   const result = {
     timestamp: now,
+    timestampThai: timestampThai,
     systemState: 'OPERATIONAL',
-    systemStateMessage: 'All Core Systems Operational',
+    systemStateMessage: 'ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)',
     metrics: {
       runnersOnline: runnersList.filter(r => r.status === 'online').length,
       runnersTotal: runnersList.length,
@@ -190,12 +241,14 @@ async function gather() {
       endpointsTotal: endpointResults.length,
       mcpConnected: mcps.filter(m => m.status === 'connected').length,
       mcpTotal: mcps.length,
-      hostUptime: `${uptimeDays}d ${uptimeHours}h ${uptimeMins}m`
+      hostUptime: `${uptimeDays}d ${uptimeHours}h ${uptimeMins}m`,
+      hostUptimeThai: hostUptimeThai
     },
     host: {
       hostname: os.hostname(),
       platform: 'macOS Apple Silicon (CI Server)',
       uptime: `${uptimeDays}d ${uptimeHours}h ${uptimeMins}m`,
+      uptimeThai: hostUptimeThai,
       sleepDisabled: sleepDisabled,
       powerStatus: 'AC Power (Sleep Disabled · Always-On)'
     },

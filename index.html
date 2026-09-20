@@ -104,86 +104,100 @@
           </div>
           <div>
             <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span id="systemStateTitle">All Systems Operational</span>
+              <span id="systemStateTitle">ทุกระบบหลักทำงานปกติสมบูรณ์ 100%</span>
             </h1>
             <p class="text-xs sm:text-sm text-slate-400 mt-0.5" id="systemSubtitle">
-              Continuous Integration Farm · Web Services · AI Agents · Databases 100% Up
+              CI Host (MacBook Pro) · เว็บไซต์และบริการสาธารณะ · AI Agents · ฐานข้อมูล 100% Up
             </p>
           </div>
         </div>
 
         <div class="text-xs text-slate-400 bg-white/5 border border-white/10 px-3.5 py-2 rounded-xl flex items-center justify-between md:justify-end gap-3">
           <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span>Last sync: <strong id="lastSyncTime" class="text-slate-200">Just now</strong></span>
+          <span>ซิงค์ล่าสุด: <strong id="lastSyncTime" class="text-slate-200">กำลังโหลด...</strong></span>
           <span class="text-slate-500">|</span>
-          <span id="autoRefreshCountdown" class="text-slate-400">30s</span>
+          <span>รีเฟรชใน <strong id="autoRefreshCountdown" class="text-emerald-400">30 วิ</strong></span>
         </div>
       </div>
     </section>
 
-    <!-- Key Metrics Ribbon (4 Cards) -->
-    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- Key Metrics Ribbon (5 Cards Grid) -->
+    <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
       <!-- 1. Runners -->
-      <div class="glass-card p-5 rounded-xl">
+      <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>GitHub Runners</span>
-          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium">8 Online</span>
+          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">8 ออนไลน์</span>
         </div>
-        <div class="mt-3 flex items-baseline space-x-2">
-          <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="metricRunners">8 / 8</span>
-          <span class="text-xs text-slate-400">Nodes</span>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-white tracking-tight" id="metricRunners">8 / 8</span>
+          <span class="text-xs text-slate-400">โหนด</span>
         </div>
-        <div class="mt-2 text-xs text-slate-400 flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          <span>macOS Apple Silicon Host</span>
+        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+          <span class="truncate">macOS Host (LaunchAgent)</span>
         </div>
       </div>
 
       <!-- 2. Endpoints -->
-      <div class="glass-card p-5 rounded-xl">
+      <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>Public Endpoints</span>
-          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium">100% Up</span>
+          <span>เว็บไซต์สาธารณะ</span>
+          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">100% Up</span>
         </div>
-        <div class="mt-3 flex items-baseline space-x-2">
-          <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="metricEndpoints">6 / 6</span>
-          <span class="text-xs text-slate-400">Passing</span>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-white tracking-tight" id="metricEndpoints">6 / 6</span>
+          <span class="text-xs text-slate-400">ผ่าน</span>
         </div>
-        <div class="mt-2 text-xs text-slate-400 flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          <span>Avg Latency: ~98ms</span>
+        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+          <span class="truncate">ความเร็วเฉลี่ย ~98ms</span>
         </div>
       </div>
 
       <!-- 3. AI & MCP -->
-      <div class="glass-card p-5 rounded-xl">
+      <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>MCP Servers</span>
-          <span class="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-medium">Unified</span>
+          <span>AI MCP Servers</span>
+          <span class="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-medium font-mono text-[11px]">Unified</span>
         </div>
-        <div class="mt-3 flex items-baseline space-x-2">
-          <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="metricMcp">9</span>
-          <span class="text-xs text-slate-400">Connected</span>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-white tracking-tight" id="metricMcp">9</span>
+          <span class="text-xs text-slate-400">เชื่อมต่อ</span>
         </div>
-        <div class="mt-2 text-xs text-slate-400 flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-          <span>Claude · Codex · Gemini</span>
+        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
+          <span class="truncate">Claude · Codex · Gemini</span>
         </div>
       </div>
 
       <!-- 4. Host Uptime -->
-      <div class="glass-card p-5 rounded-xl">
+      <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>Host System Uptime</span>
-          <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium">AC Powered</span>
+          <span>เวลาทำงาน Host</span>
+          <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium font-mono text-[11px]">AC Power</span>
         </div>
-        <div class="mt-3 flex items-baseline space-x-2">
-          <span class="text-2xl sm:text-3xl font-bold text-white tracking-tight" id="metricUptime">23d+</span>
-          <span class="text-xs text-slate-400">Always-On</span>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-white tracking-tight" id="metricUptime">Always-On</span>
         </div>
-        <div class="mt-2 text-xs text-slate-400 flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-          <span>SleepDisabled = 1</span>
+        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
+          <span class="truncate" id="metricUptimeThai">SleepDisabled = 1</span>
+        </div>
+      </div>
+
+      <!-- 5. Bwork Trust & Compliance -->
+      <div class="glass-card p-4 rounded-xl border border-amber-500/30 bg-amber-500/[0.03]">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Bwork ความปลอดภัย</span>
+          <span class="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-medium font-mono text-[11px]">2 รอตรวจ</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-amber-400 tracking-tight" id="metricTrust">LINE · Google</span>
+        </div>
+        <div class="mt-2 text-[11px] text-amber-300/80 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+          <span class="truncate">โล่น้ำเงิน & Scopes ตรวจ</span>
         </div>
       </div>
     </section>
@@ -191,27 +205,44 @@
     <!-- Filter & Navigation Tabs -->
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar text-xs">
-        <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3 py-1.5 rounded-lg bg-white/10 text-white font-medium">All Overview</button>
-        <button onclick="switchTab('runners')" id="tab-runners" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">Runners (8)</button>
-        <button onclick="switchTab('endpoints')" id="tab-endpoints" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">Web Sites (6)</button>
-        <button onclick="switchTab('mcp')" id="tab-mcp" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">AI & MCP (9)</button>
-        <button onclick="switchTab('storage')" id="tab-storage" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium">Cloud & DB</button>
-        <button onclick="switchTab('trust')" id="tab-trust" class="tab-btn px-3 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Trust & Safety</button>
+        <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3.5 py-1.5 rounded-lg bg-white/10 text-white font-medium whitespace-nowrap">ทั้งหมด (Overview)</button>
+        <button onclick="switchTab('trust')" id="tab-trust" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>🛡️ Bwork ความปลอดภัย (LINE & Google)
+        </button>
+        <button onclick="switchTab('runners')" id="tab-runners" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap">🏃 GitHub Runners (8)</button>
+        <button onclick="switchTab('endpoints')" id="tab-endpoints" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap">🌐 เว็บไซต์สาธารณะ (6)</button>
+        <button onclick="switchTab('mcp')" id="tab-mcp" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap">🤖 AI & MCP (9)</button>
+        <button onclick="switchTab('storage')" id="tab-storage" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap">🗄️ ฐานข้อมูลและคลาวด์</button>
       </div>
 
-      <div class="relative text-xs">
-        <input type="text" id="filterInput" oninput="filterItems()" placeholder="Search components..." class="w-full sm:w-48 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition">
+      <div class="relative text-xs flex-shrink-0">
+        <input type="text" id="filterInput" oninput="filterItems()" placeholder="ค้นหาระบบ / คำสำคัญ..." class="w-full sm:w-56 bg-white/5 border border-white/10 rounded-lg px-3.5 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition">
       </div>
     </div>
 
-    <!-- Section 1: GitHub Runners -->
+    <!-- Section 1: Trust & Security Verification (LINE, Google, Stripe) -->
+    <section id="section-trust" class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-semibold tracking-wide text-white uppercase flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          🛡️ Bwork Trust & Account Security Verification (สถานะการอนุมัติบัญชีปลอดภัย)
+        </h2>
+        <span class="text-xs text-amber-400/90 font-medium">LINE โล่น้ำเงิน · Google OAuth Scopes · Stripe Live</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="trustContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Section 2: GitHub Runners -->
     <section id="section-runners" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          GitHub Actions Self-Hosted Runner Farm (macOS Host)
+          🏃 GitHub Actions Self-Hosted Runner Farm (เครื่อง MacBook Pro Host)
         </h2>
-        <span class="text-xs text-slate-500">Auto-Managed via LaunchAgents</span>
+        <span class="text-xs text-slate-500">ทำงานอัตโนมัติผ่าน LaunchAgents (0 GitHub Crons)</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="runnersContainer">
@@ -219,14 +250,14 @@
       </div>
     </section>
 
-    <!-- Section 2: Production Web Endpoints -->
+    <!-- Section 3: Production Web Endpoints -->
     <section id="section-endpoints" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          Production Endpoints & Public Web Services
+          🌐 เว็บไซต์และบริการสาธารณะ (Production Endpoints)
         </h2>
-        <span class="text-xs text-slate-500">Live HTTP Checks</span>
+        <span class="text-xs text-slate-500">ตรวจสอบ HTTP และ Latency อัตโนมัติ</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="endpointsContainer">
@@ -234,14 +265,14 @@
       </div>
     </section>
 
-    <!-- Section 3: AI & MCP Servers -->
+    <!-- Section 4: AI & MCP Servers -->
     <section id="section-mcp" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
-          AI Agent MCP Infrastructure (Claude · Codex · Gemini)
+          🤖 โครงสร้าง AI Agent MCP (Claude · Codex · Gemini · Antigravity)
         </h2>
-        <span class="text-xs text-slate-500">Unified 9 Servers</span>
+        <span class="text-xs text-slate-500">เชื่อมต่อครบ 9 เซิร์ฟเวอร์หลัก</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="mcpContainer">
@@ -249,32 +280,17 @@
       </div>
     </section>
 
-    <!-- Section 4: Cloud Storage, Supabase & Chrome -->
+    <!-- Section 5: Cloud Storage, Supabase & Chrome -->
     <section id="section-storage" class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-          Databases, Storage & Chrome Automation Hub
+          🗄️ ฐานข้อมูล Supabase, Google Drive & ระบบ Chrome Automation
         </h2>
-        <span class="text-xs text-slate-500">Cloud Storage & CDP</span>
+        <span class="text-xs text-slate-500">Cloud Storage & CDP Port 9222</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="storageContainer">
-        <!-- Rendered via JS -->
-      </div>
-    </section>
-
-    <!-- Section 5: Trust & Security Verification (LINE, Google, Stripe) -->
-    <section id="section-trust" class="space-y-3">
-      <div class="flex items-center justify-between">
-        <h2 class="text-sm font-semibold tracking-wide text-slate-300 uppercase flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-          Bwork Trust & Security Verification
-        </h2>
-        <span class="text-xs text-slate-500">LINE Blue Shield · Google OAuth · Stripe</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="trustContainer">
         <!-- Rendered via JS -->
       </div>
     </section>
@@ -445,20 +461,279 @@
       if (isManual) showToast('Dashboard synced with latest data');
     }
 
+    // Thai Date & Time Formatter Helper
+    function formatThaiDateTime(isoStr) {
+      if (!isoStr) return '-';
+      const d = new Date(isoStr);
+      if (isNaN(d.getTime())) return isoStr;
+      const thaiMonths = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
+      const day = d.getDate();
+      const month = thaiMonths[d.getMonth()];
+      const year = d.getFullYear() + 543;
+      const time = d.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Bangkok' });
+      return `${day} ${month} ${year} เวลา ${time} น.`;
+    }
+
     function renderUI(data) {
       if (!data) return;
 
-      // Update Header
-      const timeStr = new Date(data.timestamp || Date.now()).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-      document.getElementById('lastSyncTime').textContent = timeStr;
+      // Update Header with Thai Timestamp
+      const thaiTimeDisplay = data.timestampThai || formatThaiDateTime(data.timestamp || new Date().toISOString());
+      document.getElementById('lastSyncTime').textContent = thaiTimeDisplay;
 
       // Update Metrics
       document.getElementById('metricRunners').textContent = `${data.metrics?.runnersOnline || 8} / ${data.metrics?.runnersTotal || 8}`;
       document.getElementById('metricEndpoints').textContent = `${data.metrics?.endpointsOnline || 6} / ${data.metrics?.endpointsTotal || 6}`;
       document.getElementById('metricMcp').textContent = `${data.metrics?.mcpConnected || 9}`;
-      document.getElementById('metricUptime').textContent = data.host?.uptime ? data.host.uptime.split(' ')[0] : '23d+';
+      document.getElementById('metricUptime').textContent = data.metrics?.hostUptime ? data.metrics.hostUptime.split(' ')[0] : '23d+';
+      if (document.getElementById('metricUptimeThai')) {
+        document.getElementById('metricUptimeThai').textContent = data.metrics?.hostUptimeThai || 'SleepDisabled = 1 (Always-On)';
+      }
 
-      // 1. Render Runners
+      // 1. Render Trust & Verification (Bwork) - SECTION 1
+      const trust = (data.trustAndVerification && data.trustAndVerification.bwork) ? data.trustAndVerification.bwork : fallbackData.trustAndVerification.bwork;
+      const trustHtml = `
+        <!-- LINE Official Account Verification -->
+        <div class="glass-card p-5 rounded-xl space-y-4 item-row border-l-4 border-l-amber-500 bg-amber-500/[0.02]">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-7 h-7 rounded-lg bg-[#06C755]/20 text-[#06C755] flex items-center justify-center font-bold text-xs">
+                LINE
+              </div>
+              <div>
+                <span class="font-semibold text-white text-sm block leading-tight">LINE Official Account</span>
+                <span class="text-[11px] text-slate-400 font-mono">@bwork / @254yglkl</span>
+              </div>
+            </div>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold border border-amber-500/20">
+              UNDER REVIEW
+            </span>
+          </div>
+
+          <!-- Step Timeline -->
+          <div class="grid grid-cols-3 gap-1.5 py-1">
+            <div class="p-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-center">
+              <span class="text-[10px] text-emerald-400 font-medium block">1. ยื่นเอกสาร DBD</span>
+              <span class="text-[9px] text-emerald-300/80">✅ 14 ก.ย. 69</span>
+            </div>
+            <div class="p-1.5 rounded bg-amber-500/15 border border-amber-500/30 text-center relative overflow-hidden">
+              <span class="text-[10px] text-amber-300 font-bold block">2. รอตรวจ & โทร</span>
+              <span class="text-[9px] text-amber-400 font-mono">⏳ 5–10 วันทำการ</span>
+            </div>
+            <div class="p-1.5 rounded bg-white/5 border border-white/10 text-center">
+              <span class="text-[10px] text-slate-400 block">3. โล่น้ำเงิน</span>
+              <span class="text-[9px] text-sky-400 font-medium">🎯 Verified</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-lg bg-white/5 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">เป้าหมาย (Target):</span>
+                <span class="text-sky-400 font-semibold flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5 fill-current text-sky-400" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                  โล่น้ำเงิน (Blue Shield / Verified)
+                </span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">สถานะปัจจุบัน:</span>
+                <span class="text-slate-300 flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                  โล่เทา (Grey Shield / บัญชีทั่วไป)
+                </span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">ใบสมัครอ้างอิง:</span>
+                <span class="text-emerald-400 font-mono font-bold">${trust.line?.applicationRef || '002434229'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">วันเวลาที่ยื่น:</span>
+                <span class="text-slate-200">${trust.line?.submittedDateThai || '14 ก.ย. 2569 เวลา 14:20 น.'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">ระยะเวลาที่ยื่นมาแล้ว:</span>
+                <span class="text-amber-300 font-medium">${trust.line?.daysInReviewText || 'ยื่นมาแล้ว 6 วัน (กรอบ 5–10 วันทำการ)'}</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-white/5 pt-1.5">
+                <span class="text-slate-400">นิติบุคคลผู้ยื่น:</span>
+                <span class="text-slate-200 text-right truncate pl-2">${trust.line?.entity || 'บจ. บีเอทบี สแตรทิจิก แอดไวซอรี'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">เลขทะเบียนนิติบุคคล:</span>
+                <span class="text-slate-300 font-mono">${trust.line?.entityRegNo || '0105559126054'}</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1.5 text-[11px]">
+              <div class="font-bold flex items-center gap-1 text-amber-400">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>สิ่งที่เจ้าของต้องทำ (Owner Action):</span>
+              </div>
+              <p class="text-amber-200/90 leading-relaxed">
+                รอรับสายบันทึกเสียงยืนยันตัวตนจากเจ้าหน้าที่ LINE ประเทศไทย ที่เบอร์ <strong class="text-white font-mono bg-black/30 px-1 py-0.5 rounded">${trust.line?.contactPhone || '062-928-6289'}</strong> โดยเจ้าหน้าที่จะโทรมาสอบถามเพื่อเทียบกับเอกสารบริษัทที่แนบไป
+              </p>
+              <div class="pt-1 text-[10px] text-amber-400/80">
+                ✨ ปลดล็อก: ค้นหาชื่อ Bwork บนแอป LINE ได้ทันที · ยิงแอดเพิ่มเพื่อน · ปลดคำเตือนความเสี่ยง
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Cloud OAuth Verification -->
+        <div class="glass-card p-5 rounded-xl space-y-4 item-row border-l-4 border-l-amber-500 bg-amber-500/[0.02]">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs">
+                G
+              </div>
+              <div>
+                <span class="font-semibold text-white text-sm block leading-tight">Google Cloud OAuth</span>
+                <span class="text-[11px] text-slate-400 font-mono">โปรเจกต์: bwork-bot</span>
+              </div>
+            </div>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold border border-amber-500/20">
+              UNDER REVIEW
+            </span>
+          </div>
+
+          <!-- Step Timeline -->
+          <div class="grid grid-cols-3 gap-1.5 py-1">
+            <div class="p-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-center">
+              <span class="text-[10px] text-emerald-400 font-medium block">1. แบรนด์ & โลโก้</span>
+              <span class="text-[9px] text-emerald-300/80">✅ ผ่าน 13 ก.ย.</span>
+            </div>
+            <div class="p-1.5 rounded bg-amber-500/15 border border-amber-500/30 text-center relative overflow-hidden">
+              <span class="text-[10px] text-amber-300 font-bold block">2. ตรวจ Scopes</span>
+              <span class="text-[9px] text-amber-400 font-mono">⏳ 3–5 วันทำการ</span>
+            </div>
+            <div class="p-1.5 rounded bg-white/5 border border-white/10 text-center">
+              <span class="text-[10px] text-slate-400 block">3. Verified App</span>
+              <span class="text-[9px] text-emerald-400 font-medium">🎯 ปลดจอเตือน</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-lg bg-white/5 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">สถานะแบรนด์ & ชื่อแอป:</span>
+                <span class="text-emerald-400 font-medium">✅ ผ่านการอนุมัติแล้ว</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">สถานะตรวจสิทธิ์ (Scopes):</span>
+                <span class="text-amber-400 font-medium font-mono">⏳ อยู่ระหว่างตรวจสิทธิ์</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">วันเวลาที่ยื่นตรวจ:</span>
+                <span class="text-slate-200">${trust.google?.submittedDateThai || '14 ก.ย. 2569 เวลา 19:40 น.'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">ระยะเวลาที่ยื่นมาแล้ว:</span>
+                <span class="text-amber-300 font-medium">${trust.google?.daysInReviewText || 'ยื่นมาแล้ว 6 วัน (กรอบ 3–5 วันทำการ)'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">วิดีโอสาธิต (Demo Video):</span>
+                <a href="${trust.google?.demoVideo || 'https://youtu.be/Khzz_76OfoE'}" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 flex items-center gap-1 font-medium">
+                  <span>YouTube (2:16 นาที)</span>
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+              </div>
+              <div class="flex items-center justify-between border-t border-white/5 pt-1.5">
+                <span class="text-slate-400">สิทธิ์ Sensitive Scopes:</span>
+                <span class="text-slate-300 font-mono text-[10px]">calendar.events, readonly</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">ระบบคุ้มครองผู้ใช้:</span>
+                <span class="text-emerald-400 font-mono">GOOGLE_VERIFIED=0 (มีหน้าแนะนำ 3 ขั้นตอน)</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1.5 text-[11px]">
+              <div class="font-bold flex items-center gap-1 text-amber-400">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <span>ข้อควรปฏิบัติสำคัญ (Crucial Rule):</span>
+              </div>
+              <p class="text-amber-200/90 leading-relaxed">
+                ⛔ <strong>ห้ามกดยื่นซ้ำหรือแก้ไขข้อมูลใน Cloud Console ระหว่างรอตรวจเด็ดขาด</strong> เพื่อไม่ให้คิวตรวจสอบรีเซ็ตใหม่ ให้รออีเมลแจ้งผลจาก Google Trust & Safety ที่ <span class="text-white font-mono underline">tanakorn.db@gmail.com</span>
+              </p>
+              <div class="pt-1 text-[10px] text-emerald-400">
+                🛡️ ผู้ใช้ปัจจุบันได้รับการคุ้มครองด้วยหน้าต่างแนะนำ 3 ขั้นตอนเรียบร้อยแล้ว
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stripe Live Merchant & Ecosystem -->
+        <div class="glass-card p-5 rounded-xl space-y-4 item-row border-l-4 border-l-emerald-500 bg-emerald-500/[0.02]">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">
+                💳
+              </div>
+              <div>
+                <span class="font-semibold text-white text-sm block leading-tight">Stripe & โครงสร้างบริการ</span>
+                <span class="text-[11px] text-slate-400 font-mono">Bwork · live (acct_1UA07D...)</span>
+              </div>
+            </div>
+            <span class="text-[10px] px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold border border-emerald-500/20">
+              100% ACTIVE
+            </span>
+          </div>
+
+          <!-- Step Timeline -->
+          <div class="grid grid-cols-3 gap-1.5 py-1">
+            <div class="p-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-center">
+              <span class="text-[10px] text-emerald-400 font-medium block">รับเงิน (Charges)</span>
+              <span class="text-[9px] text-emerald-300">✅ เปิดใช้งานแล้ว</span>
+            </div>
+            <div class="p-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-center">
+              <span class="text-[10px] text-emerald-400 font-medium block">โอนเงิน (Payouts)</span>
+              <span class="text-[9px] text-emerald-300">✅ Daily Rolling 7d</span>
+            </div>
+            <div class="p-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-center">
+              <span class="text-[10px] text-emerald-400 font-medium block">Google Maps</span>
+              <span class="text-[9px] text-emerald-300">✅ Routes 200 OK</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-lg bg-white/5 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">ระบบรับชำระเงิน:</span>
+                <span class="text-emerald-400 font-medium">บัตรเครดิต/เดบิต & PromptPay QR</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">การโอนเงินเข้าบัญชี:</span>
+                <span class="text-emerald-400 font-medium">อัตโนมัติรายวัน (Auto Payouts)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Google Maps Routes:</span>
+                <span class="text-emerald-400 font-medium">HTTP 200 OK (คำนวณเวลาเดินทาง)</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-white/5 pt-1.5">
+                <span class="text-slate-400">วันเปิดตัวอย่างเป็นทางการ:</span>
+                <span class="text-emerald-300 font-semibold">${trust.launch?.launchDateThai || '29 กันยายน 2569 เวลา 00:00 น.'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">นับถอยหลังเปิดตัว:</span>
+                <span class="text-emerald-400 font-mono font-bold">${trust.launch?.launchCountdownText || 'อีก 9 วันเปิดตัว'}</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 space-y-1.5 text-[11px]">
+              <div class="font-bold flex items-center gap-1 text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>ระบบการเงินและการเปิดตัวพร้อมสมบูรณ์:</span>
+              </div>
+              <p class="text-emerald-200/90 leading-relaxed">
+                คีย์ลับและ Webhook บน Railway เชื่อมต่อชุดจริง บัญชีธนาคารยืนยันเรียบร้อย ราคาเปิดตัว ฿169/฿269 จะเริ่มเองตอนเที่ยงคืนของวันที่ 29 ก.ย. 2569 โดยอัตโนมัติ
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById('trustContainer').innerHTML = trustHtml;
+
+      // 2. Render Runners
       const runnersHtml = (data.runners || []).map(r => `
         <div class="glass-card p-4 rounded-xl flex items-center justify-between border-l-4 border-l-emerald-500 item-row">
           <div class="space-y-1">
@@ -478,7 +753,7 @@
       `).join('');
       document.getElementById('runnersContainer').innerHTML = runnersHtml;
 
-      // 2. Render Endpoints
+      // 3. Render Endpoints
       const endpointsHtml = (data.endpoints || []).map(e => `
         <div class="glass-card p-4 rounded-xl flex flex-col justify-between border-l-4 ${e.ok ? 'border-l-emerald-500' : 'border-l-rose-500'} item-row">
           <div class="space-y-1.5">
@@ -501,7 +776,7 @@
       `).join('');
       document.getElementById('endpointsContainer').innerHTML = endpointsHtml;
 
-      // 3. Render MCP
+      // 4. Render MCP
       const mcpHtml = (data.mcpServers || []).map(m => `
         <div class="glass-card p-3.5 rounded-xl flex items-center justify-between item-row">
           <div class="space-y-0.5 pr-2">
@@ -516,7 +791,7 @@
       `).join('');
       document.getElementById('mcpContainer').innerHTML = mcpHtml;
 
-      // 4. Render Storage & Cloud
+      // 5. Render Storage & Cloud
       const storageHtml = `
         <!-- Supabase -->
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
@@ -543,24 +818,24 @@
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
             <span>📁 Google Drive Sync (macOS)</span>
-            <span class="text-emerald-400 font-mono">2 / 2 Mounted</span>
+            <span class="text-emerald-400 font-mono">2 / 2 เชื่อมต่อแล้ว</span>
           </div>
           <div class="space-y-2 text-xs">
             <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
               <div class="flex items-center justify-between">
-                <span class="font-medium text-white">Personal Account</span>
-                <span class="text-emerald-400 text-[10px] font-mono">🟢 Synced</span>
+                <span class="font-medium text-white">บัญชีส่วนตัว (Personal)</span>
+                <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
               </div>
               <div class="text-[11px] text-slate-400 font-mono">tanakorn.db@gmail.com</div>
-              <div class="text-[10px] text-slate-500">Backups / Reports / Specs</div>
+              <div class="text-[10px] text-slate-500">สำรองข้อมูล / รายงาน / สเปกงาน</div>
             </div>
             <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
               <div class="flex items-center justify-between">
-                <span class="font-medium text-white">Work Account</span>
-                <span class="text-emerald-400 text-[10px] font-mono">🟢 Synced</span>
+                <span class="font-medium text-white">บัญชีทำงาน (Work)</span>
+                <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
               </div>
               <div class="text-[11px] text-slate-400 font-mono">tanakorn.p@b8b.homes</div>
-              <div class="text-[10px] text-slate-500">Shared Drive & Enterprise Docs</div>
+              <div class="text-[10px] text-slate-500">Shared Drive & เอกสารองค์กร</div>
             </div>
           </div>
         </div>
@@ -568,153 +843,22 @@
         <!-- Chrome Automation -->
         <div class="glass-card p-4 rounded-xl space-y-3 item-row">
           <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
-            <span>🌐 Chrome Automation Hub</span>
-            <span class="text-emerald-400 font-mono">Port 9222</span>
+            <span>🌐 ระบบ Chrome Automation Hub</span>
+            <span class="text-emerald-400 font-mono">พอร์ต 9222</span>
           </div>
           <div class="p-3 rounded-lg bg-white/5 space-y-2 text-xs">
             <div class="flex items-center justify-between">
               <span class="text-slate-300 font-medium">Remote Debugging (CDP)</span>
               <span class="text-emerald-400 text-[10px] font-mono font-bold">READY</span>
             </div>
-            <p class="text-[11px] text-slate-400">Allows Claude, Codex & Gemini to control Chrome across all user profiles simultaneously.</p>
+            <p class="text-[11px] text-slate-400">ควบคุมเบราว์เซอร์สำหรับ Claude, Codex, Gemini และ Antigravity โดยตรง</p>
             <div class="pt-1 text-[10px] text-slate-500 font-mono">
-              3 Profiles Connected · No Profile Lock Conflict
+              3 โปรไฟล์พร้อมใช้งาน · ไม่มีปัญหา Session ชนกัน
             </div>
           </div>
         </div>
       `;
       document.getElementById('storageContainer').innerHTML = storageHtml;
-
-      // 5. Render Trust & Verification (Bwork)
-      const trust = (data.trustAndVerification && data.trustAndVerification.bwork) ? data.trustAndVerification.bwork : fallbackData.trustAndVerification.bwork;
-      const trustHtml = `
-        <!-- LINE Official Account Verification -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-amber-500">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-              <span class="font-semibold text-white text-sm">LINE Official Account</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold">UNDER REVIEW</span>
-            </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">@bwork</span>
-          </div>
-
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Target Badge:</span>
-                <span class="text-sky-400 font-semibold flex items-center gap-1">
-                  <svg class="w-3.5 h-3.5 fill-current text-sky-400" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
-                  Blue Shield (บัญชีรับรอง)
-                </span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Current Badge:</span>
-                <span class="text-slate-300">Grey Shield (บัญชีทั่วไป)</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Application Ref:</span>
-                <span class="text-slate-200 font-mono font-medium">${trust.line.applicationRef || '002434229'}</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Submitted Date:</span>
-                <span class="text-slate-300">${trust.line.submittedDate || '14 ก.ย. 2569'}</span>
-              </div>
-            </div>
-
-            <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1 text-[11px]">
-              <div class="font-medium flex items-center gap-1">
-                <span>📞 Next Action: รอสายโทรยืนยันตัวตน</span>
-              </div>
-              <p class="text-amber-200/80 leading-relaxed">
-                LINE Thailand จะโทรเข้ามาที่เบอร์ <strong class="text-white font-mono">${trust.line.contactPhone}</strong> เพื่อบันทึกเสียงยืนยันตัวตนกับหนังสือรับรองบริษัท (ระยะเวลาตรวจ 5-10 วันทำการ)
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Google Cloud OAuth Verification -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-amber-500">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-              <span class="font-semibold text-white text-sm">Google OAuth Security</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-mono font-bold">UNDER REVIEW</span>
-            </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">bwork-bot</span>
-          </div>
-
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Branding & Logo:</span>
-                <span class="text-emerald-400 font-medium">✅ Verified & Published</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Data Access (Scopes):</span>
-                <span class="text-amber-400 font-medium">⏳ Under Review</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Demo Video:</span>
-                <a href="${trust.google.demoVideo}" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">YouTube (Unlisted) ↗</a>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Interim Shield:</span>
-                <span class="text-slate-300 font-mono">GOOGLE_VERIFIED=0</span>
-              </div>
-            </div>
-
-            <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 space-y-1 text-[11px]">
-              <div class="font-medium flex items-center gap-1">
-                <span>🛡️ Protocol: คุ้มครองผู้ใช้งานด้วยคำแนะนำ 3 ขั้นตอน</span>
-              </div>
-              <p class="text-amber-200/80 leading-relaxed">
-                ${trust.google.actionRequired || 'รออีเมลผลตรวจจาก Google Trust & Safety (ห้ามแก้ไขข้อมูลใน Cloud Console ระหว่างรอเพื่อไม่ให้รีเซ็ตคิว)'}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Stripe Live Merchant & Ecosystem -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border-l-4 border-l-emerald-500">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-              <span class="font-semibold text-white text-sm">Stripe & Ecosystem</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">100% ACTIVE</span>
-            </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-white/5 text-slate-300 font-mono">Live Mode</span>
-          </div>
-
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Stripe Charges:</span>
-                <span class="text-emerald-400 font-medium">✅ Enabled (บัตร & พร้อมเพย์)</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Stripe Payouts:</span>
-                <span class="text-emerald-400 font-medium">✅ Automatic Daily</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Google Maps Routes:</span>
-                <span class="text-emerald-400 font-medium">✅ 200 OK (เดินทาง)</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-slate-400">Launch Readiness:</span>
-                <span class="text-emerald-400 font-medium">Ready for 29 Sep 2026</span>
-              </div>
-            </div>
-
-            <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 space-y-1 text-[11px]">
-              <div class="font-medium flex items-center gap-1">
-                <span>💳 ระบบการเงินและโครงสร้างพื้นฐานสมบูรณ์</span>
-              </div>
-              <p class="text-emerald-200/80 leading-relaxed">
-                คีย์ลับและ Webhook บน Railway เชื่อมต่อชุดจริง บัญชีธนาคารยืนยันเรียบร้อย พร้อมรองรับการเปิดตัว
-              </p>
-            </div>
-          </div>
-        </div>
-      `;
-      document.getElementById('trustContainer').innerHTML = trustHtml;
     }
 
     // Tab Switching
@@ -752,40 +896,59 @@
     function copyMarkdownReport() {
       if (!globalData) return;
       const d = globalData;
-      const md = `# 🟢 B8B Cloud AI System Status Report (${new Date(d.timestamp).toLocaleString('th-TH')})
+      const trust = (d.trustAndVerification && d.trustAndVerification.bwork) ? d.trustAndVerification.bwork : fallbackData.trustAndVerification.bwork;
+      const thaiTimeDisplay = d.timestampThai || formatThaiDateTime(d.timestamp || new Date().toISOString());
 
-### 📊 System Health Overview
-- **System State**: ${d.systemStateMessage}
-- **Host Uptime**: ${d.host?.uptime || '23d+'} (macOS Apple Silicon CI Host)
-- **Power Policy**: AC Power (SleepDisabled=1 · Always-On CI Server)
-- **GitHub Runners**: ${d.metrics?.runnersOnline || 8} / ${d.metrics?.runnersTotal || 8} Online
-- **Web Endpoints**: ${d.metrics?.endpointsOnline || 6} / ${d.metrics?.endpointsTotal || 6} (100% Up)
-- **MCP Servers**: ${d.metrics?.mcpConnected || 9} Connected
+      const md = `# 🛡️ รายงานสถานะระบบ & การอนุมัติความปลอดภัย Bwork (${thaiTimeDisplay})
 
-### 🛡️ Trust & Security Verification (Bwork)
-- LINE Official Account: ⏳ UNDER REVIEW (Ref: 002434229 · รอสายยืนยันตัวตน 062-928-6289)
-- Google Cloud OAuth: ⏳ UNDER REVIEW (Branding Verified ✅ · Scopes Under Review · Demo Video Submitted)
-- Stripe Live Merchant: 🟢 VERIFIED & ACTIVE (Charges & Payouts 100% Ready)
+### 📊 ภาพรวมระบบหลัก (System Overview)
+- **สถานะระบบ**: ${d.systemStateMessage || 'ทำงานปกติ 100%'}
+- **เวลาทำงานของโฮสต์ (Host Uptime)**: ${d.metrics?.hostUptimeThai || d.host?.uptime || 'Always-On'} (MacBook Pro Apple Silicon)
+- **นโยบายพลังงาน**: AC Power (SleepDisabled=1 · Always-On CI Host)
+- **GitHub Actions Runners**: ${d.metrics?.runnersOnline || 8} / ${d.metrics?.runnersTotal || 8} ออนไลน์ (0 GitHub Crons)
+- **เว็บไซต์และบริการสาธารณะ**: ${d.metrics?.endpointsOnline || 6} / ${d.metrics?.endpointsTotal || 6} (100% ผ่าน)
+- **AI MCP Ecosystem**: ${d.metrics?.mcpConnected || 9} เซิร์ฟเวอร์เชื่อมต่อสมบูรณ์
 
-### 🏃 GitHub Actions Runners (8/8 Online)
-${(d.runners || []).map(r => `- [${r.runner}] ${r.repo} : 🟢 ${r.status} (busy: ${r.busy})`).join('\n')}
+### 🛡️ สถานะการอนุมัติความปลอดภัย Bwork (Trust & Security Verification)
+1. **LINE Official Account (@bwork / @254yglkl)**:
+   - เป้าหมาย: 🔵 โล่น้ำเงิน (Blue Shield / บัญชีรับรอง)
+   - สถานะปัจจุบัน: ⚪ โล่เทา (Grey Shield / บัญชีทั่วไป)
+   - สถานะการตรวจ: 🟡 รอสายยืนยันตัวตน (Under Review 5–10 วันทำการ)
+   - ใบสมัครเลขที่: ${trust.line?.applicationRef || '002434229'} (ยื่นเมื่อ: ${trust.line?.submittedDateThai || '14 ก.ย. 2569 เวลา 14:20 น.'})
+   - ระยะเวลาที่ยื่นมา: ${trust.line?.daysInReviewText || 'ยื่นมาแล้ว 6 วัน'}
+   - เบอร์โทรติดต่อ: ${trust.line?.contactPhone || '062-928-6289'}
+   - นิติบุคคล: ${trust.line?.entity || 'บจ. บีเอทบี สแตรทิจิก แอดไวซอรี'} (${trust.line?.entityRegNo || '0105559126054'})
+   - สิ่งที่ต้องทำ: รอรับสายบันทึกเสียงยืนยันตัวตนจากเจ้าหน้าที่ LINE ประเทศไทย
 
-### 🌐 Production Endpoints
+2. **Google Cloud OAuth (โปรเจกต์: bwork-bot)**:
+   - สถานะแบรนด์ & โลโก้: 🟢 ผ่านการรับรองและเผยแพร่แล้ว (13 ก.ย. 2569)
+   - สถานะขอสิทธิ์ (Scopes): 🟡 อยู่ระหว่างการตรวจสิทธิ์ (Under Review 3–5 วันทำการ)
+   - Scopes ที่ขอ: calendar.events, calendar.readonly, drive.file
+   - วิดีโอสาธิต: ${trust.google?.demoVideo || 'https://youtu.be/Khzz_76OfoE'} (2:16 นาที)
+   - ยื่นตรวจเมื่อ: ${trust.google?.submittedDateThai || '14 ก.ย. 2569 เวลา 19:40 น.'}
+   - ระยะเวลาที่ยื่นมา: ${trust.google?.daysInReviewText || 'ยื่นมาแล้ว 6 วัน'}
+   - ตัวคุ้มครองผู้ใช้: GOOGLE_VERIFIED=0 (แสดงหน้าต่างนำทาง 3 ขั้นตอน)
+   - ข้อปฏิบัติสำคัญ: ห้ามแก้ไขข้อมูลใน Cloud Console หรือกดยื่นซ้ำระหว่างรอตรวจ
+
+3. **Stripe Live Payments & โครงสร้างบริการ**:
+   - ระบบชำระเงิน: 🟢 เปิดรับเงิน & โอนเงินอัตโนมัติแล้ว 100% (charges & payouts active)
+   - Google Maps Routes API: 🟢 พร้อมใช้งานคำนวณเวลาเดินทาง (HTTP 200 OK)
+   - วันเปิดตัวอย่างเป็นทางการ: ${trust.launch?.launchDateThai || '29 กันยายน 2569'} (${trust.launch?.launchCountdownText || 'อีก 9 วัน'})
+
+### 🏃 GitHub Actions Self-Hosted Runners (8 โหนด)
+${(d.runners || []).map(r => `- [${r.runner}] ${r.repo} : 🟢 ${r.status} (${r.service})`).join('\n')}
+
+### 🌐 เว็บไซต์และบริการสาธารณะ (6 เว็บ)
 ${(d.endpoints || []).map(e => `- ${e.name} (${e.url}) : HTTP ${e.code} [${e.latency}]`).join('\n')}
 
-### 🗄️ Supabase Databases
+### 🗄️ ฐานข้อมูล Supabase
 ${(d.supabase || []).map(s => `- ${s.name} (${s.ref}) : ${s.status} [${s.tier}]`).join('\n')}
-
-### 📁 Google Drive & Chrome
-- Google Drive Personal (tanakorn.db@gmail.com): Mounted
-- Google Drive Work (tanakorn.p@b8b.homes): Mounted
-- Chrome CDP (Port 9222): Active & Ready for all AI Agents
 `;
 
       navigator.clipboard.writeText(md).then(() => {
-        showToast('Full Markdown status copied to clipboard!');
+        showToast('คัดลอกรายงานสรุปภาษาไทยลงคลิปบอร์ดแล้ว!');
       }).catch(() => {
-        showToast('Failed to copy, please allow clipboard access');
+        showToast('ไม่สามารถคัดลอกได้ โปรดอนุญาตการเข้าถึงคลิปบอร์ด');
       });
     }
 

@@ -1,7 +1,8 @@
 {
-  "timestamp": "2026-09-20T02:43:16.857Z",
+  "timestamp": "2026-09-20T02:50:19.446Z",
+  "timestampThai": "20 ก.ย. 2569 เวลา 09:50:20 น.",
   "systemState": "OPERATIONAL",
-  "systemStateMessage": "All Core Systems Operational",
+  "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
     "runnersOnline": 8,
     "runnersTotal": 8,
@@ -9,12 +10,14 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "0d 1h 28m"
+    "hostUptime": "0d 1h 35m",
+    "hostUptimeThai": "0 วัน 1 ชั่วโมง 35 นาที"
   },
   "host": {
     "hostname": "MacBook-Pro-2.local",
     "platform": "macOS Apple Silicon (CI Server)",
-    "uptime": "0d 1h 28m",
+    "uptime": "0d 1h 35m",
+    "uptimeThai": "0 วัน 1 ชั่วโมง 35 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (Sleep Disabled · Always-On)"
   },
@@ -108,7 +111,7 @@
       "url": "https://b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "140ms",
+      "latency": "65ms",
       "ok": true
     },
     {
@@ -116,7 +119,7 @@
       "url": "https://b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "586ms",
+      "latency": "83ms",
       "ok": true
     },
     {
@@ -124,7 +127,7 @@
       "url": "https://trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "112ms",
+      "latency": "63ms",
       "ok": true
     },
     {
@@ -132,7 +135,7 @@
       "url": "https://b8b.group/lands/",
       "type": "Web Platform",
       "code": 200,
-      "latency": "82ms",
+      "latency": "138ms",
       "ok": true
     },
     {
@@ -140,7 +143,7 @@
       "url": "https://b8b.group/pp/",
       "type": "Web Platform",
       "code": 200,
-      "latency": "100ms",
+      "latency": "75ms",
       "ok": true
     },
     {
@@ -148,7 +151,7 @@
       "url": "https://bwork.b8b.group/healthz",
       "type": "Worker Health",
       "code": 200,
-      "latency": "547ms",
+      "latency": "488ms",
       "ok": true
     }
   ],
@@ -229,53 +232,86 @@
     }
   ],
   "trustAndVerification": {
-    "summary": "LINE & Google Reviews Pending · Stripe Active",
+    "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
+    "lastSyncThai": "20 ก.ย. 2569 เวลา 09:50:20 น.",
     "bwork": {
       "line": {
-        "name": "LINE Official Account (@bwork)",
-        "target": "Blue Shield (บัญชีรับรอง)",
+        "name": "LINE Official Account (@bwork / @254yglkl)",
+        "accountName": "Bwork",
+        "basicId": "@254yglkl",
+        "premiumId": "@bwork",
+        "target": "Blue Shield (บัญชีรับรอง / Verified Account)",
         "currentBadge": "Grey Shield (บัญชีทั่วไป)",
         "status": "UNDER_REVIEW",
-        "statusLabel": "รอสายยืนยันตัวตน (5-10 วันทำการ)",
+        "statusLabel": "อยู่ระหว่างการตรวจสอบ (รอสายยืนยันตัวตน)",
+        "statusTag": "รอรับสาย 5–10 วันทำการ",
         "applicationRef": "002434229",
         "submittedDate": "2026-09-14 14:20",
-        "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด (0105559126054)",
+        "submittedDateThai": "14 ก.ย. 2569 เวลา 14:20 น.",
+        "daysInReview": 5,
+        "daysInReviewText": "ยื่นมาแล้ว 5 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
+        "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด",
+        "entityRegNo": "0105559126054",
         "contactPhone": "062-928-6289",
-        "actionRequired": "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย",
+        "applicantName": "ธนกร ปทุมรัตนเดชากร",
+        "applicantEmail": "tanakorn.db@gmail.com",
+        "actionRequired": "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย ที่เบอร์ 062-928-6289",
+        "benefits": "ปลดล็อกค้นหาชื่อ Bwork บนแอป LINE, ยิงแอดเพิ่มเพื่อนได้, ปลดคำเตือนความเสี่ยงทั้งหมด",
         "badgeColor": "amber"
       },
       "google": {
-        "name": "Google Cloud OAuth (bwork-bot)",
+        "name": "Google Cloud OAuth (โปรเจกต์: bwork-bot)",
+        "projectName": "bwork-bot",
+        "clientId": "bwork-bot-web",
         "target": "Verified App / Sensitive Scopes Approval",
         "brandingStatus": "VERIFIED",
         "brandingLabel": "แบรนด์และโลโก้ผ่านการอนุมัติแล้ว",
+        "brandingDateThai": "13 ก.ย. 2569",
         "dataAccessStatus": "UNDER_REVIEW",
-        "dataAccessLabel": "อยู่ระหว่างการตรวจสิทธิ์ (3-5 วันทำการ)",
+        "dataAccessLabel": "อยู่ระหว่างการตรวจสิทธิ์ Sensitive Scopes",
+        "statusTag": "รอผลตรวจ 3–5 วันทำการ",
         "scopes": [
-          "calendar.events",
-          "calendar.readonly",
-          "drive.file"
+          "calendar.events (Sensitive)",
+          "calendar.readonly (Sensitive)",
+          "drive.file (Non-sensitive)"
         ],
         "submittedDate": "2026-09-14 19:40",
+        "submittedDateThai": "14 ก.ย. 2569 เวลา 19:40 น.",
+        "daysInReview": 5,
+        "daysInReviewText": "ยื่นมาแล้ว 5 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
         "demoVideo": "https://youtu.be/Khzz_76OfoE",
-        "interimShield": "GOOGLE_VERIFIED=0 (แสดงจอแนะนำความปลอดภัย 3 ขั้นตอน)",
-        "actionRequired": "รออีเมลผลการตรวจจาก Google Trust & Safety (ห้ามแก้ไขคอนโซลระหว่างรอ)",
+        "demoVideoDuration": "2:16 นาที (ภาษาอังกฤษ)",
+        "interimShield": "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
+        "actionRequired": "รออีเมลผลตรวจจาก Google Trust & Safety (ห้ามกดยื่นซ้ำหรือแก้ไขคอนโซลระหว่างรอตรวจ)",
+        "adminEmail": "tanakorn.db@gmail.com",
         "badgeColor": "amber"
       },
       "stripe": {
         "name": "Stripe Live Payments (Bwork · live)",
+        "accountId": "acct_1UA07DKEZmbugLFd",
         "status": "VERIFIED_ACTIVE",
-        "statusLabel": "เปิดรับเงินและโอนเข้าบัญชีแล้ว 100%",
+        "statusLabel": "อนุมัติสมบูรณ์ 100% (รับเงิน & โอนเข้าบัญชี)",
         "chargesEnabled": true,
         "payoutsEnabled": true,
-        "payoutSchedule": "Automatic Daily (rolling 7 days)",
+        "payoutSchedule": "Automatic Daily (Rolling 7 วัน)",
+        "supportedMethods": [
+          "บัตรเครดิต/เดบิต (Visa, Mastercard, JCB)",
+          "PromptPay QR Code"
+        ],
         "badgeColor": "emerald"
       },
       "googleMaps": {
-        "name": "Google Maps Routes API",
+        "name": "Google Maps Platform",
+        "service": "Routes API & Geocoding",
         "status": "ACTIVE",
-        "statusLabel": "คำนวณเวลาเดินทางพร้อมใช้ (HTTP 200)",
+        "statusLabel": "พร้อมใช้งานคำนวณเวลาเดินทาง (HTTP 200 OK)",
         "badgeColor": "emerald"
+      },
+      "launch": {
+        "launchDate": "2026-09-29T00:00:00+07:00",
+        "launchDateThai": "29 กันยายน 2569 เวลา 00:00 น.",
+        "daysRemaining": 9,
+        "launchCountdownText": "อีก 9 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
   }
