@@ -1,0 +1,65 @@
+{
+  "downloadMbps": 81.9,
+  "uploadMbps": 193.7,
+  "pingMs": "29ms",
+  "responsivenessRpm": 18.4,
+  "testedAt": "2026-09-20T09:48:40Z",
+  "testedAtThai": "20 ก.ย. 2569 เวลา 16:48 น.",
+  "testServer": "Apple Edge (sgsin4-edge-fx-031.aaplimg.com)",
+  "interface": "Wi-Fi (en0 · 802.11n 2.4GHz)",
+  "signalDbm": "-62 dBm",
+  "isp": "TRUE INTERNET CORPORATION CO. LTD.",
+  "publicIp": "115.87.58.146",
+  "city": "Bangkok",
+  "country": "Thailand",
+  "colo": "BKK",
+  "localIp": "192.168.1.126",
+  "gatewayIp": "192.168.1.1",
+  "devices": [
+    {
+      "name": "MikroTik Routerboard",
+      "type": "Core Gateway / Router",
+      "ip": "192.168.1.1",
+      "secondaryIp": "10.10.10.1",
+      "mac": "dc:2c:6e:d7:e3:c5",
+      "vendor": "Routerboard.com (MikroTik)",
+      "ports": "WinBox (8291), WebFig (443), DNS (53)",
+      "role": "NAT Gateway, DHCP Server, Traffic Management"
+    },
+    {
+      "name": "UniFi Cloud Key Gen2 Plus",
+      "type": "Central Controller & NVR",
+      "ip": "192.168.1.143",
+      "mac": "78:45:58:de:bb:29",
+      "vendor": "Ubiquiti Inc",
+      "ports": "Web Console (443), Inform (8080), Controller (8443)",
+      "role": "Centralized Wi-Fi & UniFi Protect NVR Management"
+    },
+    {
+      "name": "UniFi Access Point #1",
+      "type": "Wireless Access Point",
+      "ip": "192.168.1.4",
+      "mac": "78:45:58:4b:5a:e8",
+      "vendor": "Ubiquiti Inc",
+      "ports": "Inform (8080), SSH (22)",
+      "role": "Dual-Band Wi-Fi Coverage Zone 1"
+    },
+    {
+      "name": "UniFi Access Point #2",
+      "type": "Wireless Access Point",
+      "ip": "192.168.1.5",
+      "mac": "78:45:58:4e:f1:d0",
+      "vendor": "Ubiquiti Inc",
+      "ports": "Inform (8080), SSH (22)",
+      "role": "Dual-Band Wi-Fi Coverage Zone 2"
+    },
+    {
+      "name": "Tailscale Mesh Node",
+      "type": "Virtual Private Network",
+      "ip": "100.126.177.124",
+      "vendor": "Tailscale (WireGuard)",
+      "ports": "Encrypted UDP Tunnel",
+      "role": "Zero-Trust Remote Access to CI & Cloud"
+    }
+  ]
+}

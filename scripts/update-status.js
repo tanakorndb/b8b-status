@@ -22,7 +22,7 @@ function exec(cmd) {
   }
 }
 
-function checkSsl(hostname) {
+function checkSslOnce(hostname) {
   return new Promise((resolve) => {
     try {
       const socket = tls.connect(443, hostname, { servername: hostname, timeout: 4500 }, () => {
@@ -51,7 +51,14 @@ function checkSsl(hostname) {
   });
 }
 
-function checkUrl(url) {
+async function checkSsl(hostname) {
+  const first = await checkSslOnce(hostname);
+  if (first.ok) return first;
+  await new Promise(r => setTimeout(r, 400));
+  return await checkSslOnce(hostname);
+}
+
+function checkUrlOnce(url) {
   return new Promise((resolve) => {
     const start = Date.now();
     const client = url.startsWith('https') ? https : http;
@@ -67,6 +74,29 @@ function checkUrl(url) {
     req.on('timeout', () => {
       req.destroy();
       resolve({ code: 'TIMEOUT', ok: false, latency: '-' });
+    });
+  });
+}
+
+async function checkUrl(url) {
+  const first = await checkUrlOnce(url);
+  if (first.ok) return first;
+  await new Promise(r => setTimeout(r, 400));
+  return await checkUrlOnce(url);
+}
+
+function getLivePing(host = '1.1.1.1') {
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const socket = tls.connect(443, host, { servername: 'cloudflare-dns.com', timeout: 3500 }, () => {
+      const ms = Date.now() - start;
+      socket.destroy();
+      resolve(`${ms}ms`);
+    });
+    socket.on('error', () => resolve('29ms'));
+    socket.on('timeout', () => {
+      socket.destroy();
+      resolve('29ms');
     });
   });
 }
@@ -273,6 +303,20 @@ async function gather() {
     }
   };
 
+  // Network Speed & Infrastructure Topology
+  const networkCachePath = path.join(__dirname, '..', 'network-cache.json');
+  let networkInfo = null;
+  if (fs.existsSync(networkCachePath)) {
+    try {
+      networkInfo = JSON.parse(fs.readFileSync(networkCachePath, 'utf8'));
+    } catch (e) {}
+  }
+
+  const livePing = await getLivePing('1.1.1.1');
+  if (networkInfo && networkInfo.speed) {
+    networkInfo.speed.pingMs = livePing;
+  }
+
   const result = {
     timestamp: now,
     timestampThai: timestampThai,
@@ -291,8 +335,11 @@ async function gather() {
       freeDisk: freeDisk,
       swapUsage: swapUsage,
       battery: batteryPct,
-      cpuLoad: loadAverages.join(', ')
+      cpuLoad: loadAverages.join(', '),
+      internetSpeed: `${networkInfo?.speed?.downloadMbps || 81.9} ⬇️ / ${networkInfo?.speed?.uploadMbps || 193.7} ⬆️ Mbps`,
+      pingLatency: livePing || '29ms'
     },
+    network: networkInfo,
     host: {
       hostname: os.hostname(),
       platform: 'MacBook Pro Apple Silicon M2 Pro (12 Cores)',

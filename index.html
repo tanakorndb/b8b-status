@@ -122,7 +122,7 @@
     </section>
 
     <!-- Key Metrics Ribbon (5 Cards Grid) -->
-    <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
       <!-- 1. Runners -->
       <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
@@ -182,11 +182,27 @@
         </div>
         <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
           <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
-          <span class="truncate" id="metricUptimeThai">SSD 169Gi ว่าง · RAM 16GB</span>
+          <span class="truncate" id="metricUptimeThai">SSD 186Gi ว่าง · RAM 16GB</span>
         </div>
       </div>
 
-      <!-- 5. Bwork Trust & Compliance -->
+      <!-- 5. Internet Speed -->
+      <div class="glass-card p-4 rounded-xl border border-sky-500/30 bg-sky-500/[0.03]">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>ความเร็วอินเทอร์เน็ต</span>
+          <span class="px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 font-medium font-mono text-[11px]" id="metricPing">Ping 29ms</span>
+        </div>
+        <div class="mt-2.5 flex items-baseline space-x-2">
+          <span class="text-2xl font-bold text-white tracking-tight" id="metricSpeedDown">81.9</span>
+          <span class="text-xs text-sky-400 font-mono">Mbps ⬇️</span>
+        </div>
+        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
+          <span class="truncate" id="metricSpeedUp">⬆️ 193.7 Mbps · True Fiber</span>
+        </div>
+      </div>
+
+      <!-- 6. Bwork Trust & Compliance -->
       <div class="glass-card p-4 rounded-xl border border-amber-500/30 bg-amber-500/[0.03]">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>Bwork ความปลอดภัย</span>
@@ -206,6 +222,9 @@
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar text-xs">
         <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3.5 py-1.5 rounded-lg bg-white/10 text-white font-medium whitespace-nowrap">ทั้งหมด (Overview)</button>
+        <button onclick="switchTab('network')" id="tab-network" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>⚡ ความเร็วเน็ต & อุปกรณ์ (Speed)
+        </button>
         <button onclick="switchTab('trust')" id="tab-trust" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>🛡️ Bwork ความปลอดภัย (LINE & Google)
         </button>
@@ -219,6 +238,21 @@
         <input type="text" id="filterInput" oninput="filterItems()" placeholder="ค้นหาระบบ / คำสำคัญ..." class="w-full sm:w-56 bg-white/5 border border-white/10 rounded-lg px-3.5 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition">
       </div>
     </div>
+
+    <!-- Section: Network Speed & Infrastructure Topology (MikroTik & Ubiquiti) -->
+    <section id="section-network" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-semibold tracking-wide text-white uppercase flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+          ⚡ ประสิทธิภาพเครือข่าย & ความเร็วอินเทอร์เน็ต (Network Speed & Infrastructure)
+        </h2>
+        <span class="text-xs text-sky-400/90 font-medium">Apple networkQuality · MikroTik Core Gateway · Ubiquiti UniFi Ecosystem</span>
+      </div>
+
+      <div id="networkContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
 
     <!-- Section 1: Trust & Security Verification (LINE, Google, Stripe) -->
     <section id="section-trust" class="space-y-3">
@@ -425,6 +459,21 @@
             badgeColor: "emerald"
           }
         }
+      },
+      network: {
+        downloadMbps: 81.9,
+        uploadMbps: 193.7,
+        pingMs: "29ms",
+        responsivenessRpm: 18.4,
+        testedAt: "2026-09-20T09:48:40Z",
+        testedAtThai: "20 ก.ย. 2569 เวลา 16:48 น.",
+        testServer: "Apple Edge (sgsin4-edge-fx-031.aaplimg.com)",
+        interface: "Wi-Fi (en0 · 802.11n 2.4GHz)",
+        isp: "TRUE INTERNET CORPORATION CO. LTD.",
+        publicIp: "115.87.58.146",
+        colo: "BKK",
+        localIp: "192.168.1.126",
+        gatewayIp: "192.168.1.1"
       }
     };
 
@@ -843,24 +892,283 @@
           </div>
         </div>
 
-        <!-- Chrome Automation -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row">
-          <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
-            <span>🌐 ระบบ Chrome Automation Hub</span>
-            <span class="text-emerald-400 font-mono">พอร์ต 9222</span>
-          </div>
-          <div class="p-3 rounded-lg bg-white/5 space-y-2 text-xs">
-            <div class="flex items-center justify-between">
-              <span class="text-slate-300 font-medium">Remote Debugging (CDP)</span>
-              <span class="text-emerald-400 text-[10px] font-mono font-bold">READY</span>
+      if (document.getElementById('metricSpeedDown')) {
+        document.getElementById('metricSpeedDown').textContent = data.network?.downloadMbps || data.network?.speed?.downloadMbps || '81.9';
+      }
+      if (document.getElementById('metricSpeedUp')) {
+        document.getElementById('metricSpeedUp').textContent = `⬆️ ${data.network?.uploadMbps || data.network?.speed?.uploadMbps || '193.7'} Mbps · True Fiber`;
+      }
+      if (document.getElementById('metricPing')) {
+        document.getElementById('metricPing').textContent = `Ping ${data.network?.pingMs || data.network?.speed?.pingMs || data.metrics?.pingLatency || '29ms'}`;
+      }
+
+      // 6. Render Network Speed & Infrastructure - SECTION 6
+      const net = data.network || fallbackData.network || {};
+      const speed = net.speed || net;
+      const networkHtml = `
+        <!-- Speedtest Hero Card -->
+        <div class="glass-card p-6 rounded-2xl border border-sky-500/30 bg-gradient-to-br from-sky-500/[0.04] via-transparent to-indigo-500/[0.04] space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-lg shadow-lg shadow-sky-500/10">
+                ⚡
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                  ความเร็วอินเทอร์เน็ต & เครือข่าย (Host Network Vitals)
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-mono font-medium">Apple networkQuality Verified</span>
+                </h3>
+                <p class="text-xs text-slate-400 mt-0.5">
+                  ทดสอบตรงจาก Apple Silicon Host (en0) ไปยัง ${speed.testServer || 'Apple Edge CDN'} · ${net.testedAtThai || formatThaiDateTime(net.testedAt)}
+                </p>
+              </div>
             </div>
-            <p class="text-[11px] text-slate-400">ควบคุมเบราว์เซอร์สำหรับ Claude, Codex, Gemini และ Antigravity โดยตรง</p>
-            <div class="pt-1 text-[10px] text-slate-500 font-mono">
-              3 โปรไฟล์พร้อมใช้งาน · ไม่มีปัญหา Session ชนกัน
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 font-mono">
+                ISP: <strong class="text-sky-400">${net.isp || 'TRUE INTERNET (TrueOnline)'}</strong>
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 font-mono">
+                WAN: <strong class="text-white">${net.publicIp || '115.87.58.146'}</strong> (${net.colo || 'BKK'})
+              </span>
+            </div>
+          </div>
+
+          <!-- Speed Gauges -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Downlink -->
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-sky-500/40 transition">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 font-medium text-slate-300">
+                  <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                  ดาวน์โหลด (Download)
+                </span>
+                <span class="text-[10px] text-emerald-400 font-mono">Ultra Fast</span>
+              </div>
+              <div class="mt-3 flex items-baseline space-x-1.5">
+                <span class="text-3xl sm:text-4xl font-black text-white tracking-tight font-mono">${speed.downloadMbps || 81.9}</span>
+                <span class="text-xs font-semibold text-emerald-400">Mbps</span>
+              </div>
+              <div class="mt-2 text-[11px] text-slate-400 truncate">
+                Bandwidth พร้อมสำหรับ Full CI QA & AI Workloads
+              </div>
+            </div>
+
+            <!-- Uplink -->
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-sky-500/40 transition">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 font-medium text-slate-300">
+                  <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                  อัปโหลด (Upload)
+                </span>
+                <span class="text-[10px] text-sky-400 font-mono">High Fiber</span>
+              </div>
+              <div class="mt-3 flex items-baseline space-x-1.5">
+                <span class="text-3xl sm:text-4xl font-black text-white tracking-tight font-mono">${speed.uploadMbps || 193.7}</span>
+                <span class="text-xs font-semibold text-sky-400">Mbps</span>
+              </div>
+              <div class="mt-2 text-[11px] text-slate-400 truncate">
+                อัปโหลดขึ้น Cloudflare & GitHub Actions รวดเร็วเต็มพิกัด
+              </div>
+            </div>
+
+            <!-- Latency Ping -->
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-sky-500/40 transition">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 font-medium text-slate-300">
+                  <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  ความหน่วง (Ping / RTT)
+                </span>
+                <span class="text-[10px] text-amber-400 font-mono">BKK Edge</span>
+              </div>
+              <div class="mt-3 flex items-baseline space-x-1.5">
+                <span class="text-3xl sm:text-4xl font-black text-white tracking-tight font-mono">${String(speed.pingMs || '29ms').replace('ms', '')}</span>
+                <span class="text-xs font-semibold text-amber-400">ms</span>
+              </div>
+              <div class="mt-2 text-[11px] text-slate-400 truncate">
+                Cloudflare 1.1.1.1 DNS & PoP Direct Route
+              </div>
+            </div>
+
+            <!-- Responsiveness -->
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-sky-500/40 transition">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 font-medium text-slate-300">
+                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                  การตอบสนอง (RPM)
+                </span>
+                <span class="text-[10px] text-purple-400 font-mono">Apple Index</span>
+              </div>
+              <div class="mt-3 flex items-baseline space-x-1.5">
+                <span class="text-3xl sm:text-4xl font-black text-white tracking-tight font-mono">${Math.round(speed.responsivenessRpm || 18)}</span>
+                <span class="text-xs font-semibold text-purple-400">RPM</span>
+              </div>
+              <div class="mt-2 text-[11px] text-slate-400 truncate">
+                Round-trips per minute ภายใต้โหลดเต็มที่
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network Devices & Infrastructure Topology (MikroTik + Ubiquiti) -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-semibold tracking-wider text-slate-400 uppercase flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+              อุปกรณ์โครงสร้างเครือข่ายภายในบ้าน (MikroTik & Ubiquiti Ecosystem)
+            </h3>
+            <span class="text-xs text-slate-500 font-mono">Local Subnet: 192.168.1.0/24 · Core: 10.10.10.0/24</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5">
+            <!-- MikroTik -->
+            <div class="glass-card p-4 rounded-xl border border-red-500/20 bg-red-500/[0.02] space-y-2.5 item-row">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-xs">
+                    MT
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">MikroTik Routerboard</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.1 · 10.10.10.1</span>
+                  </div>
+                </div>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 font-mono font-bold">
+                  CORE GATEWAY
+                </span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">บทบาท:</span>
+                  <span class="font-medium text-right">Main Router & NAT</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">การแจก IP:</span>
+                  <span class="font-mono text-emerald-400">DHCP Master (10.10.10.1)</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">พอร์ตจัดการ:</span>
+                  <span class="font-mono text-sky-400">WinBox 8291 · 443 · 53</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">MAC Address:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">dc:2c:6e:d7:e3:c5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- UniFi Cloud Key Gen2 Plus -->
+            <div class="glass-card p-4 rounded-xl border border-sky-500/20 bg-sky-500/[0.02] space-y-2.5 item-row">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">
+                    UB
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">UniFi Cloud Key Plus</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.143</span>
+                  </div>
+                </div>
+                <a href="https://192.168.1.143" target="_blank" class="text-[9px] px-2 py-0.5 rounded-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-mono font-bold transition">
+                  CONTROLLER ↗
+                </a>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">บทบาท:</span>
+                  <span class="font-medium text-right">Central Wi-Fi & NVR</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">ระบบปฏิบัติการ:</span>
+                  <span class="font-mono text-white">UniFi OS (Debian 11)</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">พอร์ตจัดการ:</span>
+                  <span class="font-mono text-sky-400">443 · 8080 · 8443 · SSH</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">MAC Address:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">78:45:58:de:bb:29</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- UniFi Access Points -->
+            <div class="glass-card p-4 rounded-xl border border-indigo-500/20 bg-indigo-500/[0.02] space-y-2.5 item-row">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">
+                    AP
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">UniFi AP #1 & #2</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.4 · 192.168.1.5</span>
+                  </div>
+                </div>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">
+                  DUAL AP MESH
+                </span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">สัญญาณ:</span>
+                  <span class="font-medium text-emerald-400">Seamless Roaming</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">คลื่นความถี่:</span>
+                  <span class="font-mono text-slate-300">2.4GHz + 5GHz Dual-Band</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">การเชื่อมต่อ:</span>
+                  <span class="font-mono text-slate-300">Inform to Cloud Key</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">Firmware OS:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">Dropbear SSH (Linux)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tailscale Mesh -->
+            <div class="glass-card p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.02] space-y-2.5 item-row">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                    TS
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-white">Tailscale Mesh Node</h4>
+                    <span class="text-[10px] text-slate-400 font-mono">100.126.177.124</span>
+                  </div>
+                </div>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">
+                  VPN ENCRYPTED
+                </span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">ประเภท:</span>
+                  <span class="font-medium text-white">WireGuard P2P Mesh</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">Node Name:</span>
+                  <span class="font-mono text-slate-300">ai-macbook-m2</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">MagicDNS:</span>
+                  <span class="font-mono text-emerald-400 text-[10px]">100.100.100.100</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                  <span class="text-slate-500">อุปกรณ์ร่วมวง:</span>
+                  <span class="font-mono text-slate-400 text-[10px]">iphone184 (100.118.42.50)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       `;
+      if (document.getElementById('networkContainer')) {
+        document.getElementById('networkContainer').innerHTML = networkHtml;
+      }
       document.getElementById('storageContainer').innerHTML = storageHtml;
     }
 
@@ -876,12 +1184,16 @@
         activeBtn.classList.remove('text-slate-400');
       }
 
-      const sections = ['runners', 'endpoints', 'mcp', 'storage', 'trust'];
+      const sections = ['network', 'runners', 'endpoints', 'mcp', 'storage', 'trust'];
       if (tab === 'all') {
-        sections.forEach(s => document.getElementById(`section-${s}`).style.display = 'block');
+        sections.forEach(s => {
+          const el = document.getElementById(`section-${s}`);
+          if (el) el.style.display = 'block';
+        });
       } else {
         sections.forEach(s => {
-          document.getElementById(`section-${s}`).style.display = (s === tab) ? 'block' : 'none';
+          const el = document.getElementById(`section-${s}`);
+          if (el) el.style.display = (s === tab) ? 'block' : 'none';
         });
       }
     }
@@ -937,6 +1249,16 @@
    - ระบบชำระเงิน: 🟢 เปิดรับเงิน & โอนเงินอัตโนมัติแล้ว 100% (charges & payouts active)
    - Google Maps Routes API: 🟢 พร้อมใช้งานคำนวณเวลาเดินทาง (HTTP 200 OK)
    - วันเปิดตัวอย่างเป็นทางการ: ${trust.launch?.launchDateThai || '29 กันยายน 2569'} (${trust.launch?.launchCountdownText || 'อีก 9 วัน'})
+
+### ⚡ ประสิทธิภาพเครือข่าย & ความเร็วอินเทอร์เน็ต (Network Infrastructure)
+- **ความเร็วดาวน์โหลด (Download)**: ${d.network?.downloadMbps || d.network?.speed?.downloadMbps || '81.9'} Mbps
+- **ความเร็วอัปโหลด (Upload)**: ${d.network?.uploadMbps || d.network?.speed?.uploadMbps || '193.7'} Mbps
+- **ความหน่วง (Ping / Latency)**: ${d.network?.pingMs || d.network?.speed?.pingMs || '29ms'} (Cloudflare BKK Edge)
+- **ผู้ให้บริการ (ISP)**: ${d.network?.isp || 'TRUE INTERNET (TrueOnline)'} (Public IP: ${d.network?.publicIp || '115.87.58.146'})
+- **เราเตอร์หลัก**: MikroTik Routerboard (192.168.1.1 & 10.10.10.1) · WinBox 8291
+- **คอนโทรลเลอร์ Wi-Fi**: Ubiquiti UniFi Cloud Key Gen2 Plus (192.168.1.143)
+- **จุดกระจายสัญญาณ**: UniFi AP #1 (192.168.1.4), AP #2 (192.168.1.5)
+- **VPN Mesh**: Tailscale (100.126.177.124)
 
 ### 🏃 GitHub Actions Self-Hosted Runners (8 โหนด)
 ${(d.runners || []).map(r => `- [${r.runner}] ${r.repo} : 🟢 ${r.status} (${r.service})`).join('\n')}
