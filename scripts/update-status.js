@@ -53,6 +53,13 @@ async function gather() {
   const pmset = exec('pmset -g');
   if (pmset && pmset.includes('SleepDisabled\t\t1')) sleepDisabled = true;
 
+  // Host Hardware & Resource Vitals
+  const freeDisk = exec("df -h /System/Volumes/Data | awk 'NR==2{print $4}'") || "170Gi";
+  const usedDiskPercent = exec("df -h /System/Volumes/Data | awk 'NR==2{print $5}'") || "82%";
+  const swapUsage = exec("sysctl -n vm.swapusage | awk '{print $6}'") || "0M";
+  const batteryPct = exec("pmset -g batt 2>/dev/null | grep -o '[0-9]*%' | head -1") || "80%";
+  const loadAverages = os.loadavg().map(n => n.toFixed(2));
+
   // Google Drive
   const drivePersonal = fs.existsSync('/Users/user/GoogleDrive-tanakorn.db');
   const driveWork = fs.existsSync('/Users/user/GoogleDrive-tanakorn.p');
@@ -242,15 +249,27 @@ async function gather() {
       mcpConnected: mcps.filter(m => m.status === 'connected').length,
       mcpTotal: mcps.length,
       hostUptime: `${uptimeDays}d ${uptimeHours}h ${uptimeMins}m`,
-      hostUptimeThai: hostUptimeThai
+      hostUptimeThai: hostUptimeThai,
+      hostVitals: `SSD ${freeDisk} ว่าง · RAM 16GB · M2 Pro`,
+      freeDisk: freeDisk,
+      swapUsage: swapUsage,
+      battery: batteryPct,
+      cpuLoad: loadAverages.join(', ')
     },
     host: {
       hostname: os.hostname(),
-      platform: 'macOS Apple Silicon (CI Server)',
+      platform: 'MacBook Pro Apple Silicon M2 Pro (12 Cores)',
+      osVersion: exec('sw_vers -productVersion') || '27.0',
       uptime: `${uptimeDays}d ${uptimeHours}h ${uptimeMins}m`,
       uptimeThai: hostUptimeThai,
       sleepDisabled: sleepDisabled,
-      powerStatus: 'AC Power (Sleep Disabled · Always-On)'
+      powerStatus: `AC Power (${batteryPct} · Sleep Disabled · Always-On)`,
+      cpuCores: 12,
+      cpuLoad: loadAverages,
+      ramTotal: '16 GB Unified Memory',
+      swapUsed: swapUsage,
+      diskAvailable: freeDisk,
+      diskUsedPercent: usedDiskPercent
     },
     googleDrive: {
       personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal },

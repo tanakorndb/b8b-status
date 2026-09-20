@@ -171,18 +171,18 @@
         </div>
       </div>
 
-      <!-- 4. Host Uptime -->
+      <!-- 4. Host Uptime & Vitals -->
       <div class="glass-card p-4 rounded-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>เวลาทำงาน Host</span>
-          <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium font-mono text-[11px]">AC Power</span>
+          <span>เวลาทำงาน & สเปก Host</span>
+          <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium font-mono text-[11px]">M2 Pro 12C</span>
         </div>
         <div class="mt-2.5 flex items-baseline space-x-2">
           <span class="text-2xl font-bold text-white tracking-tight" id="metricUptime">Always-On</span>
         </div>
         <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
           <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
-          <span class="truncate" id="metricUptimeThai">SleepDisabled = 1</span>
+          <span class="truncate" id="metricUptimeThai">SSD 169Gi ว่าง · RAM 16GB</span>
         </div>
       </div>
 
@@ -485,9 +485,9 @@
       document.getElementById('metricRunners').textContent = `${data.metrics?.runnersOnline || 8} / ${data.metrics?.runnersTotal || 8}`;
       document.getElementById('metricEndpoints').textContent = `${data.metrics?.endpointsOnline || 6} / ${data.metrics?.endpointsTotal || 6}`;
       document.getElementById('metricMcp').textContent = `${data.metrics?.mcpConnected || 9}`;
-      document.getElementById('metricUptime').textContent = data.metrics?.hostUptime ? data.metrics.hostUptime.split(' ')[0] : '23d+';
+      document.getElementById('metricUptime').textContent = data.metrics?.hostUptime ? data.metrics.hostUptime.split(' ')[0] : 'Always-On';
       if (document.getElementById('metricUptimeThai')) {
-        document.getElementById('metricUptimeThai').textContent = data.metrics?.hostUptimeThai || 'SleepDisabled = 1 (Always-On)';
+        document.getElementById('metricUptimeThai').textContent = data.metrics?.hostVitals || data.metrics?.hostUptimeThai || 'SSD 169Gi ว่าง · RAM 16GB';
       }
 
       // 1. Render Trust & Verification (Bwork) - SECTION 1
