@@ -195,7 +195,7 @@ async function gather() {
     { name: 'GitHub', id: 'github', desc: 'Codebase, PRs, Commits (tanakorndb)', status: 'connected', cost: '$4.00 / เดือน (~฿140)', billingDate: 'ทุกวันที่ 28 ของเดือน (GitHub Pro)' },
     { name: 'Cloudflare', id: 'cloudflare', desc: 'Workers, D1, KV, Pages (Tanakorn.db@gmail.com)', status: 'connected', cost: '฿0 / เดือน (Free Tier)', billingDate: 'ฟรีตลอดชีพ' },
     { name: 'Railway', id: 'railway', desc: 'Backend Services, Redis, Postgres (bwork, trade-bot)', status: 'connected', cost: '฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)', billingDate: 'รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน' },
-    { name: 'Google Drive', id: 'google-drive', desc: 'Personal & Work CloudStorage Filesystem', status: 'connected', cost: '฿70 / เดือน (Google One 100GB)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
+    { name: 'Google Drive', id: 'google-drive', desc: 'Personal (Gemini Pro 2TB) & Work (AIS Workspace)', status: 'connected', cost: '฿750 / เดือน (Google One AI Premium 2TB + Gemini Pro)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
     { name: 'Supabase', id: 'supabase', desc: 'Active Projects: อปท & bwork-index', status: 'connected', cost: '฿0 / เดือน (Free Plan 2/2)', billingDate: 'ฟรีตลอดชีพ' },
     { name: 'Brave Search', id: 'brave-search', desc: 'Real-time News & Web Search API', status: 'connected', cost: '฿0 / เดือน (API Plan)', billingDate: 'ฟรี / ในโควตา' },
     { name: 'Stripe', id: 'stripe', desc: 'Live Payments & Invoicing (Bwork · live)', status: 'connected', cost: '฿0 / เดือน คงที่ (Pay-as-you-go)', billingDate: 'ไม่มีค่าธรรมเนียมรายเดือน (หัก 3.65%+10฿/tx)' },
@@ -281,9 +281,11 @@ async function gather() {
         actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย ที่เบอร์ 062-928-6289",
         benefits: "ปลดล็อกค้นหาชื่อ Bwork บนแอป LINE, ยิงแอดเพิ่มเพื่อนได้, ปลดคำเตือนความเสี่ยงทั้งหมด",
         badgeColor: "amber",
-        cost: "~฿39.50 / เดือน (฿475.08 / ปี)",
-        billingDate: "ต่ออายุรายปีทุกวันที่ 14 กันยายน (แพ็กเกจข้อความฟรี ฿0/ด)",
-        annualThb: 475.08
+        cost: "฿1,284.00 / เดือน (Basic 15,000 ข้อความ) + ID ฿39.59/ด.",
+        billingDate: "Basic ตัดรอบบิลรายเดือน · ID ต่ออายุรายปี 14 ก.ย.",
+        monthlyBasicThb: 1284.00,
+        annualThb: 475.08,
+        package: "Basic Package (15,000 push messages/mo) + Premium ID"
       },
       google: {
         name: "Google Cloud OAuth (โปรเจกต์: bwork-bot)",
@@ -376,8 +378,8 @@ async function gather() {
     },
     workspaces: [
       { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (ฟรี)' },
-      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active', cost: '$20.00 / เดือน (~฿680)', billingDate: 'ทุกวันที่ 18 ของเดือน' },
-      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active', cost: '$20.00 / เดือน (~฿680)', billingDate: 'ทุกวันที่ 19 ของเดือน' },
+      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning (Claude Max)', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active', cost: '$200.00 / เดือน (~฿6,800)', billingDate: 'ทุกวันที่ 18 ของเดือน (Claude Max)' },
+      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode (Plus Plan)', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active', cost: '$20.00 / เดือน (฿699 จากสลิปจริง)', billingDate: 'ทุกวันที่ 19-20 ของเดือน (ChatGPT Plus)' },
       { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🪐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (Free Technical Preview)' }
     ],
     chromeConfig: {
@@ -430,48 +432,54 @@ async function gather() {
   // Master Financials Register & Summary
   const financials = {
     summary: {
-      totalMonthlyThb: 2307.50,
-      totalMonthlyUsd: 68.00,
+      totalMonthlyThb: 12677.01,
+      totalMonthlyUsd: 372.85,
       breakdown: {
-        infraThb: 239.00,
-        aiThb: 1360.00,
-        networkBusinessThb: 708.50
+        aiThb: 9426.00,
+        networkBusinessThb: 3011.85,
+        infraThb: 239.16
       },
       estimatedMonthlySavingsThb: 12500,
-      policy: "FREE-FIRST / ZERO-COST-FIRST — ควบคุมงบประมาณเข้มงวดและใช้สิทธิ์ Free-Tier & เครดิตฟรีอย่างคุ้มค่าสูงสุด",
+      policy: "FREE-FIRST / ZERO-COST-FIRST — ข้อมูลจริงจากสัญญา AIS, สลิปธนาคาร และใบเสร็จระบบทุกรายการ ไร้ข้อผิดพลาด",
       lastUpdatedThai: timestampThai
     },
     timeline: [
       { day: 1, name: "Railway Hobby Credit", cost: "เครดิตฟรี $5.00/ด. (จ่ายจริง $0)", category: "Cloud Infra", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
       { day: 1, name: "Google Maps Platform", cost: "เครดิตฟรี $200/ด. (จ่ายจริง $0)", category: "Business API", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
-      { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.50/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
-      { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿41/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
-      { day: 18, name: "Claude Desktop / Pro", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
-      { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด.", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
-      { day: 19, name: "ChatGPT Desktop / Plus", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19 ของเดือน" },
-      { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
-      { day: 25, name: "Google One Storage", cost: "฿70.00 / ด. (100GB)", category: "Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+      { day: 1, name: "LINE OA Basic Package", cost: "฿1,284.00 / ด. (15,000 ข้อความ)", category: "Business Messaging", status: "Monthly Active", cycle: "ตัดรอบบิลทุกเดือน" },
+      { day: 10, name: "True 5G Postpaid (Mobile)", cost: "฿1,089.26 / ด. (เบอร์ 094-2688868)", category: "Business Mobile", status: "Monthly Active", cycle: "ทุกวันที่ 10 ของเดือน" },
+      { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.59/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
+      { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿40.83/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
+      { day: 18, name: "Claude Max (Desktop)", cost: "$200.00 / ด. (~฿6,800)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+      { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด. (1000/500 Mbps)", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+      { day: 19, name: "ChatGPT Plus (Desktop)", cost: "$20.00 / ด. (฿699 จากสลิปจริง)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19-20 ของเดือน" },
+      { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58.33/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
+      { day: 25, name: "Gemini Pro (Google One AI Premium)", cost: "฿750.00 / ด. (2TB + Gemini Advanced)", category: "AI Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+      { day: 27, name: "Gemini Company (AIS Google Workspace)", cost: "฿1,177.00 / ด. รวม VAT (2 บัญชี b8b.homes)", category: "Enterprise AI", status: "Monthly Active", cycle: "รอบบิลรายเดือน AIS AWN" },
       { day: 28, name: "GitHub Pro (tanakorndb)", cost: "$4.00 / ด. (~฿140)", category: "Dev Platform", status: "Monthly Active", cycle: "ทุกวันที่ 28 ของเดือน" }
     ],
     items: [
-      { name: "Claude Pro (Desktop)", category: "AI Workspaces", plan: "Pro Plan ($20/mo)", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "Anthropic AI, Artifacts & Deep Reasoning" },
-      { name: "ChatGPT Plus (Desktop)", category: "AI Workspaces", plan: "Plus Plan ($20/mo)", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 19 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "OpenAI Canvas & Advanced Voice Mode" },
-      { name: "Google Chrome", category: "AI Workspaces", plan: "Desktop Browser", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "tanakorn.db@gmail.com", notes: "โปรไฟล์หลักเชื่อมต่อระบบบริหารจัดการ" },
-      { name: "Antigravity IDE", category: "AI Workspaces", plan: "Technical Preview", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "Google DeepMind", notes: "Agentic Suite & Autonomous Coding" },
-      { name: "True Fiber Internet", category: "Network & Host", plan: "GigaTex Fiber 500/500", costThb: 599, costUsd: 17.6, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "True Online", notes: "อินเทอร์เน็ตประจำ Mac Host 24/7" },
+      { name: "Claude Max (Desktop)", category: "AI Models", plan: "Max Plan ($200/mo)", costThb: 6800, costUsd: 200, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "Anthropic AI, Deep Strategic Architecture & Extended Thinking" },
+      { name: "ChatGPT Plus (Desktop)", category: "AI Models", plan: "Plus Plan ($20/mo)", costThb: 699, costUsd: 20, billingDate: "ทุกวันที่ 19-20 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "OpenAI Canvas & Advanced Voice (ตัดบัตร ฿699 จากสลิป SCB)" },
+      { name: "Gemini Pro (Personal)", category: "AI Models", plan: "Google One AI Premium (2TB)", costThb: 750, costUsd: 22.06, billingDate: "ทุกวันที่ 25 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "Gemini Advanced 1.5 Pro + 2TB Google One Cloud Storage" },
+      { name: "Gemini Company (Google Workspace)", category: "Enterprise AI", plan: "Standard with Gemini Promo (2 Users)", costThb: 1177, costUsd: 34.62, billingDate: "รอบบิลรายเดือน AIS AWN", cycle: "รายเดือน", account: "tanakorn.p@b8b.homes", notes: "สัญญา AIS AWN-20260727-001 (฿550/user + VAT 7% = ฿1,177/ด.)" },
+      { name: "LINE OA Basic Package", category: "Business & Trust", plan: "Basic (15,000 ข้อความ/ด.)", costThb: 1284, costUsd: 37.76, billingDate: "ตัดรอบบิลทุกเดือน", cycle: "รายเดือน", account: "LINE Official Account (@bwork)", notes: "แพ็กเกจส่งบรอดแคสต์ 15,000 ข้อความ/ด. (฿1,200 + VAT 7%)" },
+      { name: "LINE Premium ID (@bwork)", category: "Business & Trust", plan: "Premium ID (@bwork)", costThb: 39.59, costUsd: 1.16, billingDate: "14 กันยายน (รายปี)", cycle: "รายปี (฿475.08/ปี)", account: "LINE Thailand", notes: "ไอดีพรีเมียม Bwork สำหรับสร้างความน่าเชื่อถือและยื่นโล่น้ำเงิน" },
+      { name: "True 5G Postpaid (Mobile)", category: "Network & Host", plan: "True5G Postpaid Voice & Data", costThb: 1089.26, costUsd: 32.04, billingDate: "ทุกวันที่ 10 ของเดือน", cycle: "รายเดือน", account: "094-2688868 (True dtac)", notes: "เบอร์หลักรับ OTP บัญชีธุรกิจและการโทรยืนยันตัวตน LINE (สลิป 10 ก.ย.)" },
+      { name: "True Fiber Internet", category: "Network & Host", plan: "GigaTex Fiber 1000/500", costThb: 599, costUsd: 17.62, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "True Online", notes: "อินเทอร์เน็ตประจำ Mac Host 24/7 เพื่อ Runner & รีโมทคอนโทรล" },
       { name: "GitHub Pro", category: "Cloud Infra", plan: "Developer Pro ($4/mo)", costThb: 140, costUsd: 4, billingDate: "ทุกวันที่ 28 ของเดือน", cycle: "รายเดือน", account: "tanakorndb", notes: "Actions 3,000 นาที + Branch Protection 7 repos" },
+      { name: "Domain b8b.group", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 58.33, costUsd: 1.72, billingDate: "19 พฤษภาคม (รายปี)", cycle: "รายปี (฿700/ปี)", account: "Squarespace", notes: "โดเมนหลัก Gov, Lands, PP (หมดอายุ 2027-05-19)" },
+      { name: "Domain b8b.homes", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 40.83, costUsd: 1.20, billingDate: "16 กุมภาพันธ์ (รายปี)", cycle: "รายปี (฿490/ปี)", account: "Squarespace", notes: "โดเมนหลัก B8B Advisory & Gemini Workspace (หมดอายุ 2027-02-16)" },
+      { name: "Antigravity IDE", category: "AI Workspaces", plan: "Technical Preview", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "Google DeepMind", notes: "Agentic Suite & Autonomous Coding บนเครื่อง Mac M2" },
+      { name: "Google Chrome", category: "AI Workspaces", plan: "Desktop Browser", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "tanakorn.db@gmail.com", notes: "โปรไฟล์หลักเชื่อมต่อระบบบริหารจัดการและ Cloudflare/GitHub" },
       { name: "8 GitHub Runners", category: "Cloud Infra", plan: "Self-Hosted Farm", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่า compute", cycle: "ฟรี", account: "Local Mac M2", notes: "ประหยัดค่า GitHub Actions >฿5,000/ด." },
-      { name: "Domain b8b.group", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 58, costUsd: 1.67, billingDate: "19 พฤษภาคม (รายปี)", cycle: "รายปี (฿700/ปี)", account: "Squarespace", notes: "โดเมนหลัก Gov, Lands, PP (หมดอายุ 2027-05-19)" },
-      { name: "Domain b8b.homes", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 41, costUsd: 1.17, billingDate: "16 กุมภาพันธ์ (รายปี)", cycle: "รายปี (฿490/ปี)", account: "Squarespace", notes: "โดเมนหลัก Banii Bazi (หมดอายุ 2027-02-16)" },
       { name: "Cloudflare", category: "Cloud Infra", plan: "Free Tier (Pages/Workers)", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "Tanakorn.db@gmail.com", notes: "Unlimited Bandwidth Pages + 100k Worker req/d" },
       { name: "Railway", category: "Cloud Infra", plan: "Hobby ($5 Credit/mo)", costThb: 0, costUsd: 0, billingDate: "รีเซ็ตวันที่ 1 ของเดือน", cycle: "เครดิตฟรี", account: "tanakorn.db@gmail.com", notes: "ใช้จริง ~$1.25/ด. อยู่ในเครดิตฟรี $5.00 ไม่เสียเงิน" },
-      { name: "Supabase", category: "Database & Cloud", plan: "Free Tier (2/2 Active)", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "tanakorndb / Bwork", notes: "อปท + bwork-index (มีบอทปิงป้องกัน Auto-Pause)" },
-      { name: "Google One Storage", category: "Database & Cloud", plan: "Basic 100GB", costThb: 70, costUsd: 2, billingDate: "ทุกวันที่ 25 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "สำรองฐานข้อมูลและรายงานสถานะรายวัน" },
-      { name: "LINE OA (@bwork)", category: "Business & Trust", plan: "Premium ID (@bwork)", costThb: 39.5, costUsd: 1.16, billingDate: "14 กันยายน (รายปี)", cycle: "รายปี (฿475.08/ปี)", account: "LINE Thailand", notes: "ไอดีพรีเมียม (แพ็กเกจข้อความฟรี 500 ข้อความ ฿0)" },
+      { name: "Supabase", category: "Database & Cloud", plan: "Free Tier (3 Projects)", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "tanakorndb / Bwork", notes: "อปท + bwork-index + Bazi (มีบอทปิงป้องกัน Auto-Pause)" },
       { name: "Stripe Live", category: "Business & Trust", plan: "Live Payments Gateway", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการรายเดือน", cycle: "ตามธุรกรรม", account: "Bwork · live", notes: "หัก 3.65% + 10฿ ต่อรายการสำเร็จ (ไม่มีค่าคงที่)" },
       { name: "Google Maps Platform", category: "Business & Trust", plan: "Routes API & Geocoding", costThb: 0, costUsd: 0, billingDate: "รีเซ็ตวันที่ 1 ของเดือน", cycle: "เครดิตฟรี", account: "GCP bwork-bot", notes: "อยู่ในเครดิตฟรี $200/เดือน ไม่เสียเงิน" },
       { name: "Tailscale Mesh VPN", category: "Network & Host", plan: "Personal Free Plan", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "tanakorn.db@gmail.com", notes: "รีโมท Mac จาก iPad ความหน่วงต่ำสูงสุด 100 เครื่อง" },
-      { name: "Jump Desktop", category: "Network & Host", plan: "Fluid Unattended", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดครั้งเดียว", cycle: "ไม่มีรายเดือน", account: "tanakorn.db@gmail.com", notes: "สตรีมภาพ 60 FPS ความหน่วง <15ms จาก iPad" }
+      { name: "Jump Desktop", category: "Network & Host", plan: "Fluid Unattended", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดครั้งเดียว", cycle: "ไม่มีรายเดือน", account: "tanakorn.db@gmail.com", notes: "สตรีมภาพ 60 FPS ความหน่วง <15ms จาก iPad/iPhone" }
     ]
   };
 
@@ -519,8 +527,8 @@ async function gather() {
     },
     macbookProM2: macbookProM2,
     googleDrive: {
-      personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal, cost: '฿70 / เดือน (Google One 100GB)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
-      work: { account: 'tanakorn.p@b8b.homes', mounted: driveWork, cost: '฿0 / เดือน (Shared Workspace)', billingDate: 'บัญชีองค์กร' }
+      personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal, cost: '฿750 / เดือน (Google One AI Premium 2TB + Gemini Pro)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
+      work: { account: 'tanakorn.p@b8b.homes', mounted: driveWork, cost: '฿1,177 / เดือน รวม VAT (AIS Google Workspace Standard + Gemini 2 Licenses)', billingDate: 'รอบบิลรายเดือน AIS AWN' }
     },
     chrome: {
       cdpPort9222: isChromeCdp,

@@ -259,8 +259,8 @@
           </div>
         </div>
         <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
-          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">~฿39.50/ด.</strong></span>
-          <span class="text-sky-300 font-mono">ตัด 14 ก.ย.</span>
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿1,323.59/ด.</strong></span>
+          <span class="text-sky-300 font-mono">Basic+ID</span>
         </div>
       </div>
     </section>
@@ -281,23 +281,23 @@
         <div class="flex items-baseline gap-3">
           <div>
             <div class="text-[10px] text-slate-400 uppercase tracking-wider">ยอดรวมค่าใช้จ่ายสุทธิ / เดือน</div>
-            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight" id="heroTotalCostThb">฿2,307.50</div>
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight" id="heroTotalCostThb">฿12,677.01</div>
           </div>
-          <div class="text-sm font-mono text-slate-400 self-end pb-1" id="heroTotalCostUsd">(~$68.00 / mo)</div>
+          <div class="text-sm font-mono text-slate-400 self-end pb-1" id="heroTotalCostUsd">(~$372.85 / mo)</div>
         </div>
       </div>
 
       <!-- Financial Sub-Breakdowns & Highlights -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
         <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
-          <span class="text-[10px] text-slate-400 block">🤖 โมเดล AI (Claude + GPT)</span>
-          <span class="font-bold text-white font-mono text-sm" id="heroCostAi">฿1,360 / ด.</span>
-          <span class="text-[10px] text-slate-400 block font-mono">$40.00 · ตัดวันที่ 18, 19</span>
+          <span class="text-[10px] text-slate-400 block">🤖 โมเดล AI (Claude Max + GPT + Gemini)</span>
+          <span class="font-bold text-white font-mono text-sm" id="heroCostAi">฿9,426 / ด.</span>
+          <span class="text-[10px] text-slate-400 block font-mono">$277.00 · ตัดวันที่ 18, 19, 25, 27</span>
         </div>
         <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
-          <span class="text-[10px] text-slate-400 block">⚡ เน็ต & สตอเรจ (True + Drive)</span>
-          <span class="font-bold text-white font-mono text-sm" id="heroCostNet">฿669 / ด.</span>
-          <span class="text-[10px] text-slate-400 block font-mono">Fiber ฿599 + Drive ฿70</span>
+          <span class="text-[10px] text-slate-400 block">💬 สื่อสาร & องค์กร (LINE Basic + True)</span>
+          <span class="font-bold text-white font-mono text-sm" id="heroCostNet">฿3,012 / ด.</span>
+          <span class="text-[10px] text-slate-400 block font-mono">LINE ฿1,324 + Fiber ฿599 + 5G</span>
         </div>
         <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
           <span class="text-[10px] text-slate-400 block">🌐 คลาวด์ & โดเมน (GitHub + DNS)</span>
@@ -628,48 +628,54 @@
       },
       financials: {
         summary: {
-          totalMonthlyThb: 2307.50,
-          totalMonthlyUsd: 68.00,
+          totalMonthlyThb: 12677.01,
+          totalMonthlyUsd: 372.85,
           breakdown: {
-            infraThb: 239.00,
-            aiThb: 1360.00,
-            networkBusinessThb: 708.50
+            aiThb: 9426.00,
+            networkBusinessThb: 3011.85,
+            infraThb: 239.16
           },
           estimatedMonthlySavingsThb: 12500,
-          policy: "FREE-FIRST / ZERO-COST-FIRST — ควบคุมงบประมาณเข้มงวดและใช้สิทธิ์ Free-Tier & เครดิตฟรีอย่างคุ้มค่าสูงสุด",
-          lastUpdatedThai: "21 ก.ย. 2569 เวลา 19:00:46 น."
+          policy: "FREE-FIRST / ZERO-COST-FIRST — ข้อมูลจริงจากสัญญา AIS, สลิปธนาคาร และใบเสร็จระบบทุกรายการ ไร้ข้อผิดพลาด",
+          lastUpdatedThai: "21 ก.ย. 2569"
         },
         timeline: [
           { day: 1, name: "Railway Hobby Credit", cost: "เครดิตฟรี $5.00/ด. (จ่ายจริง $0)", category: "Cloud Infra", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
           { day: 1, name: "Google Maps Platform", cost: "เครดิตฟรี $200/ด. (จ่ายจริง $0)", category: "Business API", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
-          { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.50/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
-          { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿41/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
-          { day: 18, name: "Claude Desktop / Pro", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
-          { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด.", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
-          { day: 19, name: "ChatGPT Desktop / Plus", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19 ของเดือน" },
-          { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
-          { day: 25, name: "Google One Storage", cost: "฿70.00 / ด. (100GB)", category: "Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+          { day: 1, name: "LINE OA Basic Package", cost: "฿1,284.00 / ด. (15,000 ข้อความ)", category: "Business Messaging", status: "Monthly Active", cycle: "ตัดรอบบิลทุกเดือน" },
+          { day: 10, name: "True 5G Postpaid (Mobile)", cost: "฿1,089.26 / ด. (เบอร์ 094-2688868)", category: "Business Mobile", status: "Monthly Active", cycle: "ทุกวันที่ 10 ของเดือน" },
+          { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.59/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
+          { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿40.83/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
+          { day: 18, name: "Claude Max (Desktop)", cost: "$200.00 / ด. (~฿6,800)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+          { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด. (1000/500 Mbps)", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+          { day: 19, name: "ChatGPT Plus (Desktop)", cost: "$20.00 / ด. (฿699 จากสลิปจริง)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19-20 ของเดือน" },
+          { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58.33/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
+          { day: 25, name: "Gemini Pro (Google One AI Premium)", cost: "฿750.00 / ด. (2TB + Gemini Advanced)", category: "AI Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+          { day: 27, name: "Gemini Company (AIS Google Workspace)", cost: "฿1,177.00 / ด. รวม VAT (2 บัญชี b8b.homes)", category: "Enterprise AI", status: "Monthly Active", cycle: "รอบบิลรายเดือน AIS AWN" },
           { day: 28, name: "GitHub Pro (tanakorndb)", cost: "$4.00 / ด. (~฿140)", category: "Dev Platform", status: "Monthly Active", cycle: "ทุกวันที่ 28 ของเดือน" }
         ],
         items: [
-          { name: "Claude Desktop / Pro", category: "AI Subscription", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active" },
-          { name: "ChatGPT Desktop / Plus", category: "AI Subscription", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 19 ของเดือน", status: "Active" },
-          { name: "True Fiber Internet (1000/500)", category: "Host Connectivity", costThb: 599, costUsd: 17.6, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active" },
-          { name: "GitHub Pro (tanakorndb)", category: "Dev Platform", costThb: 140, costUsd: 4, billingDate: "ทุกวันที่ 28 ของเดือน", status: "Active" },
-          { name: "Google One (100GB Storage)", category: "Cloud Storage", costThb: 70, costUsd: 2.06, billingDate: "ทุกวันที่ 25 ของเดือน", status: "Active" },
-          { name: "Domain b8b.group", category: "Domain Name", costThb: 58.33, costUsd: 1.72, billingDate: "ต่ออายุรายปี 19 พ.ค. (฿700/ปี)", status: "Active" },
-          { name: "Domain b8b.homes", category: "Domain Name", costThb: 40.83, costUsd: 1.20, billingDate: "ต่ออายุรายปี 16 ก.พ. (฿490/ปี)", status: "Active" },
-          { name: "LINE Premium ID (@bwork)", category: "Business Brand", costThb: 39.59, costUsd: 1.16, billingDate: "ต่ออายุรายปี 14 ก.ย. (฿475.08/ปี)", status: "Active" },
-          { name: "Antigravity IDE & Gateway", category: "AI Tooling", costThb: 0, costUsd: 0, billingDate: "ฟรี Technical Preview", status: "Active Free" },
-          { name: "Google Chrome", category: "Browser", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", status: "Active Free" },
-          { name: "Jump Desktop (Fluid)", category: "Remote Suite", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดแล้ว (ฟรีบริการ)", status: "Active Free" },
-          { name: "Railway Hobby Platform", category: "Cloud Backend", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $5.00/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free" },
-          { name: "Google Maps Platform", category: "Business API", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $200/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free" },
-          { name: "Cloudflare Pages & Workers", category: "Edge Hosting", costThb: 0, costUsd: 0, billingDate: "Free Tier (100k req/วัน)", status: "Active Free" },
-          { name: "Supabase (อปท + bwork)", category: "Cloud Database", costThb: 0, costUsd: 0, billingDate: "Free Tier (2/2 Projects)", status: "Active Free" },
-          { name: "Stripe Live Payments", category: "Payment Gateway", costThb: 0, costUsd: 0, billingDate: "ตามจริง (ไม่มีค่ารายเดือน)", status: "Active Free" },
-          { name: "Tailscale Mesh VPN", category: "Network Security", costThb: 0, costUsd: 0, billingDate: "Free Tier (100 โหนด)", status: "Active Free" },
-          { name: "8 GitHub Actions Runners", category: "Compute Farm", costThb: 0, costUsd: 0, billingDate: "Self-Hosted บน Mac M2 (ประหยัด >฿5,000/ด.)", status: "Active Free" }
+          { name: "Claude Max (Desktop)", category: "AI Models", plan: "Max Plan ($200/mo)", costThb: 6800, costUsd: 200, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active", notes: "Anthropic AI, Deep Strategic Architecture & Extended Thinking" },
+          { name: "ChatGPT Plus (Desktop)", category: "AI Models", plan: "Plus Plan ($20/mo)", costThb: 699, costUsd: 20, billingDate: "ทุกวันที่ 19-20 ของเดือน", status: "Active", notes: "OpenAI Canvas & Advanced Voice (ตัดบัตร ฿699 จากสลิป SCB)" },
+          { name: "Gemini Pro (Personal)", category: "AI Models", plan: "Google One AI Premium (2TB)", costThb: 750, costUsd: 22.06, billingDate: "ทุกวันที่ 25 ของเดือน", status: "Active", notes: "Gemini Advanced 1.5 Pro + 2TB Google One Cloud Storage" },
+          { name: "Gemini Company (Google Workspace)", category: "Enterprise AI", plan: "Standard with Gemini Promo (2 Users)", costThb: 1177, costUsd: 34.62, billingDate: "รอบบิลรายเดือน AIS AWN", status: "Active", notes: "สัญญา AIS AWN-20260727-001 (฿550/user + VAT 7% = ฿1,177/ด.)" },
+          { name: "LINE OA Basic Package", category: "Business & Trust", plan: "Basic (15,000 ข้อความ/ด.)", costThb: 1284, costUsd: 37.76, billingDate: "ตัดรอบบิลทุกเดือน", status: "Active", notes: "แพ็กเกจส่งบรอดแคสต์ 15,000 ข้อความ/ด. (฿1,200 + VAT 7%)" },
+          { name: "LINE Premium ID (@bwork)", category: "Business & Trust", plan: "Premium ID (@bwork)", costThb: 39.59, costUsd: 1.16, billingDate: "14 กันยายน (รายปี)", status: "Active", notes: "ไอดีพรีเมียม Bwork สำหรับสร้างความน่าเชื่อถือและยื่นโล่น้ำเงิน" },
+          { name: "True 5G Postpaid (Mobile)", category: "Network & Host", plan: "True5G Postpaid Voice & Data", costThb: 1089.26, costUsd: 32.04, billingDate: "ทุกวันที่ 10 ของเดือน", status: "Active", notes: "เบอร์หลักรับ OTP บัญชีธุรกิจและการโทรยืนยันตัวตน LINE (สลิป 10 ก.ย.)" },
+          { name: "True Fiber Internet (1000/500)", category: "Host Connectivity", plan: "GigaTex Fiber 1000/500", costThb: 599, costUsd: 17.62, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active", notes: "อินเทอร์เน็ตประจำ Mac Host 24/7 เพื่อ Runner & รีโมทคอนโทรล" },
+          { name: "GitHub Pro (tanakorndb)", category: "Dev Platform", plan: "Developer Pro ($4/mo)", costThb: 140, costUsd: 4, billingDate: "ทุกวันที่ 28 ของเดือน", status: "Active", notes: "Actions 3,000 นาที + Branch Protection 7 repos" },
+          { name: "Domain b8b.group", category: "Domain Name", plan: "Squarespace Domains", costThb: 58.33, costUsd: 1.72, billingDate: "ต่ออายุรายปี 19 พ.ค. (฿700/ปี)", status: "Active", notes: "โดเมนหลัก Gov, Lands, PP (หมดอายุ 2027-05-19)" },
+          { name: "Domain b8b.homes", category: "Domain Name", plan: "Squarespace Domains", costThb: 40.83, costUsd: 1.20, billingDate: "ต่ออายุรายปี 16 ก.พ. (฿490/ปี)", status: "Active", notes: "โดเมนหลัก B8B Advisory & Gemini Workspace (หมดอายุ 2027-02-16)" },
+          { name: "Antigravity IDE & Gateway", category: "AI Tooling", plan: "Technical Preview", costThb: 0, costUsd: 0, billingDate: "ฟรี Technical Preview", status: "Active Free", notes: "Agentic Suite & Autonomous Coding บนเครื่อง Mac M2" },
+          { name: "Google Chrome", category: "Browser", plan: "Desktop Browser", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", status: "Active Free", notes: "โปรไฟล์หลักเชื่อมต่อระบบบริหารจัดการและ Cloudflare/GitHub" },
+          { name: "Jump Desktop (Fluid)", category: "Remote Suite", plan: "Fluid Unattended", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดแล้ว (ฟรีบริการ)", status: "Active Free", notes: "สตรีมภาพ 60 FPS ความหน่วง <15ms จาก iPad/iPhone" },
+          { name: "Railway Hobby Platform", category: "Cloud Backend", plan: "Hobby ($5 Credit/mo)", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $5.00/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free", notes: "ใช้จริง ~$1.25/ด. อยู่ในเครดิตฟรี $5.00 ไม่เสียเงิน" },
+          { name: "Google Maps Platform", category: "Business API", plan: "Routes API & Geocoding", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $200/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free", notes: "อยู่ในเครดิตฟรี $200/เดือน ไม่เสียเงิน" },
+          { name: "Cloudflare Pages & Workers", category: "Edge Hosting", plan: "Free Tier (Pages/Workers)", costThb: 0, costUsd: 0, billingDate: "Free Tier (100k req/วัน)", status: "Active Free", notes: "Unlimited Bandwidth Pages + 100k Worker req/d" },
+          { name: "Supabase (อปท + bwork)", category: "Cloud Database", plan: "Free Tier (3 Projects)", costThb: 0, costUsd: 0, billingDate: "Free Tier (3/3 Projects)", status: "Active Free", notes: "อปท + bwork-index + Bazi (มีบอทปิงป้องกัน Auto-Pause)" },
+          { name: "Stripe Live Payments", category: "Payment Gateway", plan: "Live Payments Gateway", costThb: 0, costUsd: 0, billingDate: "ตามจริง (ไม่มีค่ารายเดือน)", status: "Active Free", notes: "หัก 3.65% + 10฿ ต่อรายการสำเร็จ (ไม่มีค่าคงที่)" },
+          { name: "Tailscale Mesh VPN", category: "Network Security", plan: "Personal Free Plan", costThb: 0, costUsd: 0, billingDate: "Free Tier (100 โหนด)", status: "Active Free", notes: "รีโมท Mac จาก iPad ความหน่วงต่ำสูงสุด 100 เครื่อง" },
+          { name: "8 GitHub Actions Runners", category: "Compute Farm", plan: "Self-Hosted Farm", costThb: 0, costUsd: 0, billingDate: "Self-Hosted บน Mac M2 (ประหยัด >฿5,000/ด.)", status: "Active Free", notes: "ประหยัดค่า GitHub Actions >฿5,000/ด." }
         ]
       }
     };
@@ -744,16 +750,16 @@
 
       // Update Hero Financial stats
       if (document.getElementById('heroTotalCostThb')) {
-        document.getElementById('heroTotalCostThb').textContent = '฿' + (finSummary.totalMonthlyThb || 2307.5).toLocaleString('th-TH', { minimumFractionDigits: 2 });
+        document.getElementById('heroTotalCostThb').textContent = '฿' + (finSummary.totalMonthlyThb || 12677.01).toLocaleString('th-TH', { minimumFractionDigits: 2 });
       }
       if (document.getElementById('heroTotalCostUsd')) {
-        document.getElementById('heroTotalCostUsd').textContent = `(~$${(finSummary.totalMonthlyUsd || 68).toFixed(2)} / mo)`;
+        document.getElementById('heroTotalCostUsd').textContent = `(~$${(finSummary.totalMonthlyUsd || 372.85).toFixed(2)} / mo)`;
       }
       if (document.getElementById('heroCostAi')) {
-        document.getElementById('heroCostAi').textContent = `฿${(finSummary.breakdown?.aiThb || 1360).toLocaleString('th-TH')} / ด.`;
+        document.getElementById('heroCostAi').textContent = `฿${(finSummary.breakdown?.aiThb || 9426).toLocaleString('th-TH')} / ด.`;
       }
       if (document.getElementById('heroCostNet')) {
-        document.getElementById('heroCostNet').textContent = `฿${(finSummary.breakdown?.networkBusinessThb || 708.5).toLocaleString('th-TH')} / ด.`;
+        document.getElementById('heroCostNet').textContent = `฿${(finSummary.breakdown?.networkBusinessThb || 3012).toLocaleString('th-TH')} / ด.`;
       }
       if (document.getElementById('heroCostInfra')) {
         document.getElementById('heroCostInfra').textContent = `฿${(finSummary.breakdown?.infraThb || 239).toLocaleString('th-TH')} / ด.`;
@@ -775,11 +781,11 @@
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">ACTIVE</span>
             </div>
             <div class="flex items-baseline gap-2">
-              <span class="text-2xl font-black text-white font-mono">฿${(finSummary.totalMonthlyThb || 2307.5).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</span>
-              <span class="text-xs text-emerald-400 font-mono">(~$${(finSummary.totalMonthlyUsd || 68).toFixed(2)} / mo)</span>
+              <span class="text-2xl font-black text-white font-mono">฿${(finSummary.totalMonthlyThb || 12677.01).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</span>
+              <span class="text-xs text-emerald-400 font-mono">(~$${(finSummary.totalMonthlyUsd || 372.85).toFixed(2)} / mo)</span>
             </div>
             <p class="text-[11px] text-slate-400 leading-relaxed">
-              รวมค่าใช้จ่ายจำเป็นทุกอย่าง: AI Model, Host Internet, GitHub Pro, Google Storage และโดเมนเนม
+              รวมค่าใช้จ่ายจริงทุกรายการ: Claude Max ($200), ChatGPT Plus ($20), Gemini Pro (2TB), AIS Workspace Gemini, LINE OA Basic, True 5G & Fiber, GitHub Pro และโดเมนเนม
             </p>
           </div>
 
@@ -1282,33 +1288,33 @@
             <div class="space-y-2 text-xs mt-3">
               <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
                 <div class="flex items-center justify-between">
-                  <span class="font-medium text-white">บัญชีส่วนตัว (Personal)</span>
+                  <span class="font-medium text-white">บัญชีส่วนตัว (Personal · Gemini Pro)</span>
                   <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
                 </div>
                 <div class="text-[11px] text-slate-400 font-mono">tanakorn.db@gmail.com</div>
-                <div class="text-[10px] text-slate-500">สำรองข้อมูล / รายงาน / สเปกงาน (Google One 100GB)</div>
+                <div class="text-[10px] text-slate-500">Google One AI Premium (Gemini Advanced + 2TB Cloud)</div>
                 <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
-                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿70.00 / เดือน</strong></span>
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿750.00 / เดือน</strong></span>
                   <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 25</strong></span>
                 </div>
               </div>
               <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
                 <div class="flex items-center justify-between">
-                  <span class="font-medium text-white">บัญชีทำงาน (Work)</span>
+                  <span class="font-medium text-white">บัญชีทำงาน (Work · AIS Gemini Workspace)</span>
                   <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
                 </div>
                 <div class="text-[11px] text-slate-400 font-mono">tanakorn.p@b8b.homes</div>
-                <div class="text-[10px] text-slate-500">Shared Drive & เอกสารองค์กร B8B</div>
+                <div class="text-[10px] text-slate-500">AIS Workspace Standard + Gemini (สัญญา AWN-20260727-001)</div>
                 <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
-                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เพิ่มเติม</strong></span>
-                  <span>รอบบิล: <strong class="text-sky-300 font-mono">รวมในองค์กร</strong></span>
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿1,177.00 / เดือน</strong> (รวม VAT 2 บัญชี)</span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">AIS รอบเดือน</strong></span>
                 </div>
               </div>
             </div>
           </div>
           <div class="pt-2 mt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
-            <span class="text-slate-400">รวมค่าสตอเรจคลาวด์: <strong class="text-emerald-400 font-mono font-medium">฿70.00 / เดือน</strong></span>
-            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 25 ของเดือน</strong></span>
+            <span class="text-slate-400">รวมสตอเรจ & Workspace AI: <strong class="text-emerald-400 font-mono font-medium">฿1,927.00 / เดือน</strong></span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">25 และ AIS</strong></span>
           </div>
         </div>
 
@@ -1396,9 +1402,9 @@
                   </span>
                   <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
                 </div>
-                <div class="text-[10px] text-slate-400">Anthropic AI, Artifacts & Deep Strategic Architecture</div>
+                <div class="text-[10px] text-slate-400">Anthropic AI, Artifacts & Deep Strategic Architecture (Claude Max)</div>
                 <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
-                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$20.00 / ด. (~฿680)</strong></span>
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$200.00 / ด. (~฿6,800)</strong></span>
                   <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 18</strong></span>
                 </div>
               </div>
@@ -1412,10 +1418,10 @@
                   </span>
                   <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
                 </div>
-                <div class="text-[10px] text-slate-400">OpenAI Canvas & Advanced Voice Mode</div>
+                <div class="text-[10px] text-slate-400">OpenAI Canvas & Advanced Voice Mode (Plus Plan)</div>
                 <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
-                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$20.00 / ด. (~฿680)</strong></span>
-                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 19</strong></span>
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$20.00 / ด. (฿699 จากสลิปจริง)</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 19-20</strong></span>
                 </div>
               </div>
 
@@ -1443,8 +1449,8 @@
             </div>
           </div>
           <div class="pt-2 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
-            <span class="text-slate-400">รวมค่าแอป AI บนเครื่อง: <strong class="text-emerald-400 font-mono font-medium">฿1,360.00 / เดือน</strong> ($40.00)</span>
-            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">18 และ 19</strong></span>
+            <span class="text-slate-400">รวมค่าแอป AI บนเครื่อง: <strong class="text-emerald-400 font-mono font-medium">฿7,499.00 / เดือน</strong> ($220.00)</span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">18 และ 19-20</strong></span>
           </div>
         </div>
 
