@@ -233,6 +233,9 @@
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar text-xs">
         <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3.5 py-1.5 rounded-lg bg-white/10 text-white font-medium whitespace-nowrap">ทั้งหมด (Overview)</button>
+        <button onclick="switchTab('macbook')" id="tab-macbook" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>💻 MacBook Pro M2 & Workspaces
+        </button>
         <button onclick="switchTab('network')" id="tab-network" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>⚡ ความเร็วเน็ต & อุปกรณ์ (Speed)
         </button>
@@ -345,6 +348,21 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="storageContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- Section: MacBook Pro M2 & AI Workspaces (Host Control & Remote Ecosystem) -->
+    <section id="section-macbook" class="space-y-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-1">
+        <h2 class="text-sm font-semibold tracking-wide text-white uppercase flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          💻 เครื่อง MacBook Pro M2 (AI Workspaces & รีโมทคอนโทรล iPad/iPhone)
+        </h2>
+        <span class="text-xs text-emerald-400/90 font-medium">4 Full-Screen Spaces · Jump Desktop 60 FPS Fluid · Antigravity Web Gateway · Chrome Default Profile</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="macbookContainer">
         <!-- Rendered via JS -->
       </div>
     </section>
@@ -949,6 +967,179 @@
         </div>
       `;
 
+      // 5.5 Render MacBook Pro M2 & Workspaces
+      const macbookHtml = `
+        <!-- Card 1: 4 Full-Screen Workspaces -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-emerald-500/20 bg-emerald-500/[0.02]">
+          <div class="flex items-center justify-between text-xs font-semibold text-white">
+            <span class="flex items-center gap-1.5">
+              <span>🖥️ 4 Full-Screen Spaces</span>
+              <span class="text-[10px] text-emerald-400 font-mono">100% Active</span>
+            </span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono font-bold border border-emerald-500/30">
+              SPACE LAYOUT
+            </span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <!-- Antigravity -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>🪐 Antigravity</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">Space 2</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+              </div>
+              <div class="text-[10px] text-slate-400">Autonomous Coding IDE, Agents & Control Hub</div>
+            </div>
+
+            <!-- Claude -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>🧠 Claude Desktop</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 font-mono">Space 3</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+              </div>
+              <div class="text-[10px] text-slate-400">Anthropic AI, Artifacts & Deep Strategic Architecture</div>
+            </div>
+
+            <!-- ChatGPT -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>💬 ChatGPT Desktop</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-teal-500/20 text-teal-300 font-mono">Space 4</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+              </div>
+              <div class="text-[10px] text-slate-400">OpenAI Canvas & Advanced Voice Mode</div>
+            </div>
+
+            <!-- Chrome -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>🌐 Google Chrome</span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 font-mono">Space 5</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+              </div>
+              <div class="text-[10px] text-slate-400">โปรไฟล์หลัก: <code class="text-sky-300 font-mono">tanakorn.db@gmail.com</code> (GitHub, Cloudflare, Supabase, Stripe)</div>
+            </div>
+
+            <!-- CLI pill -->
+            <div class="p-2 rounded-lg bg-black/30 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center justify-between">
+              <span>สลับด่วน: <code>ai-workspace focus &lt;app&gt;</code></span>
+              <span class="text-emerald-400"><code>ai-full</code></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Remote Control via iPad/iPhone -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-sky-500/20 bg-sky-500/[0.02]">
+          <div class="flex items-center justify-between text-xs font-semibold text-white">
+            <span class="flex items-center gap-1.5">
+              <span>📱 รีโมทจาก iPad / iPhone</span>
+              <span class="text-[10px] text-sky-400 font-mono">Fluid 60 FPS</span>
+            </span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 font-mono font-bold border border-sky-500/30">
+              REMOTE SUITE
+            </span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <!-- Jump Desktop -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>⚡ Jump Desktop (Fluid Protocol)</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 READY</span>
+              </div>
+              <div class="text-[10px] text-slate-400">
+                บัญชี: <span class="text-sky-300 font-mono">tanakorn.db@gmail.com</span> · ความหน่วง &lt;15ms
+              </div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">
+                • <b>โหมดทัช:</b> Direct Touch (แตะ 1 นิ้วคลิก, 2 นิ้วคลิกขวา, ปัด 2 นิ้ว Scroll)<br>
+                • <b>สลับ Space:</b> ปัด 3 นิ้ว ซ้าย-ขวาบนจอ iPad ลื่นไหลเหมือน Mac จริง<br>
+                • <b>ระบบเสียง:</b> ไดรเวอร์ JumpAudio สตรีมเสียงสดจาก Mac ไป iPad
+              </div>
+            </div>
+
+            <!-- Antigravity Mobile Gateway -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>🪐 Web Gateway (Port 7890)</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ONLINE</span>
+              </div>
+              <div class="text-[10px] text-slate-400">
+                ปุ่มลัดสลับ 4 หน้าจอใน 0.1s + สั่งงานด้วยเสียงภาษาไทย (Voice Dictation)
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-0.5 text-[10px] font-mono text-slate-400">
+                <a href="http://192.168.1.126:7890" target="_blank" class="text-indigo-400 hover:underline">LAN: 192.168.1.126:7890</a>
+                <span>•</span>
+                <a href="http://100.126.177.124:7890" target="_blank" class="text-sky-400 hover:underline">Tailscale: :7890</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Chrome Default & System Automation -->
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-amber-500/20 bg-amber-500/[0.02]">
+          <div class="flex items-center justify-between text-xs font-semibold text-white">
+            <span class="flex items-center gap-1.5">
+              <span>🔒 Chrome Default & ไฟล์อัตโนมัติ</span>
+              <span class="text-[10px] text-amber-400 font-mono">Guarded</span>
+            </span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 font-mono font-bold border border-amber-500/30">
+              AUTOMATED
+            </span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <!-- Chrome Profile -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>🌐 Chrome Default Profile Lock</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ENFORCED</span>
+              </div>
+              <div class="text-[10px] text-slate-400">
+                ล็อกค่าเริ่มต้น: <code class="text-amber-300 font-mono">tanakorn.db@gmail.com</code>
+              </div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">
+                • <b>ระบบเฝ้าระวัง:</b> ตรวจสอบทุกวันผ่าน <code>daily-ops.sh (Step 8 Guard)</code><br>
+                • <b>แอปเปิดด่วน:</b> <code>~/Applications/Chrome - Tanakorn.app</code><br>
+                • <b>CLI Shortcuts:</b> คำสั่ง <code>chrome</code> และ <code>google-chrome</code> ใน PATH
+              </div>
+            </div>
+
+            <!-- AirDrop & Capture -->
+            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                  <span>📥 AirDrop & แคปหน้าจออัตโนมัติ</span>
+                </span>
+                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ACTIVE</span>
+              </div>
+              <div class="text-[10px] text-slate-400">
+                เก็บที่: <code class="text-indigo-300 font-mono">~/Downloads/Airdrop&Capture</code>
+              </div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">
+                • <b>การจัดเรียง:</b> เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)<br>
+                • <b>Autonomous Daemon:</b> <code>com.b8b.airdrop_mover</code> ตรวจจับและจัดระเบียบ 24/7
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
       if (document.getElementById('metricSpeedDown')) {
         document.getElementById('metricSpeedDown').textContent = data.network?.downloadMbps || data.network?.speed?.downloadMbps || '81.9';
       }
@@ -1408,7 +1599,12 @@
       if (document.getElementById('networkContainer')) {
         document.getElementById('networkContainer').innerHTML = networkHtml;
       }
-      document.getElementById('storageContainer').innerHTML = storageHtml;
+      if (document.getElementById('storageContainer')) {
+        document.getElementById('storageContainer').innerHTML = storageHtml;
+      }
+      if (document.getElementById('macbookContainer')) {
+        document.getElementById('macbookContainer').innerHTML = macbookHtml;
+      }
     }
 
     // Tab Switching
@@ -1423,7 +1619,7 @@
         activeBtn.classList.remove('text-slate-400');
       }
 
-      const sections = ['network', 'runners', 'endpoints', 'mcp', 'storage', 'trust'];
+      const sections = ['network', 'macbook', 'runners', 'endpoints', 'mcp', 'storage', 'trust'];
       if (tab === 'all') {
         sections.forEach(s => {
           const el = document.getElementById(`section-${s}`);

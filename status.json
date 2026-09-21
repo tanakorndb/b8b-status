@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-21T10:05:12.411Z",
-  "timestampThai": "21 ก.ย. 2569 เวลา 17:05:13 น.",
+  "timestamp": "2026-09-21T11:32:13.592Z",
+  "timestampThai": "21 ก.ย. 2569 เวลา 18:32:14 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
@@ -10,15 +10,15 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "1d 8h 50m",
-    "hostUptimeThai": "1 วัน 8 ชั่วโมง 50 นาที",
-    "hostVitals": "SSD 200Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "200Gi",
-    "swapUsage": "4451.94M",
+    "hostUptime": "1d 10h 17m",
+    "hostUptimeThai": "1 วัน 10 ชั่วโมง 17 นาที",
+    "hostVitals": "SSD 199Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "199Gi",
+    "swapUsage": "4961.50M",
     "battery": "80%",
-    "cpuLoad": "2.77, 2.51, 2.44",
+    "cpuLoad": "2.14, 2.85, 4.53",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "21ms"
+    "pingLatency": "27ms"
   },
   "network": {
     "downloadMbps": 81.9,
@@ -115,20 +115,120 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "1d 8h 50m",
-    "uptimeThai": "1 วัน 8 ชั่วโมง 50 นาที",
+    "uptime": "1d 10h 17m",
+    "uptimeThai": "1 วัน 10 ชั่วโมง 17 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "2.77",
-      "2.51",
-      "2.44"
+      "2.14",
+      "2.85",
+      "4.53"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "4451.94M",
-    "diskAvailable": "200Gi",
+    "swapUsed": "4961.50M",
+    "diskAvailable": "199Gi",
     "diskUsedPercent": "78%"
+  },
+  "macbookProM2": {
+    "model": "MacBook Pro 14\" (Apple Silicon M2 Pro 12C / 16GB)",
+    "vitals": {
+      "uptimeThai": "1 วัน 10 ชั่วโมง 17 นาที",
+      "cpuLoad": "2.14, 2.85, 4.53",
+      "freeDisk": "199Gi",
+      "usedDiskPercent": "78%",
+      "swapUsed": "4961.50M",
+      "battery": "80%",
+      "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
+    },
+    "workspaces": [
+      {
+        "name": "Antigravity",
+        "role": "Autonomous Coding IDE & AI Control Hub",
+        "mode": "Full-Screen Space (Space 2)",
+        "status": "ONLINE",
+        "icon": "🪐",
+        "badge": "Active"
+      },
+      {
+        "name": "Claude Desktop",
+        "role": "Anthropic AI, Artifacts & Deep Reasoning",
+        "mode": "Full-Screen Space (Space 3)",
+        "status": "ONLINE",
+        "icon": "🧠",
+        "badge": "Active"
+      },
+      {
+        "name": "ChatGPT Desktop",
+        "role": "OpenAI Canvas & Advanced Voice Mode",
+        "mode": "Full-Screen Space (Space 4)",
+        "status": "ONLINE",
+        "icon": "💬",
+        "badge": "Active"
+      },
+      {
+        "name": "Google Chrome",
+        "role": "Production Work Hub (tanakorn.db@gmail.com)",
+        "mode": "Full-Screen Space (Space 5)",
+        "status": "ONLINE",
+        "icon": "🌐",
+        "badge": "Active"
+      }
+    ],
+    "chromeConfig": {
+      "defaultProfile": "Default (tanakorn.db@gmail.com)",
+      "status": "LOCKED_DEFAULT",
+      "enforcement": "Chrome Local State + daily-ops.sh Guard",
+      "shortcutApp": "~/Applications/Chrome - Tanakorn.app",
+      "cliCommand": "chrome / google-chrome (เปิดโปรไฟล์หลักเสมอ)"
+    },
+    "remoteControl": {
+      "jumpDesktop": {
+        "status": "READY_60FPS",
+        "protocol": "Fluid Protocol (Hardware Media Engine · <15ms Latency)",
+        "account": "tanakorn.db@gmail.com",
+        "deviceId": "CD-01M31RWG0NEKQNXK2QAT9HJBFS",
+        "touchMode": "Direct Touch (1-Finger Click, 2-Finger Right Click, 2-Finger Scroll, 3-Finger Space Switch)",
+        "audioStreaming": "JumpAudio & JumpAudioMic Drivers Active",
+        "daemon": "com.p5sys.jump.connect.service (24/7 Unattended)"
+      },
+      "mobileGateway": {
+        "status": "ONLINE",
+        "port": 7890,
+        "lanUrl": "http://192.168.1.126:7890",
+        "tailscaleUrl": "http://100.126.177.124:7890",
+        "features": "1-Tap 4-Workspace Switcher, Thai Voice Dictation, Live System Vitals",
+        "daemon": "com.b8b.antigravity.remote (LaunchAgent)"
+      }
+    },
+    "airdropAndCapture": {
+      "status": "ACTIVE",
+      "targetDirectory": "/Users/user/Downloads/Airdrop&Capture",
+      "sorting": "เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)",
+      "autoMover": "com.b8b.airdrop_mover (Active)"
+    },
+    "cliTools": [
+      {
+        "cmd": "ai-full",
+        "desc": "ปรับ 4 เวิร์กสเปซ (Antigravity, Claude, ChatGPT, Chrome) ให้เต็มหน้าจอทั้งหมด"
+      },
+      {
+        "cmd": "ai-workspace focus <app>",
+        "desc": "สลับ Space ไปยังแอปที่ต้องการใน 0.1 วินาที"
+      },
+      {
+        "cmd": "ai-workspace status",
+        "desc": "ตรวจสอบสถานะหน้าต่างและ Full-Screen ของทุกแอป"
+      },
+      {
+        "cmd": "b8b status",
+        "desc": "ดูรายงานสถานะระบบ B8B และเครื่อง Mac ภาพรวม"
+      },
+      {
+        "cmd": "b8b remote",
+        "desc": "ดูและจัดการ Antigravity Mobile Gateway"
+      }
+    ]
   },
   "googleDrive": {
     "personal": {
@@ -221,7 +321,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "176ms",
+      "latency": "90ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -236,7 +336,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "150ms",
+      "latency": "158ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -251,7 +351,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "87ms",
+      "latency": "90ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -266,7 +366,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "93ms",
+      "latency": "77ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -281,7 +381,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "125ms",
+      "latency": "94ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -296,7 +396,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "455ms",
+      "latency": "350ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -405,7 +505,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "21 ก.ย. 2569 เวลา 17:05:13 น.",
+    "lastSyncThai": "21 ก.ย. 2569 เวลา 18:32:14 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",

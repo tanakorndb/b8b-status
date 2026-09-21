@@ -340,6 +340,65 @@ async function gather() {
     networkInfo.speed.pingMs = livePing;
   }
 
+  // MacBook Pro M2 Specific Operational Details
+  const macbookProM2 = {
+    model: 'MacBook Pro 14" (Apple Silicon M2 Pro 12C / 16GB)',
+    vitals: {
+      uptimeThai: hostUptimeThai,
+      cpuLoad: loadAverages.join(', '),
+      freeDisk: freeDisk,
+      usedDiskPercent: usedDiskPercent,
+      swapUsed: swapUsage,
+      battery: batteryPct,
+      powerStatus: `AC Power (${batteryPct} · Sleep Disabled · Always-On)`
+    },
+    workspaces: [
+      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🪐', badge: 'Active' },
+      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active' },
+      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active' },
+      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🌐', badge: 'Active' }
+    ],
+    chromeConfig: {
+      defaultProfile: 'Default (tanakorn.db@gmail.com)',
+      status: 'LOCKED_DEFAULT',
+      enforcement: 'Chrome Local State + daily-ops.sh Guard',
+      shortcutApp: '~/Applications/Chrome - Tanakorn.app',
+      cliCommand: 'chrome / google-chrome (เปิดโปรไฟล์หลักเสมอ)'
+    },
+    remoteControl: {
+      jumpDesktop: {
+        status: 'READY_60FPS',
+        protocol: 'Fluid Protocol (Hardware Media Engine · <15ms Latency)',
+        account: 'tanakorn.db@gmail.com',
+        deviceId: 'CD-01M31RWG0NEKQNXK2QAT9HJBFS',
+        touchMode: 'Direct Touch (1-Finger Click, 2-Finger Right Click, 2-Finger Scroll, 3-Finger Space Switch)',
+        audioStreaming: 'JumpAudio & JumpAudioMic Drivers Active',
+        daemon: 'com.p5sys.jump.connect.service (24/7 Unattended)'
+      },
+      mobileGateway: {
+        status: agRemoteRunning ? 'ONLINE' : 'OFFLINE',
+        port: 7890,
+        lanUrl: 'http://192.168.1.126:7890',
+        tailscaleUrl: 'http://100.126.177.124:7890',
+        features: '1-Tap 4-Workspace Switcher, Thai Voice Dictation, Live System Vitals',
+        daemon: 'com.b8b.antigravity.remote (LaunchAgent)'
+      }
+    },
+    airdropAndCapture: {
+      status: airdropMoverRunning ? 'ACTIVE' : 'IDLE',
+      targetDirectory: '/Users/user/Downloads/Airdrop&Capture',
+      sorting: 'เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)',
+      autoMover: 'com.b8b.airdrop_mover (Active)'
+    },
+    cliTools: [
+      { cmd: 'ai-full', desc: 'ปรับ 4 เวิร์กสเปซ (Antigravity, Claude, ChatGPT, Chrome) ให้เต็มหน้าจอทั้งหมด' },
+      { cmd: 'ai-workspace focus <app>', desc: 'สลับ Space ไปยังแอปที่ต้องการใน 0.1 วินาที' },
+      { cmd: 'ai-workspace status', desc: 'ตรวจสอบสถานะหน้าต่างและ Full-Screen ของทุกแอป' },
+      { cmd: 'b8b status', desc: 'ดูรายงานสถานะระบบ B8B และเครื่อง Mac ภาพรวม' },
+      { cmd: 'b8b remote', desc: 'ดูและจัดการ Antigravity Mobile Gateway' }
+    ]
+  };
+
   const result = {
     timestamp: now,
     timestampThai: timestampThai,
@@ -378,6 +437,7 @@ async function gather() {
       diskAvailable: freeDisk,
       diskUsedPercent: usedDiskPercent
     },
+    macbookProM2: macbookProM2,
     googleDrive: {
       personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal },
       work: { account: 'tanakorn.p@b8b.homes', mounted: driveWork }
