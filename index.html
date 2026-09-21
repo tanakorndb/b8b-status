@@ -132,99 +132,182 @@
       </div>
     </section>
 
-    <!-- Key Metrics Ribbon (5 Cards Grid) -->
+    <!-- Key Metrics Ribbon (6 Cards Grid) -->
     <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
       <!-- 1. Runners -->
-      <div class="glass-card p-4 rounded-xl">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>GitHub Runners</span>
-          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">8 ออนไลน์</span>
+      <div class="glass-card p-4 rounded-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>GitHub Runners</span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">8 ออนไลน์</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-white tracking-tight" id="metricRunners">8 / 8</span>
+            <span class="text-xs text-slate-400">โหนด</span>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+            <span class="truncate">macOS Host (LaunchAgent)</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-white tracking-tight" id="metricRunners">8 / 8</span>
-          <span class="text-xs text-slate-400">โหนด</span>
-        </div>
-        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-          <span class="truncate">macOS Host (LaunchAgent)</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0/ด.</strong></span>
+          <span class="text-sky-300 font-mono">ตัด 28th</span>
         </div>
       </div>
 
       <!-- 2. Endpoints -->
-      <div class="glass-card p-4 rounded-xl">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>เว็บไซต์สาธารณะ</span>
-          <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">100% Up</span>
+      <div class="glass-card p-4 rounded-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>เว็บไซต์สาธารณะ</span>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-medium font-mono text-[11px]">100% Up</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-white tracking-tight" id="metricEndpoints">6 / 6</span>
+            <span class="text-xs text-slate-400">ผ่าน</span>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+            <span class="truncate">ความเร็วเฉลี่ย ~98ms</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-white tracking-tight" id="metricEndpoints">6 / 6</span>
-          <span class="text-xs text-slate-400">ผ่าน</span>
-        </div>
-        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-          <span class="truncate">ความเร็วเฉลี่ย ~98ms</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿99/ด.</strong></span>
+          <span class="text-sky-300 font-mono">2 โดเมน</span>
         </div>
       </div>
 
       <!-- 3. AI & MCP -->
-      <div class="glass-card p-4 rounded-xl">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>AI MCP Servers</span>
-          <span class="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-medium font-mono text-[11px]">Unified</span>
+      <div class="glass-card p-4 rounded-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>AI MCP Servers</span>
+            <span class="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-medium font-mono text-[11px]">Unified</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-white tracking-tight" id="metricMcp">9</span>
+            <span class="text-xs text-slate-400">เชื่อมต่อ</span>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
+            <span class="truncate">Claude · Codex · Gemini</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-white tracking-tight" id="metricMcp">9</span>
-          <span class="text-xs text-slate-400">เชื่อมต่อ</span>
-        </div>
-        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-          <span class="truncate">Claude · Codex · Gemini</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">$4/ด.</strong></span>
+          <span class="text-sky-300 font-mono">ตัด 28th</span>
         </div>
       </div>
 
       <!-- 4. Host Uptime & Vitals -->
-      <div class="glass-card p-4 rounded-xl">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>เวลาทำงาน & สเปก Host</span>
-          <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium font-mono text-[11px]">M2 Pro 12C</span>
+      <div class="glass-card p-4 rounded-xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>เวลาทำงาน & สเปก Host</span>
+            <span class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-medium font-mono text-[11px]">M2 Pro 12C</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-white tracking-tight" id="metricUptime">Always-On</span>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
+            <span class="truncate" id="metricUptimeThai">SSD 186Gi ว่าง · RAM 16GB</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-white tracking-tight" id="metricUptime">Always-On</span>
-        </div>
-        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0"></span>
-          <span class="truncate" id="metricUptimeThai">SSD 186Gi ว่าง · RAM 16GB</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าเครื่อง: <strong class="text-emerald-400 font-mono font-medium">฿0/ด.</strong></span>
+          <span class="text-sky-300 font-mono">Hardware Own</span>
         </div>
       </div>
 
       <!-- 5. Internet Speed -->
-      <div class="glass-card p-4 rounded-xl border border-sky-500/30 bg-sky-500/[0.03]">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>ความเร็วอินเทอร์เน็ต</span>
-          <span class="px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 font-medium font-mono text-[11px]" id="metricPing">Ping 29ms</span>
+      <div class="glass-card p-4 rounded-xl border border-sky-500/30 bg-sky-500/[0.03] flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>ความเร็วอินเทอร์เน็ต</span>
+            <span class="px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 font-medium font-mono text-[11px]" id="metricPing">Ping 29ms</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-white tracking-tight" id="metricSpeedDown">81.9</span>
+            <span class="text-xs text-sky-400 font-mono">Mbps ⬇️</span>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
+            <span class="truncate" id="metricSpeedUp">⬆️ 193.7 Mbps · True Fiber</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-white tracking-tight" id="metricSpeedDown">81.9</span>
-          <span class="text-xs text-sky-400 font-mono">Mbps ⬇️</span>
-        </div>
-        <div class="mt-2 text-[11px] text-slate-400 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-          <span class="truncate" id="metricSpeedUp">⬆️ 193.7 Mbps · True Fiber</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿599/ด.</strong></span>
+          <span class="text-sky-300 font-mono">ตัดวันที่ 18</span>
         </div>
       </div>
 
       <!-- 6. Bwork Trust & Compliance -->
-      <div class="glass-card p-4 rounded-xl border border-amber-500/30 bg-amber-500/[0.03]">
-        <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>Bwork ความปลอดภัย</span>
-          <span class="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-medium font-mono text-[11px]">2 รอตรวจ</span>
+      <div class="glass-card p-4 rounded-xl border border-amber-500/30 bg-amber-500/[0.03] flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>Bwork ความปลอดภัย</span>
+            <span class="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 font-medium font-mono text-[11px]">2 รอตรวจ</span>
+          </div>
+          <div class="mt-2.5 flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-amber-400 tracking-tight" id="metricTrust">LINE · Google</span>
+          </div>
+          <div class="mt-2 text-[11px] text-amber-300/80 flex items-center gap-1.5 truncate">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+            <span class="truncate">โล่น้ำเงิน & Scopes ตรวจ</span>
+          </div>
         </div>
-        <div class="mt-2.5 flex items-baseline space-x-2">
-          <span class="text-2xl font-bold text-amber-400 tracking-tight" id="metricTrust">LINE · Google</span>
+        <div class="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+          <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">~฿39.50/ด.</strong></span>
+          <span class="text-sky-300 font-mono">ตัด 14 ก.ย.</span>
         </div>
-        <div class="mt-2 text-[11px] text-amber-300/80 flex items-center gap-1.5 truncate">
-          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-          <span class="truncate">โล่น้ำเงิน & Scopes ตรวจ</span>
+      </div>
+    </section>
+
+    <!-- Executive Financial Master Banner -->
+    <section class="glass-card p-4 sm:p-5 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-500/[0.08] via-slate-900/80 to-indigo-500/[0.08] space-y-3.5 shadow-2xl">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 border-b border-white/10 pb-3.5">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold border border-emerald-500/30">MONTHLY BUDGET</span>
+            <span class="text-xs text-slate-400 font-mono">นโยบาย Free-First / Zero-Cost-First</span>
+          </div>
+          <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+            <span>💰 สรุปงบประมาณและค่าใช้จ่ายรวมทุกระบบ</span>
+            <span class="text-xs font-normal text-slate-400 font-mono" id="finLastUpdated"></span>
+          </h2>
+        </div>
+        <div class="flex items-baseline gap-3">
+          <div>
+            <div class="text-[10px] text-slate-400 uppercase tracking-wider">ยอดรวมค่าใช้จ่ายสุทธิ / เดือน</div>
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight" id="heroTotalCostThb">฿2,307.50</div>
+          </div>
+          <div class="text-sm font-mono text-slate-400 self-end pb-1" id="heroTotalCostUsd">(~$68.00 / mo)</div>
+        </div>
+      </div>
+
+      <!-- Financial Sub-Breakdowns & Highlights -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
+        <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
+          <span class="text-[10px] text-slate-400 block">🤖 โมเดล AI (Claude + GPT)</span>
+          <span class="font-bold text-white font-mono text-sm" id="heroCostAi">฿1,360 / ด.</span>
+          <span class="text-[10px] text-slate-400 block font-mono">$40.00 · ตัดวันที่ 18, 19</span>
+        </div>
+        <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
+          <span class="text-[10px] text-slate-400 block">⚡ เน็ต & สตอเรจ (True + Drive)</span>
+          <span class="font-bold text-white font-mono text-sm" id="heroCostNet">฿669 / ด.</span>
+          <span class="text-[10px] text-slate-400 block font-mono">Fiber ฿599 + Drive ฿70</span>
+        </div>
+        <div class="p-2.5 rounded-xl bg-white/5 border border-white/5 space-y-0.5 cursor-pointer hover:bg-white/10 transition" onclick="switchTab('finance')">
+          <span class="text-[10px] text-slate-400 block">🌐 คลาวด์ & โดเมน (GitHub + DNS)</span>
+          <span class="font-bold text-white font-mono text-sm" id="heroCostInfra">฿239 / ด.</span>
+          <span class="text-[10px] text-slate-400 block font-mono">GH Pro $4 + 2 Domains</span>
+        </div>
+        <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-0.5 cursor-pointer hover:bg-emerald-500/15 transition" onclick="switchTab('finance')">
+          <span class="text-[10px] text-emerald-300 font-medium block">🎉 มูลค่าที่ประหยัดได้</span>
+          <span class="font-bold text-emerald-400 font-mono text-sm" id="heroSavings">>฿12,500 / ด.</span>
+          <span class="text-[10px] text-emerald-300/80 block font-mono">8 Self-Runners + CF + Supabase</span>
         </div>
       </div>
     </section>
@@ -233,6 +316,9 @@
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar text-xs">
         <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-3.5 py-1.5 rounded-lg bg-white/10 text-white font-medium whitespace-nowrap">ทั้งหมด (Overview)</button>
+        <button onclick="switchTab('finance')" id="tab-finance" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>💰 ค่าใช้จ่าย & รอบบิล (Billing)
+        </button>
         <button onclick="switchTab('macbook')" id="tab-macbook" class="tab-btn px-3.5 py-1.5 rounded-lg hover:bg-white/5 text-slate-400 font-medium whitespace-nowrap flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>💻 MacBook Pro M2 & Workspaces
         </button>
@@ -261,6 +347,21 @@
       <p id="noResultsQuery" class="text-xs text-slate-400">ลองค้นหาด้วยคำอื่น เช่น LINE, Google, Runner, UniFi หรือ MikroTik</p>
       <button onclick="clearFilter()" class="mt-2 px-3 py-1.5 text-xs rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/30 transition">ล้างคำค้นหา</button>
     </div>
+
+    <!-- Section: Financial Master Dashboard & Billing Timeline -->
+    <section id="section-finance" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-1">
+        <h2 class="text-sm font-semibold tracking-wide text-white uppercase flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          💰 สรุปงบประมาณ ค่าใช้จ่ายรายเดือน และปฏิทินรอบบิล (Financial Register & Billing Cycles)
+        </h2>
+        <span class="text-xs text-emerald-400/90 font-medium">ทุกรายการละเอียด · โปร่งใส · รวมยอดทั้งระบบ</span>
+      </div>
+
+      <div id="financeContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
 
     <!-- Section: Network Speed & Infrastructure Topology (MikroTik & Ubiquiti) -->
     <section id="section-network" class="space-y-4">
@@ -524,6 +625,52 @@
         colo: "BKK",
         localIp: "192.168.1.126",
         gatewayIp: "192.168.1.1"
+      },
+      financials: {
+        summary: {
+          totalMonthlyThb: 2307.50,
+          totalMonthlyUsd: 68.00,
+          breakdown: {
+            infraThb: 239.00,
+            aiThb: 1360.00,
+            networkBusinessThb: 708.50
+          },
+          estimatedMonthlySavingsThb: 12500,
+          policy: "FREE-FIRST / ZERO-COST-FIRST — ควบคุมงบประมาณเข้มงวดและใช้สิทธิ์ Free-Tier & เครดิตฟรีอย่างคุ้มค่าสูงสุด",
+          lastUpdatedThai: "21 ก.ย. 2569 เวลา 19:00:46 น."
+        },
+        timeline: [
+          { day: 1, name: "Railway Hobby Credit", cost: "เครดิตฟรี $5.00/ด. (จ่ายจริง $0)", category: "Cloud Infra", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
+          { day: 1, name: "Google Maps Platform", cost: "เครดิตฟรี $200/ด. (จ่ายจริง $0)", category: "Business API", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
+          { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.50/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
+          { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿41/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
+          { day: 18, name: "Claude Desktop / Pro", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+          { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด.", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+          { day: 19, name: "ChatGPT Desktop / Plus", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19 ของเดือน" },
+          { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
+          { day: 25, name: "Google One Storage", cost: "฿70.00 / ด. (100GB)", category: "Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+          { day: 28, name: "GitHub Pro (tanakorndb)", cost: "$4.00 / ด. (~฿140)", category: "Dev Platform", status: "Monthly Active", cycle: "ทุกวันที่ 28 ของเดือน" }
+        ],
+        items: [
+          { name: "Claude Desktop / Pro", category: "AI Subscription", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active" },
+          { name: "ChatGPT Desktop / Plus", category: "AI Subscription", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 19 ของเดือน", status: "Active" },
+          { name: "True Fiber Internet (1000/500)", category: "Host Connectivity", costThb: 599, costUsd: 17.6, billingDate: "ทุกวันที่ 18 ของเดือน", status: "Active" },
+          { name: "GitHub Pro (tanakorndb)", category: "Dev Platform", costThb: 140, costUsd: 4, billingDate: "ทุกวันที่ 28 ของเดือน", status: "Active" },
+          { name: "Google One (100GB Storage)", category: "Cloud Storage", costThb: 70, costUsd: 2.06, billingDate: "ทุกวันที่ 25 ของเดือน", status: "Active" },
+          { name: "Domain b8b.group", category: "Domain Name", costThb: 58.33, costUsd: 1.72, billingDate: "ต่ออายุรายปี 19 พ.ค. (฿700/ปี)", status: "Active" },
+          { name: "Domain b8b.homes", category: "Domain Name", costThb: 40.83, costUsd: 1.20, billingDate: "ต่ออายุรายปี 16 ก.พ. (฿490/ปี)", status: "Active" },
+          { name: "LINE Premium ID (@bwork)", category: "Business Brand", costThb: 39.59, costUsd: 1.16, billingDate: "ต่ออายุรายปี 14 ก.ย. (฿475.08/ปี)", status: "Active" },
+          { name: "Antigravity IDE & Gateway", category: "AI Tooling", costThb: 0, costUsd: 0, billingDate: "ฟรี Technical Preview", status: "Active Free" },
+          { name: "Google Chrome", category: "Browser", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", status: "Active Free" },
+          { name: "Jump Desktop (Fluid)", category: "Remote Suite", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดแล้ว (ฟรีบริการ)", status: "Active Free" },
+          { name: "Railway Hobby Platform", category: "Cloud Backend", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $5.00/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free" },
+          { name: "Google Maps Platform", category: "Business API", costThb: 0, costUsd: 0, billingDate: "เครดิตฟรี $200/ด. รีเซ็ตทุกวันที่ 1", status: "Active Free" },
+          { name: "Cloudflare Pages & Workers", category: "Edge Hosting", costThb: 0, costUsd: 0, billingDate: "Free Tier (100k req/วัน)", status: "Active Free" },
+          { name: "Supabase (อปท + bwork)", category: "Cloud Database", costThb: 0, costUsd: 0, billingDate: "Free Tier (2/2 Projects)", status: "Active Free" },
+          { name: "Stripe Live Payments", category: "Payment Gateway", costThb: 0, costUsd: 0, billingDate: "ตามจริง (ไม่มีค่ารายเดือน)", status: "Active Free" },
+          { name: "Tailscale Mesh VPN", category: "Network Security", costThb: 0, costUsd: 0, billingDate: "Free Tier (100 โหนด)", status: "Active Free" },
+          { name: "8 GitHub Actions Runners", category: "Compute Farm", costThb: 0, costUsd: 0, billingDate: "Self-Hosted บน Mac M2 (ประหยัด >฿5,000/ด.)", status: "Active Free" }
+        ]
       }
     };
 
@@ -587,6 +734,168 @@
       document.getElementById('metricUptime').textContent = data.metrics?.hostUptime ? data.metrics.hostUptime.split(' ')[0] : 'Always-On';
       if (document.getElementById('metricUptimeThai')) {
         document.getElementById('metricUptimeThai').textContent = data.metrics?.hostVitals || data.metrics?.hostUptimeThai || 'SSD 169Gi ว่าง · RAM 16GB';
+      }
+
+      // 0. Render Financial Master Register & Billing Cycles (SECTION 0)
+      const fin = data.financials || fallbackData.financials || {};
+      const finSummary = fin.summary || {};
+      const finTimeline = fin.timeline || [];
+      const finItems = fin.items || [];
+
+      // Update Hero Financial stats
+      if (document.getElementById('heroTotalCostThb')) {
+        document.getElementById('heroTotalCostThb').textContent = '฿' + (finSummary.totalMonthlyThb || 2307.5).toLocaleString('th-TH', { minimumFractionDigits: 2 });
+      }
+      if (document.getElementById('heroTotalCostUsd')) {
+        document.getElementById('heroTotalCostUsd').textContent = `(~$${(finSummary.totalMonthlyUsd || 68).toFixed(2)} / mo)`;
+      }
+      if (document.getElementById('heroCostAi')) {
+        document.getElementById('heroCostAi').textContent = `฿${(finSummary.breakdown?.aiThb || 1360).toLocaleString('th-TH')} / ด.`;
+      }
+      if (document.getElementById('heroCostNet')) {
+        document.getElementById('heroCostNet').textContent = `฿${(finSummary.breakdown?.networkBusinessThb || 708.5).toLocaleString('th-TH')} / ด.`;
+      }
+      if (document.getElementById('heroCostInfra')) {
+        document.getElementById('heroCostInfra').textContent = `฿${(finSummary.breakdown?.infraThb || 239).toLocaleString('th-TH')} / ด.`;
+      }
+      if (document.getElementById('heroSavings')) {
+        document.getElementById('heroSavings').textContent = `>฿${(finSummary.estimatedMonthlySavingsThb || 12500).toLocaleString('th-TH')} / ด.`;
+      }
+      if (document.getElementById('finLastUpdated') && finSummary.lastUpdatedThai) {
+        document.getElementById('finLastUpdated').textContent = `· ${finSummary.lastUpdatedThai}`;
+      }
+
+      const financeHtml = `
+        <!-- Overview Glass Highlights -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <!-- Card A: Total Spend -->
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-emerald-500 bg-emerald-500/[0.03] space-y-2">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>งบประมาณรายเดือนสุทธิ</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">ACTIVE</span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-black text-white font-mono">฿${(finSummary.totalMonthlyThb || 2307.5).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</span>
+              <span class="text-xs text-emerald-400 font-mono">(~$${(finSummary.totalMonthlyUsd || 68).toFixed(2)} / mo)</span>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+              รวมค่าใช้จ่ายจำเป็นทุกอย่าง: AI Model, Host Internet, GitHub Pro, Google Storage และโดเมนเนม
+            </p>
+          </div>
+
+          <!-- Card B: Zero-Cost Strategy -->
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-sky-500 bg-sky-500/[0.03] space-y-2">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>มูลค่าที่ประหยัดได้ (Free-Tier & Self-Hosted)</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 font-mono font-bold">SAVINGS</span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-black text-sky-400 font-mono">>฿${(finSummary.estimatedMonthlySavingsThb || 12500).toLocaleString('th-TH')}</span>
+              <span class="text-xs text-slate-400">/ เดือน</span>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+              จากการใช้ 8 Self-Hosted Runners บน Mac M2, Cloudflare Pages ไม่จำกัด, เครดิต Railway $5, เครดิต Maps $200 และ Supabase ฟรี
+            </p>
+          </div>
+
+          <!-- Card C: Policy -->
+          <div class="glass-card p-4 rounded-xl border-l-4 border-l-indigo-500 bg-indigo-500/[0.03] space-y-2">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>นโยบายงบประมาณ (Cost Policy)</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">DISCIPLINE</span>
+            </div>
+            <div class="text-xs font-bold text-white leading-tight">
+              ZERO-COST-FIRST / FREE-FIRST
+            </div>
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+              ไม่มีการจ่ายเงินเพิ่มโดยพลการ · ใช้สิทธิ์เครดิตฟรีให้เต็มวงเงินก่อนเสมอ · ปลอดภัย ไร้ค่าใช้จ่ายแอบแฝง
+            </p>
+          </div>
+        </div>
+
+        <!-- Monthly Billing Timeline (ปฏิทินรอบบิลตลอดเดือน) -->
+        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-base">📅</span>
+              <h3 class="text-sm font-bold text-white">ปฏิทินวันที่ตัดรอบบิลตลอดทั้งเดือน (Monthly Billing Timeline)</h3>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">เรียงตามลำดับวันที่ 1 ถึง 28</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 pt-1">
+            ${finTimeline.map(t => `
+              <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1.5 hover:border-emerald-500/30 transition">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-300 font-mono font-bold text-xs flex items-center justify-center">
+                    ${t.day}
+                  </span>
+                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-white/10 text-slate-300 font-mono">
+                    ${t.status}
+                  </span>
+                </div>
+                <div class="font-semibold text-white text-xs truncate">${t.name}</div>
+                <div class="text-[11px] font-mono font-bold text-emerald-400">${t.cost}</div>
+                <div class="text-[10px] text-slate-400 truncate">${t.cycle || t.category}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Master Financial Register Table -->
+        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-white/10 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                <span>📑 ทะเบียนค่าใช้จ่ายและรอบบิลทุกบริการ (Master Cost Register)</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono font-bold">18 รายการ</span>
+              </h3>
+              <p class="text-xs text-slate-400">ข้อมูลค่าบริการรายเดือนและรอบตัดเงินจริงของบัญชี tanakorn.db / Bwork ทั้งหมด</p>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto no-scrollbar pt-1">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-white/10 text-slate-400 font-mono text-[11px]">
+                  <th class="py-2.5 px-3">บริการ / เครื่องมือ</th>
+                  <th class="py-2.5 px-3">หมวดหมู่</th>
+                  <th class="py-2.5 px-3">แผนที่ใช้</th>
+                  <th class="py-2.5 px-3 text-right">ค่าใช้จ่าย / เดือน (THB)</th>
+                  <th class="py-2.5 px-3">วันที่ตัดรอบบิล</th>
+                  <th class="py-2.5 px-3">บัญชี / ผู้รับเงิน</th>
+                  <th class="py-2.5 px-3">หมายเหตุ / ความคุ้มค่า</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5 font-sans">
+                ${finItems.map(item => `
+                  <tr class="hover:bg-white/[0.03] transition item-row">
+                    <td class="py-2.5 px-3 font-semibold text-white">
+                      ${item.name}
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-400 text-[11px]">${item.category}</td>
+                    <td class="py-2.5 px-3 font-mono text-slate-300 text-[11px]">${item.plan}</td>
+                    <td class="py-2.5 px-3 font-mono font-bold text-right ${item.costThb > 0 ? 'text-emerald-400' : 'text-slate-400'}">
+                      ${item.costThb > 0 ? '฿' + item.costThb.toLocaleString('th-TH') : '฿0 (ฟรี)'}
+                      ${item.costUsd > 0 ? `<span class="text-[10px] text-slate-500 block">($${item.costUsd})</span>` : ''}
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-sky-300 text-[11px]">
+                      <span class="inline-flex items-center gap-1">
+                        <span>📅</span>
+                        <span>${item.billingDate}</span>
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-400 text-[11px]">${item.account}</td>
+                    <td class="py-2.5 px-3 text-slate-400 text-[11px]">${item.notes}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+      if (document.getElementById('financeContainer')) {
+        document.getElementById('financeContainer').innerHTML = financeHtml;
       }
 
       // 1. Render Trust & Verification (Bwork) - SECTION 1
@@ -675,6 +984,12 @@
                 ✨ ปลดล็อก: ค้นหาชื่อ Bwork บนแอป LINE ได้ทันที · ยิงแอดเพิ่มเพื่อน · ปลดคำเตือนความเสี่ยง
               </div>
             </div>
+
+            <!-- Cost & Billing Footer for LINE -->
+            <div class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono gap-1">
+              <span class="text-emerald-400">💳 ค่าบริการ: ${trust.line?.cost || '~฿39.50 / เดือน (฿475.08 / ปี)'}</span>
+              <span class="text-sky-300">📅 รอบบิล: ${trust.line?.billingDate || 'ต่ออายุรายปี 14 ก.ย.'}</span>
+            </div>
           </div>
         </div>
 
@@ -733,7 +1048,7 @@
                 <span class="text-slate-400">วิดีโอสาธิต (Demo Video):</span>
                 <a href="${trust.google?.demoVideo || 'https://youtu.be/Khzz_76OfoE'}" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300 flex items-center gap-1 font-medium">
                   <span>YouTube (2:16 นาที)</span>
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  <svg class="w-3 h-3 fill-none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
               </div>
               <div class="flex items-center justify-between border-t border-white/5 pt-1.5">
@@ -757,6 +1072,12 @@
               <div class="pt-1 text-[10px] text-emerald-400">
                 🛡️ ผู้ใช้ปัจจุบันได้รับการคุ้มครองด้วยหน้าต่างแนะนำ 3 ขั้นตอนเรียบร้อยแล้ว
               </div>
+            </div>
+
+            <!-- Cost & Billing Footer for Google Cloud -->
+            <div class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono gap-1">
+              <span class="text-emerald-400">💳 ค่าบริการ: ${trust.google?.cost || '฿0 / เดือน (Developer Scopes)'}</span>
+              <span class="text-sky-300">📅 รอบบิล: ${trust.google?.billingDate || 'ฟรีตลอดชีพ'}</span>
             </div>
           </div>
         </div>
@@ -827,6 +1148,16 @@
                 คีย์ลับและ Webhook บน Railway เชื่อมต่อชุดจริง บัญชีธนาคารยืนยันเรียบร้อย ราคาเปิดตัว ฿169/฿269 จะเริ่มเองตอนเที่ยงคืนของวันที่ 29 ก.ย. 2569 โดยอัตโนมัติ
               </p>
             </div>
+
+            <!-- Cost & Billing Footer for Stripe & Maps -->
+            <div class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono gap-1">
+              <span class="text-emerald-400">💳 Stripe: ${trust.stripe?.cost || '฿0 / เดือน ค่าคงที่'}</span>
+              <span class="text-sky-300">📅 รอบบิล: ${trust.stripe?.billingDate || 'หัก 3.65%+10฿/tx'}</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono gap-1">
+              <span class="text-emerald-400">💳 Maps API: ${trust.googleMaps?.cost || '฿0.00 สุทธิ (ในเครดิต $200)'}</span>
+              <span class="text-sky-300">📅 รอบบิล: ${trust.googleMaps?.billingDate || 'รีเซ็ตวันที่ 1 ของเดือน'}</span>
+            </div>
           </div>
         </div>
       `;
@@ -834,19 +1165,25 @@
 
       // 2. Render Runners
       const runnersHtml = (data.runners || []).map(r => `
-        <div class="glass-card p-4 rounded-xl flex items-center justify-between border-l-4 border-l-emerald-500 item-row">
-          <div class="space-y-1">
-            <div class="flex items-center space-x-2">
-              <span class="font-semibold text-white text-sm">${r.runner}</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-medium">ONLINE</span>
+        <div class="glass-card p-4 rounded-xl flex flex-col justify-between border-l-4 border-l-emerald-500 item-row space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="space-y-1">
+              <div class="flex items-center space-x-2">
+                <span class="font-semibold text-white text-sm">${r.runner}</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-medium">ONLINE</span>
+              </div>
+              <p class="text-xs text-slate-400 font-mono">${r.repo}</p>
+              <p class="text-[11px] text-slate-500">${r.service || 'CI / CD Automated Pipeline'}</p>
             </div>
-            <p class="text-xs text-slate-400 font-mono">${r.repo}</p>
-            <p class="text-[11px] text-slate-500">${r.service || 'CI / CD Automated Pipeline'}</p>
+            <div class="text-right">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10 font-mono">
+                ${r.busy ? '⚡ Running Job' : '🟢 Idle Ready'}
+              </span>
+            </div>
           </div>
-          <div class="text-right">
-            <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10 font-mono">
-              ${r.busy ? '⚡ Running Job' : '🟢 Idle Ready'}
-            </span>
+          <div class="pt-2 border-t border-white/5 flex flex-wrap items-center justify-between text-[11px] font-mono gap-1">
+            <span class="text-emerald-400">💳 ค่าบริการ: ${r.cost || '฿0 / เดือน (Self-Hosted)'}</span>
+            <span class="text-sky-300">📅 รอบบิล: ${r.billingDate || 'ไม่มีค่า compute (โควตา GitHub Pro จ่ายวันที่ 28)'}</span>
           </div>
         </div>
       `).join('');
@@ -854,7 +1191,7 @@
 
       // 3. Render Endpoints
       const endpointsHtml = (data.endpoints || []).map(e => `
-        <div class="glass-card p-4 rounded-xl flex flex-col justify-between border-l-4 ${e.ok ? 'border-l-emerald-500' : 'border-l-rose-500'} item-row">
+        <div class="glass-card p-4 rounded-xl flex flex-col justify-between border-l-4 ${e.ok ? 'border-l-emerald-500' : 'border-l-rose-500'} item-row space-y-2">
           <div class="space-y-1.5">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-white text-sm">${e.name}</span>
@@ -867,12 +1204,19 @@
               <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
             </a>
           </div>
-          <div class="mt-4 pt-2 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-            <span class="text-[11px] text-slate-500">${e.type}</span>
-            <div class="flex items-center gap-2">
-              ${e.ssl && e.ssl.daysLeft ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono" title="ผู้รับรอง: ${e.ssl.issuer || 'CA'} (หมดอายุใน ${e.ssl.daysLeft} วัน)">🔒 SSL ${e.ssl.daysLeft} วัน</span>` : ''}
-              <span class="font-mono text-emerald-400">${e.latency || '< 100ms'}</span>
+          <div class="pt-2 border-t border-white/5 space-y-1.5 text-xs text-slate-400">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] text-slate-500">${e.type}</span>
+              <div class="flex items-center gap-2">
+                ${e.ssl && e.ssl.daysLeft ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono" title="ผู้รับรอง: ${e.ssl.issuer || 'CA'} (หมดอายุใน ${e.ssl.daysLeft} วัน)">🔒 SSL ${e.ssl.daysLeft} วัน</span>` : ''}
+                <span class="font-mono text-emerald-400">${e.latency || '< 100ms'}</span>
+              </div>
             </div>
+            <div class="pt-1 border-t border-white/5 flex flex-wrap items-center justify-between text-[10.5px] font-mono gap-1">
+              <span class="text-emerald-400">💳 ${e.cost || '฿0 / เดือน (Cloudflare)'}</span>
+              <span class="text-sky-300">📅 ${e.billingDate || 'ฟรีตลอดชีพ'}</span>
+            </div>
+            ${e.domainCost ? `<div class="text-[10px] text-amber-300/90 font-mono">🌐 โดเมนเนม: ${e.domainCost}</div>` : ''}
           </div>
         </div>
       `).join('');
@@ -880,15 +1224,21 @@
 
       // 4. Render MCP
       const mcpHtml = (data.mcpServers || []).map(m => `
-        <div class="glass-card p-3.5 rounded-xl flex items-center justify-between item-row">
-          <div class="space-y-0.5 pr-2">
-            <div class="flex items-center space-x-2">
-              <span class="font-medium text-white text-xs">${m.name}</span>
-              <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/10 text-indigo-300 font-mono">MCP</span>
+        <div class="glass-card p-3.5 rounded-xl flex flex-col justify-between item-row space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="space-y-0.5 pr-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-medium text-white text-xs">${m.name}</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/10 text-indigo-300 font-mono">MCP</span>
+              </div>
+              <p class="text-[11px] text-slate-400 line-clamp-1">${m.desc}</p>
             </div>
-            <p class="text-[11px] text-slate-400 line-clamp-1">${m.desc}</p>
+            <span class="w-2 h-2 rounded-full ${m.status === 'connected' ? 'bg-emerald-400' : 'bg-amber-400'} flex-shrink-0"></span>
           </div>
-          <span class="w-2 h-2 rounded-full ${m.status === 'connected' ? 'bg-emerald-400' : 'bg-amber-400'} flex-shrink-0"></span>
+          <div class="pt-1.5 border-t border-white/5 flex flex-wrap items-center justify-between text-[10px] font-mono gap-1">
+            <span class="text-emerald-400">💳 ${m.cost || 'ฟรี ฿0/ด'}</span>
+            <span class="text-sky-300">📅 ${m.billingDate || 'ฟรีตลอดชีพ'}</span>
+          </div>
         </div>
       `).join('');
       document.getElementById('mcpContainer').innerHTML = mcpHtml;
@@ -896,85 +1246,111 @@
       // 5. Render Storage & Cloud
       const storageHtml = `
         <!-- Supabase -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row">
-          <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
-            <span>⚡ Supabase Database Clusters</span>
-            <span class="text-emerald-400 font-mono">2 / 2 Active</span>
-          </div>
-          <div class="space-y-2 text-xs">
-            ${(data.supabase || []).map(s => `
-              <div class="flex items-center justify-between p-2 rounded-lg bg-white/5">
-                <div>
-                  <div class="font-medium text-white">${s.name}</div>
-                  <div class="text-[10px] text-slate-500 font-mono">${s.ref}</div>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
+              <span>⚡ Supabase Database Clusters</span>
+              <span class="text-emerald-400 font-mono">2 / 2 Active</span>
+            </div>
+            <div class="space-y-2 text-xs mt-3">
+              ${(data.supabase || []).map(s => `
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white/5">
+                  <div>
+                    <div class="font-medium text-white">${s.name}</div>
+                    <div class="text-[10px] text-slate-500 font-mono">${s.ref}</div>
+                  </div>
+                  <span class="text-[10px] px-2 py-0.5 rounded font-mono ${s.status === 'ACTIVE_HEALTHY' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-slate-500/20 text-slate-400'}">
+                    ${s.tier}
+                  </span>
                 </div>
-                <span class="text-[10px] px-2 py-0.5 rounded font-mono ${s.status === 'ACTIVE_HEALTHY' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-slate-500/20 text-slate-400'}">
-                  ${s.tier}
-                </span>
-              </div>
-            `).join('')}
+              `).join('')}
+            </div>
+          </div>
+          <div class="pt-2 mt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">ค่าใช้จ่าย: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (Free Tier 2/2)</span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">รีเซ็ตทุกวันที่ 1</strong></span>
           </div>
         </div>
 
         <!-- Google Drive -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row">
-          <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
-            <span>📁 Google Drive Sync (macOS)</span>
-            <span class="text-emerald-400 font-mono">2 / 2 เชื่อมต่อแล้ว</span>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
+              <span>📁 Google Drive Sync (macOS)</span>
+              <span class="text-emerald-400 font-mono">2 / 2 เชื่อมต่อแล้ว</span>
+            </div>
+            <div class="space-y-2 text-xs mt-3">
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white">บัญชีส่วนตัว (Personal)</span>
+                  <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono">tanakorn.db@gmail.com</div>
+                <div class="text-[10px] text-slate-500">สำรองข้อมูล / รายงาน / สเปกงาน (Google One 100GB)</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿70.00 / เดือน</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 25</strong></span>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white">บัญชีทำงาน (Work)</span>
+                  <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono">tanakorn.p@b8b.homes</div>
+                <div class="text-[10px] text-slate-500">Shared Drive & เอกสารองค์กร B8B</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เพิ่มเติม</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">รวมในองค์กร</strong></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white">บัญชีส่วนตัว (Personal)</span>
-                <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
-              </div>
-              <div class="text-[11px] text-slate-400 font-mono">tanakorn.db@gmail.com</div>
-              <div class="text-[10px] text-slate-500">สำรองข้อมูล / รายงาน / สเปกงาน</div>
-            </div>
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white">บัญชีทำงาน (Work)</span>
-                <span class="text-emerald-400 text-[10px] font-mono">🟢 ซิงค์แล้ว</span>
-              </div>
-              <div class="text-[11px] text-slate-400 font-mono">tanakorn.p@b8b.homes</div>
-              <div class="text-[10px] text-slate-500">Shared Drive & เอกสารองค์กร</div>
-            </div>
+          <div class="pt-2 mt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">รวมค่าสตอเรจคลาวด์: <strong class="text-emerald-400 font-mono font-medium">฿70.00 / เดือน</strong></span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 25 ของเดือน</strong></span>
           </div>
         </div>
 
         <!-- Local Autonomous Services & Mobile Gateway -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row">
-          <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
-            <span>📱 เซอร์วิสควบคุม & ทำงานอัตโนมัติ</span>
-            <span class="text-emerald-400 font-mono">2 / 2 Active</span>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
+              <span>📱 เซอร์วิสควบคุม & ทำงานอัตโนมัติ</span>
+              <span class="text-emerald-400 font-mono">2 / 2 Active</span>
+            </div>
+            <div class="space-y-2 text-xs mt-3">
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🪐 Antigravity Mobile Gateway</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">Port 7890</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ONLINE</span>
+                </div>
+                <div class="text-[10px] text-slate-400">สั่งงานด้วยเสียงภาษาไทยจาก iPad / iPhone</div>
+                <div class="flex flex-wrap gap-1.5 pt-0.5 text-[10px] font-mono text-slate-400">
+                  <a href="http://192.168.1.126:7890" target="_blank" class="text-indigo-400 hover:underline">LAN: 192.168.1.126:7890</a>
+                  <span>•</span>
+                  <a href="http://100.126.177.124:7890" target="_blank" class="text-sky-400 hover:underline">Tailscale: :7890</a>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>📲 Autonomous AirDrop & Capture</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">Engine</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ACTIVE</span>
+                </div>
+                <div class="text-[10px] text-slate-400">จัดเก็บและเรียงไฟล์ใหม่สุดไว้บนสุดอัตโนมัติ</div>
+                <div class="text-[10px] font-mono text-slate-500 truncate">~/Downloads/Airdrop&Capture</div>
+              </div>
+            </div>
           </div>
-          <div class="space-y-2 text-xs">
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🪐 Antigravity Mobile Gateway</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">Port 7890</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ONLINE</span>
-              </div>
-              <div class="text-[10px] text-slate-400">สั่งงานด้วยเสียงภาษาไทยจาก iPad / iPhone</div>
-              <div class="flex flex-wrap gap-1.5 pt-0.5 text-[10px] font-mono text-slate-400">
-                <a href="http://192.168.1.126:7890" target="_blank" class="text-indigo-400 hover:underline">LAN: 192.168.1.126:7890</a>
-                <span>•</span>
-                <a href="http://100.126.177.124:7890" target="_blank" class="text-sky-400 hover:underline">Tailscale: :7890</a>
-              </div>
-            </div>
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>📲 Autonomous AirDrop & Capture</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">Engine</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ACTIVE</span>
-              </div>
-              <div class="text-[10px] text-slate-400">จัดเก็บและเรียงไฟล์ใหม่สุดไว้บนสุดอัตโนมัติ</div>
-              <div class="text-[10px] font-mono text-slate-500 truncate">~/Downloads/Airdrop&Capture</div>
-            </div>
+          <div class="pt-2 mt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">ค่าบริการเซอร์วิส: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (รันในเครื่อง)</span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">ไม่มีค่าบริการ</strong></span>
           </div>
         </div>
       `;
@@ -982,172 +1358,222 @@
       // 5.5 Render MacBook Pro M2 & Workspaces
       const macbookHtml = `
         <!-- Card 1: 4 Full-Screen Workspaces -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-emerald-500/20 bg-emerald-500/[0.02]">
-          <div class="flex items-center justify-between text-xs font-semibold text-white">
-            <span class="flex items-center gap-1.5">
-              <span>🖥️ 4 Full-Screen Spaces</span>
-              <span class="text-[10px] text-emerald-400 font-mono">100% Active</span>
-            </span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono font-bold border border-emerald-500/30">
-              SPACE LAYOUT
-            </span>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-emerald-500/20 bg-emerald-500/[0.02] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-white">
+              <span class="flex items-center gap-1.5">
+                <span>🖥️ 4 Full-Screen Spaces</span>
+                <span class="text-[10px] text-emerald-400 font-mono">100% Active</span>
+              </span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono font-bold border border-emerald-500/30">
+                SPACE LAYOUT
+              </span>
+            </div>
+
+            <div class="space-y-2 text-xs mt-3">
+              <!-- Chrome -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🌐 Google Chrome</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 font-mono">Space 2</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+                </div>
+                <div class="text-[10px] text-slate-400">โปรไฟล์หลัก: <code class="text-sky-300 font-mono">tanakorn.db@gmail.com</code> (GitHub, Cloudflare, Supabase, Stripe)</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / เดือน (ฟรี)</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ฟรีตลอดชีพ</strong></span>
+                </div>
+              </div>
+
+              <!-- Claude -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🧠 Claude Desktop</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 font-mono">Space 3</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+                </div>
+                <div class="text-[10px] text-slate-400">Anthropic AI, Artifacts & Deep Strategic Architecture</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$20.00 / ด. (~฿680)</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 18</strong></span>
+                </div>
+              </div>
+
+              <!-- ChatGPT -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>💬 ChatGPT Desktop</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-teal-500/20 text-teal-300 font-mono">Space 4</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+                </div>
+                <div class="text-[10px] text-slate-400">OpenAI Canvas & Advanced Voice Mode</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">$20.00 / ด. (~฿680)</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ทุกวันที่ 19</strong></span>
+                </div>
+              </div>
+
+              <!-- Antigravity -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🪐 Antigravity</span>
+                    <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">Space 5</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
+                </div>
+                <div class="text-[10px] text-slate-400">Autonomous Coding IDE, Agents & Control Hub</div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / เดือน (ฟรี)</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">Preview ฟรี</strong></span>
+                </div>
+              </div>
+
+              <!-- CLI pill -->
+              <div class="p-2 rounded-lg bg-black/30 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center justify-between">
+                <span>สลับด่วน: <code>ai-workspace focus &lt;app&gt;</code></span>
+                <span class="text-emerald-400"><code>ai-full</code></span>
+              </div>
+            </div>
           </div>
-
-          <div class="space-y-2 text-xs">
-            <!-- Chrome -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🌐 Google Chrome</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-300 font-mono">Space 2</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
-              </div>
-              <div class="text-[10px] text-slate-400">โปรไฟล์หลัก: <code class="text-sky-300 font-mono">tanakorn.db@gmail.com</code> (GitHub, Cloudflare, Supabase, Stripe)</div>
-            </div>
-
-            <!-- Claude -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🧠 Claude Desktop</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 font-mono">Space 3</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
-              </div>
-              <div class="text-[10px] text-slate-400">Anthropic AI, Artifacts & Deep Strategic Architecture</div>
-            </div>
-
-            <!-- ChatGPT -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>💬 ChatGPT Desktop</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-teal-500/20 text-teal-300 font-mono">Space 4</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
-              </div>
-              <div class="text-[10px] text-slate-400">OpenAI Canvas & Advanced Voice Mode</div>
-            </div>
-
-            <!-- Antigravity -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🪐 Antigravity</span>
-                  <span class="text-[9px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-mono">Space 5</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 FULL-SCREEN</span>
-              </div>
-              <div class="text-[10px] text-slate-400">Autonomous Coding IDE, Agents & Control Hub</div>
-            </div>
-
-            <!-- CLI pill -->
-            <div class="p-2 rounded-lg bg-black/30 border border-white/5 text-[10px] font-mono text-slate-400 flex items-center justify-between">
-              <span>สลับด่วน: <code>ai-workspace focus &lt;app&gt;</code></span>
-              <span class="text-emerald-400"><code>ai-full</code></span>
-            </div>
+          <div class="pt-2 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">รวมค่าแอป AI บนเครื่อง: <strong class="text-emerald-400 font-mono font-medium">฿1,360.00 / เดือน</strong> ($40.00)</span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">18 และ 19</strong></span>
           </div>
         </div>
 
         <!-- Card 2: Remote Control via iPad/iPhone -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-sky-500/20 bg-sky-500/[0.02]">
-          <div class="flex items-center justify-between text-xs font-semibold text-white">
-            <span class="flex items-center gap-1.5">
-              <span>📱 รีโมทจาก iPad / iPhone</span>
-              <span class="text-[10px] text-sky-400 font-mono">Fluid 60 FPS</span>
-            </span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 font-mono font-bold border border-sky-500/30">
-              REMOTE SUITE
-            </span>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-sky-500/20 bg-sky-500/[0.02] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-white">
+              <span class="flex items-center gap-1.5">
+                <span>📱 รีโมทจาก iPad / iPhone</span>
+                <span class="text-[10px] text-sky-400 font-mono">Fluid 60 FPS</span>
+              </span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 font-mono font-bold border border-sky-500/30">
+                REMOTE SUITE
+              </span>
+            </div>
+
+            <div class="space-y-2 text-xs mt-3">
+              <!-- Jump Desktop -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>⚡ Jump Desktop (Fluid Protocol)</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 READY</span>
+                </div>
+                <div class="text-[10px] text-slate-400">
+                  บัญชี: <span class="text-sky-300 font-mono">tanakorn.db@gmail.com</span> · ความหน่วง &lt;15ms
+                </div>
+                <div class="text-[10px] text-slate-500 leading-relaxed">
+                  • <b>โหมดทัช:</b> Direct Touch (แตะ 1 นิ้วคลิก, 2 นิ้วคลิกขวา, ปัด 2 นิ้ว Scroll)<br>
+                  • <b>สลับ Space:</b> ปัด 3 นิ้ว ซ้าย-ขวาบนจอ iPad ลื่นไหลเหมือน Mac จริง<br>
+                  • <b>ระบบเสียง:</b> ไดรเวอร์ JumpAudio สตรีมเสียงสดจาก Mac ไป iPad
+                </div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (ซื้อขาด)</span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">ฟรีตลอดชีพ</strong></span>
+                </div>
+              </div>
+
+              <!-- Antigravity Mobile Gateway -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🪐 Web Gateway (Port 7890)</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ONLINE</span>
+                </div>
+                <div class="text-[10px] text-slate-400">
+                  ปุ่มลัดสลับ 4 หน้าจอใน 0.1s + สั่งงานด้วยเสียงภาษาไทย (Voice Dictation)
+                </div>
+                <div class="flex flex-wrap gap-1.5 pt-0.5 text-[10px] font-mono text-slate-400">
+                  <a href="http://192.168.1.126:7890" target="_blank" class="text-indigo-400 hover:underline">LAN: 192.168.1.126:7890</a>
+                  <span>•</span>
+                  <a href="http://100.126.177.124:7890" target="_blank" class="text-sky-400 hover:underline">Tailscale: :7890</a>
+                </div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (Self-hosted)</span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">LAN / Tailscale</strong></span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="space-y-2 text-xs">
-            <!-- Jump Desktop -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>⚡ Jump Desktop (Fluid Protocol)</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 READY</span>
-              </div>
-              <div class="text-[10px] text-slate-400">
-                บัญชี: <span class="text-sky-300 font-mono">tanakorn.db@gmail.com</span> · ความหน่วง &lt;15ms
-              </div>
-              <div class="text-[10px] text-slate-500 leading-relaxed">
-                • <b>โหมดทัช:</b> Direct Touch (แตะ 1 นิ้วคลิก, 2 นิ้วคลิกขวา, ปัด 2 นิ้ว Scroll)<br>
-                • <b>สลับ Space:</b> ปัด 3 นิ้ว ซ้าย-ขวาบนจอ iPad ลื่นไหลเหมือน Mac จริง<br>
-                • <b>ระบบเสียง:</b> ไดรเวอร์ JumpAudio สตรีมเสียงสดจาก Mac ไป iPad
-              </div>
-            </div>
-
-            <!-- Antigravity Mobile Gateway -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🪐 Web Gateway (Port 7890)</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ONLINE</span>
-              </div>
-              <div class="text-[10px] text-slate-400">
-                ปุ่มลัดสลับ 4 หน้าจอใน 0.1s + สั่งงานด้วยเสียงภาษาไทย (Voice Dictation)
-              </div>
-              <div class="flex flex-wrap gap-1.5 pt-0.5 text-[10px] font-mono text-slate-400">
-                <a href="http://192.168.1.126:7890" target="_blank" class="text-indigo-400 hover:underline">LAN: 192.168.1.126:7890</a>
-                <span>•</span>
-                <a href="http://100.126.177.124:7890" target="_blank" class="text-sky-400 hover:underline">Tailscale: :7890</a>
-              </div>
-            </div>
+          <div class="pt-2 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">ค่าบริการรีโมททั้งหมด: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong></span>
+            <span class="text-slate-400">สถานะ: <strong class="text-emerald-400 font-mono">Zero-Cost</strong></span>
           </div>
         </div>
 
         <!-- Card 3: Chrome Default & System Automation -->
-        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-amber-500/20 bg-amber-500/[0.02]">
-          <div class="flex items-center justify-between text-xs font-semibold text-white">
-            <span class="flex items-center gap-1.5">
-              <span>🔒 Chrome Default & ไฟล์อัตโนมัติ</span>
-              <span class="text-[10px] text-amber-400 font-mono">Guarded</span>
-            </span>
-            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 font-mono font-bold border border-amber-500/30">
-              AUTOMATED
-            </span>
+        <div class="glass-card p-4 rounded-xl space-y-3 item-row border border-amber-500/20 bg-amber-500/[0.02] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-semibold text-white">
+              <span class="flex items-center gap-1.5">
+                <span>🔒 Chrome Default & ไฟล์อัตโนมัติ</span>
+                <span class="text-[10px] text-amber-400 font-mono">Guarded</span>
+              </span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 font-mono font-bold border border-amber-500/30">
+                AUTOMATED
+              </span>
+            </div>
+
+            <div class="space-y-2 text-xs mt-3">
+              <!-- Chrome Profile -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>🌐 Chrome Default Profile Lock</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ENFORCED</span>
+                </div>
+                <div class="text-[10px] text-slate-400">
+                  ล็อกค่าเริ่มต้น: <code class="text-amber-300 font-mono">tanakorn.db@gmail.com</code>
+                </div>
+                <div class="text-[10px] text-slate-500 leading-relaxed">
+                  • <b>ระบบเฝ้าระวัง:</b> ตรวจสอบทุกวันผ่าน <code>daily-ops.sh (Step 8 Guard)</code><br>
+                  • <b>แอปเปิดด่วน:</b> <code>~/Applications/Chrome - Tanakorn.app</code><br>
+                  • <b>CLI Shortcuts:</b> คำสั่ง <code>chrome</code> และ <code>google-chrome</code> ใน PATH
+                </div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">สคริปต์ในเครื่อง</strong></span>
+                </div>
+              </div>
+
+              <!-- AirDrop & Capture -->
+              <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-white flex items-center gap-1.5">
+                    <span>📥 AirDrop & แคปหน้าจออัตโนมัติ</span>
+                  </span>
+                  <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ACTIVE</span>
+                </div>
+                <div class="text-[10px] text-slate-400">
+                  เก็บที่: <code class="text-indigo-300 font-mono">~/Downloads/Airdrop&Capture</code>
+                </div>
+                <div class="text-[10px] text-slate-500 leading-relaxed">
+                  • <b>การจัดเรียง:</b> เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)<br>
+                  • <b>Autonomous Daemon:</b> <code>com.b8b.airdrop_mover</code> ตรวจจับและจัดระเบียบ 24/7
+                </div>
+                <div class="mt-1 flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-1">
+                  <span>ค่าบริการ: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong></span>
+                  <span>รอบบิล: <strong class="text-sky-300 font-mono">LaunchDaemon</strong></span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="space-y-2 text-xs">
-            <!-- Chrome Profile -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>🌐 Chrome Default Profile Lock</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ENFORCED</span>
-              </div>
-              <div class="text-[10px] text-slate-400">
-                ล็อกค่าเริ่มต้น: <code class="text-amber-300 font-mono">tanakorn.db@gmail.com</code>
-              </div>
-              <div class="text-[10px] text-slate-500 leading-relaxed">
-                • <b>ระบบเฝ้าระวัง:</b> ตรวจสอบทุกวันผ่าน <code>daily-ops.sh (Step 8 Guard)</code><br>
-                • <b>แอปเปิดด่วน:</b> <code>~/Applications/Chrome - Tanakorn.app</code><br>
-                • <b>CLI Shortcuts:</b> คำสั่ง <code>chrome</code> และ <code>google-chrome</code> ใน PATH
-              </div>
-            </div>
-
-            <!-- AirDrop & Capture -->
-            <div class="p-2.5 rounded-lg bg-white/5 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-white flex items-center gap-1.5">
-                  <span>📥 AirDrop & แคปหน้าจออัตโนมัติ</span>
-                </span>
-                <span class="text-emerald-400 text-[10px] font-mono font-bold">🟢 ACTIVE</span>
-              </div>
-              <div class="text-[10px] text-slate-400">
-                เก็บที่: <code class="text-indigo-300 font-mono">~/Downloads/Airdrop&Capture</code>
-              </div>
-              <div class="text-[10px] text-slate-500 leading-relaxed">
-                • <b>การจัดเรียง:</b> เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)<br>
-                • <b>Autonomous Daemon:</b> <code>com.b8b.airdrop_mover</code> ตรวจจับและจัดระเบียบ 24/7
-              </div>
-            </div>
+          <div class="pt-2 mt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">ค่าบำรุงรักษาซอฟต์แวร์: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong></span>
+            <span class="text-slate-400">รอบบิล: <strong class="text-sky-300 font-mono">Automated</strong></span>
           </div>
         </div>
       `;
@@ -1269,6 +1695,16 @@
               </div>
             </div>
           </div>
+
+          <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400">แพ็กเกจไฟเบอร์: <strong class="text-white font-medium">True Giga Fiber 1000/500</strong></span>
+              <span class="text-slate-400">• ค่าบริการ: <strong class="text-emerald-400 font-mono font-bold">฿599.00 / เดือน</strong></span>
+            </div>
+            <div class="text-slate-400">
+              รอบบิลตัดจ่าย: <strong class="text-sky-300 font-mono font-semibold">ทุกวันที่ 18 ของเดือน</strong>
+            </div>
+          </div>
         </div>
 
         <!-- Network Devices & Infrastructure Topology (MikroTik + Ubiquiti) -->
@@ -1283,182 +1719,212 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3.5">
             <!-- 1. MikroTik -->
-            <div class="glass-card p-4 rounded-xl border border-red-500/20 bg-red-500/[0.02] space-y-2.5 item-row">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-xs">
-                    MT
+            <div class="glass-card p-4 rounded-xl border border-red-500/20 bg-red-500/[0.02] space-y-2.5 item-row flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-xs">
+                      MT
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">MikroTik Router</h4>
+                      <span class="text-[10px] text-slate-400 font-mono">192.168.1.1</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">MikroTik Router</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.1</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 font-mono font-bold">
+                    CORE GATEWAY
+                  </span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px] mt-2.5">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">บทบาท:</span>
+                    <span class="font-medium text-right">Main Router & NAT</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">การแจก IP:</span>
+                    <span class="font-mono text-emerald-400">DHCP Master</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">พอร์ตจัดการ:</span>
+                    <span class="font-mono text-sky-400">WinBox 8291 · 443</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">MAC Address:</span>
+                    <span class="font-mono text-slate-400 text-[10px]">dc:2c:6e:d7:e3:c5</span>
                   </div>
                 </div>
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 font-mono font-bold">
-                  CORE GATEWAY
-                </span>
               </div>
-              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">บทบาท:</span>
-                  <span class="font-medium text-right">Main Router & NAT</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">การแจก IP:</span>
-                  <span class="font-mono text-emerald-400">DHCP Master</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">พอร์ตจัดการ:</span>
-                  <span class="font-mono text-sky-400">WinBox 8291 · 443</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">MAC Address:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">dc:2c:6e:d7:e3:c5</span>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / ด.</strong> (ซื้อขาด)</span>
+                <span class="text-sky-300 font-mono">ไม่มีรายเดือน</span>
               </div>
             </div>
 
             <!-- 2. Ubiquiti Infrastructure / Switch (192.168.1.3) -->
-            <div class="glass-card p-4 rounded-xl border border-amber-500/20 bg-amber-500/[0.02] space-y-2.5 item-row">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
-                    SW
+            <div class="glass-card p-4 rounded-xl border border-amber-500/20 bg-amber-500/[0.02] space-y-2.5 item-row flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
+                      SW
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Ubiquiti Infra / Switch</h4>
+                      <span class="text-[10px] text-slate-400 font-mono">192.168.1.3</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">Ubiquiti Infra / Switch</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.3</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 font-mono font-bold" title="L2 Present / รอเชื่อมกับ Cloud Key">
+                    PENDING SETUP
+                  </span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px] mt-2.5">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">บทบาท:</span>
+                    <span class="font-medium text-amber-300 text-right">PoE Switch / Device</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">สถานะ L2/L3:</span>
+                    <span class="font-mono text-amber-400">ARP Active · ICMP Silent</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">ผู้ผลิตฮาร์ดแวร์:</span>
+                    <span class="font-medium text-white">Ubiquiti Inc.</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">MAC Address:</span>
+                    <span class="font-mono text-slate-400 text-[10px]">fc:ec:da:e8:7a:88</span>
                   </div>
                 </div>
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-300 font-mono font-bold" title="L2 Present / รอเชื่อมกับ Cloud Key">
-                  PENDING SETUP
-                </span>
               </div>
-              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">บทบาท:</span>
-                  <span class="font-medium text-amber-300 text-right">PoE Switch / Device</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">สถานะ L2/L3:</span>
-                  <span class="font-mono text-amber-400">ARP Active · ICMP Silent</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">ผู้ผลิตฮาร์ดแวร์:</span>
-                  <span class="font-medium text-white">Ubiquiti Inc.</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">MAC Address:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">fc:ec:da:e8:7a:88</span>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / ด.</strong> (ซื้อขาด)</span>
+                <span class="text-sky-300 font-mono">ไม่มีรายเดือน</span>
               </div>
             </div>
 
             <!-- 3. UniFi Cloud Key Gen2 Plus (192.168.1.143) -->
-            <div class="glass-card p-4 rounded-xl border border-sky-500/20 bg-sky-500/[0.02] space-y-2.5 item-row">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">
-                    UCK
+            <div class="glass-card p-4 rounded-xl border border-sky-500/20 bg-sky-500/[0.02] space-y-2.5 item-row flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">
+                      UCK
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">UniFi Cloud Key Plus</h4>
+                      <span class="text-[10px] text-slate-400 font-mono">192.168.1.143</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">UniFi Cloud Key Plus</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.143</span>
+                  <a href="https://192.168.1.143" target="_blank" class="text-[9px] px-2 py-0.5 rounded-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-mono font-bold transition">
+                    SETUP ↗
+                  </a>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px] mt-2.5">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">บทบาท:</span>
+                    <span class="font-medium text-right">Controller & NVR</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">Storage / OS:</span>
+                    <span class="font-mono text-white">SSD 512GB · UniFi OS</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">สถานะติดตั้ง:</span>
+                    <span class="font-mono text-amber-300">isSetup: false (รอเซ็ตอัป)</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">MAC Address:</span>
+                    <span class="font-mono text-slate-400 text-[10px]">78:45:58:de:bb:29</span>
                   </div>
                 </div>
-                <a href="https://192.168.1.143" target="_blank" class="text-[9px] px-2 py-0.5 rounded-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 font-mono font-bold transition">
-                  SETUP ↗
-                </a>
               </div>
-              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">บทบาท:</span>
-                  <span class="font-medium text-right">Controller & NVR</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">Storage / OS:</span>
-                  <span class="font-mono text-white">SSD 512GB · UniFi OS</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">สถานะติดตั้ง:</span>
-                  <span class="font-mono text-amber-300">isSetup: false (รอเซ็ตอัป)</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">MAC Address:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">78:45:58:de:bb:29</span>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / ด.</strong> (ซื้อขาด NVR)</span>
+                <span class="text-sky-300 font-mono">ไม่มีรายเดือน</span>
               </div>
             </div>
 
             <!-- 4. UniFi Access Points (192.168.1.4, 192.168.1.5) -->
-            <div class="glass-card p-4 rounded-xl border border-indigo-500/20 bg-indigo-500/[0.02] space-y-2.5 item-row">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">
-                    AP
+            <div class="glass-card p-4 rounded-xl border border-indigo-500/20 bg-indigo-500/[0.02] space-y-2.5 item-row flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">
+                      AP
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">UniFi 6 Lite (Dual AP)</h4>
+                      <span class="text-[10px] text-slate-400 font-mono">192.168.1.4 · .5</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">UniFi 6 Lite (Dual AP)</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">192.168.1.4 · .5</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">
+                    PENDING ADOPTION
+                  </span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px] mt-2.5">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">โฮสต์ชื่อ:</span>
+                    <span class="font-mono text-white text-[10px]">U6-Lite-F2 · inroom</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">คลื่นความถี่:</span>
+                    <span class="font-mono text-slate-300">Wi-Fi 6 (802.11ax)</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">การเชื่อมต่อ:</span>
+                    <span class="font-mono text-amber-300">รอ Adopt เข้า Cloud Key</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">Firmware:</span>
+                    <span class="font-mono text-slate-400 text-[10px]">v6.6.55 (Dropbear SSH)</span>
                   </div>
                 </div>
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">
-                  PENDING ADOPTION
-                </span>
               </div>
-              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">โฮสต์ชื่อ:</span>
-                  <span class="font-mono text-white text-[10px]">U6-Lite-F2 · inroom</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">คลื่นความถี่:</span>
-                  <span class="font-mono text-slate-300">Wi-Fi 6 (802.11ax)</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">การเชื่อมต่อ:</span>
-                  <span class="font-mono text-amber-300">รอ Adopt เข้า Cloud Key</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">Firmware:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">v6.6.55 (Dropbear SSH)</span>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / ด.</strong> (ซื้อขาด)</span>
+                <span class="text-sky-300 font-mono">ไม่มีรายเดือน</span>
               </div>
             </div>
 
             <!-- 5. Tailscale Mesh -->
-            <div class="glass-card p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.02] space-y-2.5 item-row">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
-                    TS
+            <div class="glass-card p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.02] space-y-2.5 item-row flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                      TS
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Tailscale Mesh Node</h4>
+                      <span class="text-[10px] text-slate-400 font-mono">100.126.177.124</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-white">Tailscale Mesh Node</h4>
-                    <span class="text-[10px] text-slate-400 font-mono">100.126.177.124</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">
+                    VPN ENCRYPTED
+                  </span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px] mt-2.5">
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">ประเภท:</span>
+                    <span class="font-medium text-white">WireGuard P2P Mesh</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">Node Name:</span>
+                    <span class="font-mono text-slate-300">ai-macbook-m2</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">MagicDNS:</span>
+                    <span class="font-mono text-emerald-400 text-[10px]">100.100.100.100</span>
+                  </div>
+                  <div class="flex justify-between text-slate-300">
+                    <span class="text-slate-500">อุปกรณ์ร่วมวง:</span>
+                    <span class="font-mono text-slate-400 text-[10px]">iphone184 (100.118.42.50)</span>
                   </div>
                 </div>
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono font-bold">
-                  VPN ENCRYPTED
-                </span>
               </div>
-              <div class="p-2.5 rounded-lg bg-white/5 space-y-1 text-[11px]">
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">ประเภท:</span>
-                  <span class="font-medium text-white">WireGuard P2P Mesh</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">Node Name:</span>
-                  <span class="font-mono text-slate-300">ai-macbook-m2</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">MagicDNS:</span>
-                  <span class="font-mono text-emerald-400 text-[10px]">100.100.100.100</span>
-                </div>
-                <div class="flex justify-between text-slate-300">
-                  <span class="text-slate-500">อุปกรณ์ร่วมวง:</span>
-                  <span class="font-mono text-slate-400 text-[10px]">iphone184 (100.118.42.50)</span>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                <span>ค่าบริการ: <strong class="text-emerald-400 font-mono">฿0 / ด.</strong> (Free Tier)</span>
+                <span class="text-sky-300 font-mono">ฟรี 100 อุปกรณ์</span>
               </div>
             </div>
           </div>
@@ -1532,77 +1998,89 @@
                   </p>
                 </div>
               </div>
+
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+                <span class="text-slate-400">ค่าใช้จ่ายการจูนโฮสต์: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (ในเครื่อง)</span>
+                <span class="text-sky-300 font-mono">ถาวร (Zero-Cost)</span>
+              </div>
             </div>
 
             <!-- Right Card: Hardware Recommendation (UniFi & MikroTik) -->
-            <div class="glass-card p-5 rounded-2xl border border-sky-500/20 bg-sky-500/[0.02] space-y-3.5">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2.5">
-                  <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-sm">
-                    📶
+            <div class="glass-card p-5 rounded-2xl border border-sky-500/20 bg-sky-500/[0.02] space-y-3.5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-sm">
+                      📶
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold text-white">ขั้นตอนปลดล็อก Wi-Fi สปีด 500–800+ Mbps</h4>
+                      <span class="text-[11px] text-slate-400 font-mono">UniFi Controller (192.168.1.143) & MikroTik</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-sm font-bold text-white">ขั้นตอนปลดล็อก Wi-Fi สปีด 500–800+ Mbps</h4>
-                    <span class="text-[11px] text-slate-400 font-mono">UniFi Controller (192.168.1.143) & MikroTik</span>
+                  <span class="text-[10px] px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 font-mono font-bold border border-amber-500/20">
+                    RECOMMENDED SETUP
+                  </span>
+                </div>
+
+                <div class="space-y-2 text-xs mt-3">
+                  <!-- Step 0: Setup Cloud Key & Adopt Devices -->
+                  <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-semibold text-white flex items-center gap-1.5">
+                        <span class="text-amber-400 font-bold">0.</span> ตั้งค่า Cloud Key & Adopt อุปกรณ์
+                      </span>
+                      <span class="text-amber-300 font-mono text-[11px]">เร่งด่วน ⚠️</span>
+                    </div>
+                    <p class="text-[11px] text-slate-300 leading-relaxed">
+                      เปิด <a href="https://192.168.1.143" target="_blank" class="text-sky-400 font-semibold underline">https://192.168.1.143</a> เพื่อทำ Initial Setup ของ <strong>UCK G2 Plus</strong> จากนั้นกด <strong>Adopt</strong> อุปกรณ์ AP ทั้ง 2 ตัว (<code class="text-indigo-300">192.168.1.4</code>, <code class="text-indigo-300">192.168.1.5</code>) และตัวอุปกรณ์เครือข่าย <code class="text-amber-300">192.168.1.3</code> ให้เข้าสู่ระบบ
+                    </p>
+                  </div>
+
+                  <!-- Band Steering -->
+                  <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-semibold text-white flex items-center gap-1.5">
+                        <span class="text-amber-400">1.</span> เปิด Band Steering: <span class="text-sky-300 font-mono">Prefer 5 GHz</span>
+                      </span>
+                      <span class="text-amber-300 font-mono text-[11px]">สำคัญที่สุด ⭐</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">
+                      ใน <a href="https://192.168.1.143" target="_blank" class="text-sky-400 underline">UniFi Controller</a> > Settings > Wireless Networks > เปิด <strong>Band Steering -> Prefer 5 GHz</strong> เพื่อดึงเครื่อง Mac เข้าคลื่น 5GHz Wi-Fi 6 อัตโนมัติ (ปัจจุบันเครื่องเกาะ 2.4GHz ที่ 52-82 Mbps)
+                    </p>
+                  </div>
+
+                  <!-- Channel Width -->
+                  <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-semibold text-white flex items-center gap-1.5">
+                        <span class="text-amber-400">2.</span> ปรับความกว้างช่องสัญญาณเป็น <span class="text-emerald-400 font-mono">HE80 / HE160</span>
+                      </span>
+                      <span class="text-emerald-400 font-mono text-[11px]">1,200+ Mbps</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">
+                      ปัจจุบันคลื่น 5GHz ของ UniFi ตั้งไว้ที่ 40MHz แนะนำเปลี่ยนเป็น <strong>HE80 (80MHz)</strong> บน Channel 36–48 เพื่อปลดล็อกแบนด์วิดท์สูงสุด
+                    </p>
+                  </div>
+
+                  <!-- MikroTik FastPath -->
+                  <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-semibold text-white flex items-center gap-1.5">
+                        <span class="text-amber-400">3.</span> MikroTik FastTrack & DNS Cache
+                      </span>
+                      <span class="text-slate-300 font-mono text-[11px]">Hardware Rate</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">
+                      ใน MikroTik WinBox (192.168.1.1): ตรวจสอบ Firewall Filter Rule ให้เปิด FastTrack สำหรับ Established/Related Connections เพื่อประหยัด CPU เราเตอร์
+                    </p>
                   </div>
                 </div>
-                <span class="text-[10px] px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 font-mono font-bold border border-amber-500/20">
-                  RECOMMENDED SETUP
-                </span>
               </div>
 
-              <div class="space-y-2 text-xs">
-                <!-- Step 0: Setup Cloud Key & Adopt Devices -->
-                <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-white flex items-center gap-1.5">
-                      <span class="text-amber-400 font-bold">0.</span> ตั้งค่า Cloud Key & Adopt อุปกรณ์
-                    </span>
-                    <span class="text-amber-300 font-mono text-[11px]">เร่งด่วน ⚠️</span>
-                  </div>
-                  <p class="text-[11px] text-slate-300 leading-relaxed">
-                    เปิด <a href="https://192.168.1.143" target="_blank" class="text-sky-400 font-semibold underline">https://192.168.1.143</a> เพื่อทำ Initial Setup ของ <strong>UCK G2 Plus</strong> จากนั้นกด <strong>Adopt</strong> อุปกรณ์ AP ทั้ง 2 ตัว (<code class="text-indigo-300">192.168.1.4</code>, <code class="text-indigo-300">192.168.1.5</code>) และตัวอุปกรณ์เครือข่าย <code class="text-amber-300">192.168.1.3</code> ให้เข้าสู่ระบบ
-                  </p>
-                </div>
-
-                <!-- Band Steering -->
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-white flex items-center gap-1.5">
-                      <span class="text-amber-400">1.</span> เปิด Band Steering: <span class="text-sky-300 font-mono">Prefer 5 GHz</span>
-                    </span>
-                    <span class="text-amber-300 font-mono text-[11px]">สำคัญที่สุด ⭐</span>
-                  </div>
-                  <p class="text-[11px] text-slate-400 leading-relaxed">
-                    ใน <a href="https://192.168.1.143" target="_blank" class="text-sky-400 underline">UniFi Controller</a> > Settings > Wireless Networks > เปิด <strong>Band Steering -> Prefer 5 GHz</strong> เพื่อดึงเครื่อง Mac เข้าคลื่น 5GHz Wi-Fi 6 อัตโนมัติ (ปัจจุบันเครื่องเกาะ 2.4GHz ที่ 52-82 Mbps)
-                  </p>
-                </div>
-
-                <!-- Channel Width -->
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-white flex items-center gap-1.5">
-                      <span class="text-amber-400">2.</span> ปรับความกว้างช่องสัญญาณเป็น <span class="text-emerald-400 font-mono">HE80 / HE160</span>
-                    </span>
-                    <span class="text-emerald-400 font-mono text-[11px]">1,200+ Mbps</span>
-                  </div>
-                  <p class="text-[11px] text-slate-400 leading-relaxed">
-                    ปัจจุบันคลื่น 5GHz ของ UniFi ตั้งไว้ที่ 40MHz แนะนำเปลี่ยนเป็น <strong>HE80 (80MHz)</strong> บน Channel 36–48 เพื่อปลดล็อกแบนด์วิดท์สูงสุด
-                  </p>
-                </div>
-
-                <!-- MikroTik FastPath -->
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="font-semibold text-white flex items-center gap-1.5">
-                      <span class="text-amber-400">3.</span> MikroTik FastTrack & DNS Cache
-                    </span>
-                    <span class="text-slate-300 font-mono text-[11px]">Hardware Rate</span>
-                  </div>
-                  <p class="text-[11px] text-slate-400 leading-relaxed">
-                    ใน MikroTik WinBox (192.168.1.1): ตรวจสอบ Firewall Filter Rule ให้เปิด FastTrack สำหรับ Established/Related Connections เพื่อประหยัด CPU เราเตอร์
-                  </p>
-                </div>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+                <span class="text-slate-400">ค่าซอฟต์แวร์ UniFi OS: <strong class="text-emerald-400 font-mono font-medium">฿0 / เดือน</strong> (ไร้ค่า License)</span>
+                <span class="text-sky-300 font-mono">Self-Hosted</span>
               </div>
             </div>
           </div>
@@ -1631,7 +2109,7 @@
         activeBtn.classList.remove('text-slate-400');
       }
 
-      const sections = ['network', 'macbook', 'runners', 'endpoints', 'mcp', 'storage', 'trust'];
+      const sections = ['finance', 'network', 'macbook', 'runners', 'endpoints', 'mcp', 'storage', 'trust'];
       if (tab === 'all') {
         sections.forEach(s => {
           const el = document.getElementById(`section-${s}`);

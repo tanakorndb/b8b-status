@@ -151,18 +151,21 @@ async function gather() {
       service: r.service,
       status: 'online',
       launchAgent: isLaunchAgent,
-      busy: false
+      busy: false,
+      cost: '฿0 / เดือน (Self-Hosted บน Mac M2)',
+      billingDate: 'ไม่มีค่า compute (ประหยัด >฿5,000/ด. จาก Actions นาทีละ $0.008)',
+      accountPlan: 'GitHub Pro ($4.00/ด. จ่ายทุกวันที่ 28)'
     });
   }
 
   // Endpoints
   const endpointsToTest = [
-    { name: 'B8B Group (Landing)', url: 'https://b8b.group', type: 'Platform Hub' },
-    { name: 'Banii Bazi (Fortune)', url: 'https://b8b.homes', type: 'Cloudflare Pages' },
-    { name: 'Banii Trip (Travel OS)', url: 'https://trip.b8b.homes', type: 'Cloudflare Pages' },
-    { name: 'B8B Lands (Real Estate)', url: 'https://b8b.group/lands/', type: 'Web Platform' },
-    { name: 'B8B Power Passive', url: 'https://b8b.group/pp/', type: 'Web Platform' },
-    { name: 'Bwork LINE Bot API', url: 'https://bwork.b8b.group/healthz', type: 'Worker Health' }
+    { name: 'B8B Group (Landing)', url: 'https://b8b.group', type: 'Platform Hub', cost: '฿0 / เดือน (Cloudflare Pages)', billingDate: 'ฟรีตลอดชีพ', domainCost: '~฿58 / เดือน (฿700/ปี ต่ออายุ 19 พ.ค.)' },
+    { name: 'Banii Bazi (Fortune)', url: 'https://b8b.homes', type: 'Cloudflare Pages', cost: '฿0 / เดือน (Cloudflare Pages)', billingDate: 'ฟรีตลอดชีพ', domainCost: '~฿41 / เดือน (฿490/ปี ต่ออายุ 16 ก.พ.)' },
+    { name: 'Banii Trip (Travel OS)', url: 'https://trip.b8b.homes', type: 'Cloudflare Pages', cost: '฿0 / เดือน (Cloudflare Worker)', billingDate: 'ฟรี 100,000 req/วัน' },
+    { name: 'B8B Lands (Real Estate)', url: 'https://b8b.group/lands/', type: 'Web Platform', cost: '฿0 / เดือน (Cloudflare Pages)', billingDate: 'ฟรีตลอดชีพ' },
+    { name: 'B8B Power Passive', url: 'https://b8b.group/pp/', type: 'Web Platform', cost: '฿0 / เดือน (Cloudflare Pages)', billingDate: 'ฟรีตลอดชีพ' },
+    { name: 'Bwork LINE Bot API', url: 'https://bwork.b8b.group/healthz', type: 'Worker Health', cost: '฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)', billingDate: 'รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน' }
   ];
 
   const endpointResults = [];
@@ -180,28 +183,31 @@ async function gather() {
       code: res.code,
       latency: res.latency,
       ok: res.ok,
-      ssl: ssl
+      ssl: ssl,
+      cost: ep.cost,
+      billingDate: ep.billingDate,
+      domainCost: ep.domainCost || null
     });
   }
 
   // MCP Servers
   const mcps = [
-    { name: 'GitHub', id: 'github', desc: 'Codebase, PRs, Commits (tanakorndb)', status: 'connected' },
-    { name: 'Cloudflare', id: 'cloudflare', desc: 'Workers, D1, KV, Pages (Tanakorn.db@gmail.com)', status: 'connected' },
-    { name: 'Railway', id: 'railway', desc: 'Backend Services, Redis, Postgres (bwork, trade-bot)', status: 'connected' },
-    { name: 'Google Drive', id: 'google-drive', desc: 'Personal & Work CloudStorage Filesystem', status: 'connected' },
-    { name: 'Supabase', id: 'supabase', desc: 'Active Projects: อปท & bwork-index', status: 'connected' },
-    { name: 'Brave Search', id: 'brave-search', desc: 'Real-time News & Web Search API', status: 'connected' },
-    { name: 'Stripe', id: 'stripe', desc: 'Live Payments & Invoicing (Bwork · live)', status: 'connected' },
-    { name: 'Chrome DevTools', id: 'chrome-devtools', desc: 'Multi-Profile Browser CDP (Port 9222)', status: isChromeCdp ? 'connected' : 'ready' },
-    { name: 'Playwright', id: 'playwright', desc: 'Browser Automation & Headless Test Suite', status: 'connected' }
+    { name: 'GitHub', id: 'github', desc: 'Codebase, PRs, Commits (tanakorndb)', status: 'connected', cost: '$4.00 / เดือน (~฿140)', billingDate: 'ทุกวันที่ 28 ของเดือน (GitHub Pro)' },
+    { name: 'Cloudflare', id: 'cloudflare', desc: 'Workers, D1, KV, Pages (Tanakorn.db@gmail.com)', status: 'connected', cost: '฿0 / เดือน (Free Tier)', billingDate: 'ฟรีตลอดชีพ' },
+    { name: 'Railway', id: 'railway', desc: 'Backend Services, Redis, Postgres (bwork, trade-bot)', status: 'connected', cost: '฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)', billingDate: 'รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน' },
+    { name: 'Google Drive', id: 'google-drive', desc: 'Personal & Work CloudStorage Filesystem', status: 'connected', cost: '฿70 / เดือน (Google One 100GB)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
+    { name: 'Supabase', id: 'supabase', desc: 'Active Projects: อปท & bwork-index', status: 'connected', cost: '฿0 / เดือน (Free Plan 2/2)', billingDate: 'ฟรีตลอดชีพ' },
+    { name: 'Brave Search', id: 'brave-search', desc: 'Real-time News & Web Search API', status: 'connected', cost: '฿0 / เดือน (API Plan)', billingDate: 'ฟรี / ในโควตา' },
+    { name: 'Stripe', id: 'stripe', desc: 'Live Payments & Invoicing (Bwork · live)', status: 'connected', cost: '฿0 / เดือน คงที่ (Pay-as-you-go)', billingDate: 'ไม่มีค่าธรรมเนียมรายเดือน (หัก 3.65%+10฿/tx)' },
+    { name: 'Chrome DevTools', id: 'chrome-devtools', desc: 'Multi-Profile Browser CDP (Port 9222)', status: isChromeCdp ? 'connected' : 'ready', cost: '฿0 / เดือน (Local Protocol)', billingDate: 'ฟรีตลอดชีพ' },
+    { name: 'Playwright', id: 'playwright', desc: 'Browser Automation & Headless Test Suite', status: 'connected', cost: '฿0 / เดือน (Local Automation)', billingDate: 'ฟรีตลอดชีพ' }
   ];
 
   // Supabase
   const supabase = [
-    { name: 'กระทรวง อปท', ref: 'zmdhboxausxwjsjbgnxk', status: 'ACTIVE_HEALTHY', tier: 'Active 1/2' },
-    { name: 'bwork-index', ref: 'alqipoxdcfnyftfklgzp', status: 'ACTIVE_HEALTHY', tier: 'Active 2/2' },
-    { name: 'Banii Bazi', ref: 'cqnjislvbcixfttheqjp', status: 'PAUSED_SAVED', tier: 'Slot Preserved' }
+    { name: 'กระทรวง อปท', ref: 'zmdhboxausxwjsjbgnxk', status: 'ACTIVE_HEALTHY', tier: 'Active 1/2', cost: '฿0 / เดือน (Free Tier 1/2)', billingDate: 'ฟรีตลอดชีพ (มีบอทปิงกัน Pause)' },
+    { name: 'bwork-index', ref: 'alqipoxdcfnyftfklgzp', status: 'ACTIVE_HEALTHY', tier: 'Active 2/2', cost: '฿0 / เดือน (Free Tier 2/2)', billingDate: 'ฟรีตลอดชีพ (pgvector)' },
+    { name: 'Banii Bazi', ref: 'cqnjislvbcixfttheqjp', status: 'PAUSED_SAVED', tier: 'Slot Preserved', cost: '฿0 / เดือน (Paused Preserved)', billingDate: 'ไม่มีค่าใช้จ่าย' }
   ];
 
   // Local Autonomous Daemons
@@ -274,7 +280,10 @@ async function gather() {
         applicantEmail: "tanakorn.db@gmail.com",
         actionRequired: "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย ที่เบอร์ 062-928-6289",
         benefits: "ปลดล็อกค้นหาชื่อ Bwork บนแอป LINE, ยิงแอดเพิ่มเพื่อนได้, ปลดคำเตือนความเสี่ยงทั้งหมด",
-        badgeColor: "amber"
+        badgeColor: "amber",
+        cost: "~฿39.50 / เดือน (฿475.08 / ปี)",
+        billingDate: "ต่ออายุรายปีทุกวันที่ 14 กันยายน (แพ็กเกจข้อความฟรี ฿0/ด)",
+        annualThb: 475.08
       },
       google: {
         name: "Google Cloud OAuth (โปรเจกต์: bwork-bot)",
@@ -297,7 +306,9 @@ async function gather() {
         interimShield: "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
         actionRequired: "รออีเมลผลตรวจจาก Google Trust & Safety (ห้ามกดยื่นซ้ำหรือแก้ไขคอนโซลระหว่างรอตรวจ)",
         adminEmail: "tanakorn.db@gmail.com",
-        badgeColor: "amber"
+        badgeColor: "amber",
+        cost: "฿0 / เดือน (Developer Scopes)",
+        billingDate: "ฟรีตลอดชีพ"
       },
       stripe: {
         name: "Stripe Live Payments (Bwork · live)",
@@ -308,14 +319,18 @@ async function gather() {
         payoutsEnabled: true,
         payoutSchedule: "Automatic Daily (Rolling 7 วัน)",
         supportedMethods: ["บัตรเครดิต/เดบิต (Visa, Mastercard, JCB)", "PromptPay QR Code"],
-        badgeColor: "emerald"
+        badgeColor: "emerald",
+        cost: "฿0 / เดือน ค่าธรรมเนียมคงที่",
+        billingDate: "ไม่มีค่าบริการรายเดือน (หักตามจริง 3.65% + 10฿ ต่อรายการสำเร็จ)"
       },
       googleMaps: {
         name: "Google Maps Platform",
         service: "Routes API & Geocoding",
         status: "ACTIVE",
         statusLabel: "พร้อมใช้งานคำนวณเวลาเดินทาง (HTTP 200 OK)",
-        badgeColor: "emerald"
+        badgeColor: "emerald",
+        cost: "฿0.00 สุทธิ (ในเครดิตฟรี $200/ด)",
+        billingDate: "รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน"
       },
       launch: {
         launchDate: "2026-09-29T00:00:00+07:00",
@@ -339,10 +354,17 @@ async function gather() {
   if (networkInfo && networkInfo.speed) {
     networkInfo.speed.pingMs = livePing;
   }
+  if (networkInfo) {
+    networkInfo.cost = '฿599 / เดือน (True GigaTex Fiber)';
+    networkInfo.billingDate = 'ทุกวันที่ 18 ของเดือน';
+    networkInfo.tailscaleCost = '฿0 / เดือน (Personal Free Plan 100 อุปกรณ์)';
+  }
 
   // MacBook Pro M2 Specific Operational Details
   const macbookProM2 = {
     model: 'MacBook Pro 14" (Apple Silicon M2 Pro 12C / 16GB)',
+    cost: '฿0 / เดือน (Hardware ซื้อขาด)',
+    billingDate: 'ไม่มีค่าบริการรายเดือน',
     vitals: {
       uptimeThai: hostUptimeThai,
       cpuLoad: loadAverages.join(', '),
@@ -353,10 +375,10 @@ async function gather() {
       powerStatus: `AC Power (${batteryPct} · Sleep Disabled · Always-On)`
     },
     workspaces: [
-      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active' },
-      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active' },
-      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active' },
-      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🪐', badge: 'Active' }
+      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (ฟรี)' },
+      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active', cost: '$20.00 / เดือน (~฿680)', billingDate: 'ทุกวันที่ 18 ของเดือน' },
+      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active', cost: '$20.00 / เดือน (~฿680)', billingDate: 'ทุกวันที่ 19 ของเดือน' },
+      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🪐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (Free Technical Preview)' }
     ],
     chromeConfig: {
       defaultProfile: 'Default (tanakorn.db@gmail.com)',
@@ -373,7 +395,9 @@ async function gather() {
         deviceId: 'CD-01M31RWG0NEKQNXK2QAT9HJBFS',
         touchMode: 'Direct Touch (1-Finger Click, 2-Finger Right Click, 2-Finger Scroll, 3-Finger Space Switch)',
         audioStreaming: 'JumpAudio & JumpAudioMic Drivers Active',
-        daemon: 'com.p5sys.jump.connect.service (24/7 Unattended)'
+        daemon: 'com.p5sys.jump.connect.service (24/7 Unattended)',
+        cost: '฿0 / เดือน (แอป iOS ซื้อขาด)',
+        billingDate: 'ไม่มีค่าบริการรายเดือน (Fluid ใช้งานฟรี)'
       },
       mobileGateway: {
         status: agRemoteRunning ? 'ONLINE' : 'OFFLINE',
@@ -381,14 +405,18 @@ async function gather() {
         lanUrl: 'http://192.168.1.126:7890',
         tailscaleUrl: 'http://100.126.177.124:7890',
         features: '1-Tap 4-Workspace Switcher, Thai Voice Dictation, Live System Vitals',
-        daemon: 'com.b8b.antigravity.remote (LaunchAgent)'
+        daemon: 'com.b8b.antigravity.remote (LaunchAgent)',
+        cost: '฿0 / เดือน (Self-Hosted Node.js)',
+        billingDate: 'รันบนเครื่อง Mac M2 ตลอด 24 ชม.'
       }
     },
     airdropAndCapture: {
       status: airdropMoverRunning ? 'ACTIVE' : 'IDLE',
       targetDirectory: '/Users/user/Downloads/Airdrop&Capture',
       sorting: 'เรียงไฟล์ใหม่สุดอยู่บนสุดเสมอ (Date Modified Descending)',
-      autoMover: 'com.b8b.airdrop_mover (Active)'
+      autoMover: 'com.b8b.airdrop_mover (Active)',
+      cost: '฿0 / เดือน (Local Script)',
+      billingDate: 'ไม่มีค่าใช้จ่าย'
     },
     cliTools: [
       { cmd: 'ai-full', desc: 'ปรับ 4 เวิร์กสเปซ (Antigravity, Claude, ChatGPT, Chrome) ให้เต็มหน้าจอทั้งหมด' },
@@ -399,11 +427,60 @@ async function gather() {
     ]
   };
 
+  // Master Financials Register & Summary
+  const financials = {
+    summary: {
+      totalMonthlyThb: 2307.50,
+      totalMonthlyUsd: 68.00,
+      breakdown: {
+        infraThb: 239.00,
+        aiThb: 1360.00,
+        networkBusinessThb: 708.50
+      },
+      estimatedMonthlySavingsThb: 12500,
+      policy: "FREE-FIRST / ZERO-COST-FIRST — ควบคุมงบประมาณเข้มงวดและใช้สิทธิ์ Free-Tier & เครดิตฟรีอย่างคุ้มค่าสูงสุด",
+      lastUpdatedThai: timestampThai
+    },
+    timeline: [
+      { day: 1, name: "Railway Hobby Credit", cost: "เครดิตฟรี $5.00/ด. (จ่ายจริง $0)", category: "Cloud Infra", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
+      { day: 1, name: "Google Maps Platform", cost: "เครดิตฟรี $200/ด. (จ่ายจริง $0)", category: "Business API", status: "Active Free", cycle: "ทุกวันที่ 1 ของเดือน" },
+      { day: 14, name: "LINE Premium ID (@bwork)", cost: "฿475.08 / ปี (~฿39.50/ด.)", category: "Business Branding", status: "Annual Sep", cycle: "ต่ออายุรายปี 14 ก.ย." },
+      { day: 16, name: "Domain b8b.homes", cost: "฿490 / ปี (~฿41/ด.)", category: "Domain", status: "Annual Feb", cycle: "ต่ออายุรายปี 16 ก.พ." },
+      { day: 18, name: "Claude Desktop / Pro", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+      { day: 18, name: "True Fiber Internet", cost: "฿599.00 / ด.", category: "Network", status: "Monthly Active", cycle: "ทุกวันที่ 18 ของเดือน" },
+      { day: 19, name: "ChatGPT Desktop / Plus", cost: "$20.00 / ด. (~฿680)", category: "AI Models", status: "Monthly Active", cycle: "ทุกวันที่ 19 ของเดือน" },
+      { day: 19, name: "Domain b8b.group", cost: "฿700 / ปี (~฿58/ด.)", category: "Domain", status: "Annual May", cycle: "ต่ออายุรายปี 19 พ.ค." },
+      { day: 25, name: "Google One Storage", cost: "฿70.00 / ด. (100GB)", category: "Storage", status: "Monthly Active", cycle: "ทุกวันที่ 25 ของเดือน" },
+      { day: 28, name: "GitHub Pro (tanakorndb)", cost: "$4.00 / ด. (~฿140)", category: "Dev Platform", status: "Monthly Active", cycle: "ทุกวันที่ 28 ของเดือน" }
+    ],
+    items: [
+      { name: "Claude Pro (Desktop)", category: "AI Workspaces", plan: "Pro Plan ($20/mo)", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "Anthropic AI, Artifacts & Deep Reasoning" },
+      { name: "ChatGPT Plus (Desktop)", category: "AI Workspaces", plan: "Plus Plan ($20/mo)", costThb: 680, costUsd: 20, billingDate: "ทุกวันที่ 19 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "OpenAI Canvas & Advanced Voice Mode" },
+      { name: "Google Chrome", category: "AI Workspaces", plan: "Desktop Browser", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "tanakorn.db@gmail.com", notes: "โปรไฟล์หลักเชื่อมต่อระบบบริหารจัดการ" },
+      { name: "Antigravity IDE", category: "AI Workspaces", plan: "Technical Preview", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการ", cycle: "ฟรี", account: "Google DeepMind", notes: "Agentic Suite & Autonomous Coding" },
+      { name: "True Fiber Internet", category: "Network & Host", plan: "GigaTex Fiber 500/500", costThb: 599, costUsd: 17.6, billingDate: "ทุกวันที่ 18 ของเดือน", cycle: "รายเดือน", account: "True Online", notes: "อินเทอร์เน็ตประจำ Mac Host 24/7" },
+      { name: "GitHub Pro", category: "Cloud Infra", plan: "Developer Pro ($4/mo)", costThb: 140, costUsd: 4, billingDate: "ทุกวันที่ 28 ของเดือน", cycle: "รายเดือน", account: "tanakorndb", notes: "Actions 3,000 นาที + Branch Protection 7 repos" },
+      { name: "8 GitHub Runners", category: "Cloud Infra", plan: "Self-Hosted Farm", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่า compute", cycle: "ฟรี", account: "Local Mac M2", notes: "ประหยัดค่า GitHub Actions >฿5,000/ด." },
+      { name: "Domain b8b.group", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 58, costUsd: 1.67, billingDate: "19 พฤษภาคม (รายปี)", cycle: "รายปี (฿700/ปี)", account: "Squarespace", notes: "โดเมนหลัก Gov, Lands, PP (หมดอายุ 2027-05-19)" },
+      { name: "Domain b8b.homes", category: "Cloud Infra", plan: "Squarespace Domains", costThb: 41, costUsd: 1.17, billingDate: "16 กุมภาพันธ์ (รายปี)", cycle: "รายปี (฿490/ปี)", account: "Squarespace", notes: "โดเมนหลัก Banii Bazi (หมดอายุ 2027-02-16)" },
+      { name: "Cloudflare", category: "Cloud Infra", plan: "Free Tier (Pages/Workers)", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "Tanakorn.db@gmail.com", notes: "Unlimited Bandwidth Pages + 100k Worker req/d" },
+      { name: "Railway", category: "Cloud Infra", plan: "Hobby ($5 Credit/mo)", costThb: 0, costUsd: 0, billingDate: "รีเซ็ตวันที่ 1 ของเดือน", cycle: "เครดิตฟรี", account: "tanakorn.db@gmail.com", notes: "ใช้จริง ~$1.25/ด. อยู่ในเครดิตฟรี $5.00 ไม่เสียเงิน" },
+      { name: "Supabase", category: "Database & Cloud", plan: "Free Tier (2/2 Active)", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "tanakorndb / Bwork", notes: "อปท + bwork-index (มีบอทปิงป้องกัน Auto-Pause)" },
+      { name: "Google One Storage", category: "Database & Cloud", plan: "Basic 100GB", costThb: 70, costUsd: 2, billingDate: "ทุกวันที่ 25 ของเดือน", cycle: "รายเดือน", account: "tanakorn.db@gmail.com", notes: "สำรองฐานข้อมูลและรายงานสถานะรายวัน" },
+      { name: "LINE OA (@bwork)", category: "Business & Trust", plan: "Premium ID (@bwork)", costThb: 39.5, costUsd: 1.16, billingDate: "14 กันยายน (รายปี)", cycle: "รายปี (฿475.08/ปี)", account: "LINE Thailand", notes: "ไอดีพรีเมียม (แพ็กเกจข้อความฟรี 500 ข้อความ ฿0)" },
+      { name: "Stripe Live", category: "Business & Trust", plan: "Live Payments Gateway", costThb: 0, costUsd: 0, billingDate: "ไม่มีค่าบริการรายเดือน", cycle: "ตามธุรกรรม", account: "Bwork · live", notes: "หัก 3.65% + 10฿ ต่อรายการสำเร็จ (ไม่มีค่าคงที่)" },
+      { name: "Google Maps Platform", category: "Business & Trust", plan: "Routes API & Geocoding", costThb: 0, costUsd: 0, billingDate: "รีเซ็ตวันที่ 1 ของเดือน", cycle: "เครดิตฟรี", account: "GCP bwork-bot", notes: "อยู่ในเครดิตฟรี $200/เดือน ไม่เสียเงิน" },
+      { name: "Tailscale Mesh VPN", category: "Network & Host", plan: "Personal Free Plan", costThb: 0, costUsd: 0, billingDate: "ฟรีตลอดชีพ", cycle: "ฟรี", account: "tanakorn.db@gmail.com", notes: "รีโมท Mac จาก iPad ความหน่วงต่ำสูงสุด 100 เครื่อง" },
+      { name: "Jump Desktop", category: "Network & Host", plan: "Fluid Unattended", costThb: 0, costUsd: 0, billingDate: "ซื้อขาดครั้งเดียว", cycle: "ไม่มีรายเดือน", account: "tanakorn.db@gmail.com", notes: "สตรีมภาพ 60 FPS ความหน่วง <15ms จาก iPad" }
+    ]
+  };
+
   const result = {
     timestamp: now,
     timestampThai: timestampThai,
     systemState: 'OPERATIONAL',
     systemStateMessage: 'ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)',
+    financials: financials,
     metrics: {
       runnersOnline: runnersList.filter(r => r.status === 'online').length,
       runnersTotal: runnersList.length,
@@ -419,7 +496,10 @@ async function gather() {
       battery: batteryPct,
       cpuLoad: loadAverages.join(', '),
       internetSpeed: `${networkInfo?.speed?.downloadMbps || 81.9} ⬇️ / ${networkInfo?.speed?.uploadMbps || 193.7} ⬆️ Mbps`,
-      pingLatency: livePing || '29ms'
+      pingLatency: livePing || '29ms',
+      totalMonthlyThb: financials.summary.totalMonthlyThb,
+      totalMonthlyUsd: financials.summary.totalMonthlyUsd,
+      monthlySavingsThb: financials.summary.estimatedMonthlySavingsThb
     },
     network: networkInfo,
     host: {
@@ -439,12 +519,14 @@ async function gather() {
     },
     macbookProM2: macbookProM2,
     googleDrive: {
-      personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal },
-      work: { account: 'tanakorn.p@b8b.homes', mounted: driveWork }
+      personal: { account: 'tanakorn.db@gmail.com', mounted: drivePersonal, cost: '฿70 / เดือน (Google One 100GB)', billingDate: 'ทุกวันที่ 25 ของเดือน' },
+      work: { account: 'tanakorn.p@b8b.homes', mounted: driveWork, cost: '฿0 / เดือน (Shared Workspace)', billingDate: 'บัญชีองค์กร' }
     },
     chrome: {
       cdpPort9222: isChromeCdp,
-      profilesSupported: ['Default (tanakorn.db)', 'Profile 41 (tanakorn.p)', 'Profile 42 (888trading)']
+      profilesSupported: ['Default (tanakorn.db)', 'Profile 41 (tanakorn.p)', 'Profile 42 (888trading)'],
+      cost: '฿0 / เดือน',
+      billingDate: 'ไม่มีค่าบริการ'
     },
     runners: runnersList,
     endpoints: endpointResults,
@@ -459,3 +541,4 @@ async function gather() {
 }
 
 gather();
+
