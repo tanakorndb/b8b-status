@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg512" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#070a11"/>
+    </radialGradient>
+    <linearGradient id="ring512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow512" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg512)"/>
+  <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"/>
+  
+  <!-- Outer Glow Pulse Ring -->
+  <circle cx="256" cy="256" r="165" fill="none" stroke="url(#ring512)" stroke-width="16" filter="url(#glow512)" opacity="0.85"/>
+  <circle cx="256" cy="256" r="165" fill="none" stroke="url(#ring512)" stroke-width="12"/>
+  
+  <!-- Middle Tech Radar Arc -->
+  <path d="M 150 256 A 106 106 0 0 1 362 256" fill="none" stroke="#38bdf8" stroke-width="6" stroke-dasharray="12 16" opacity="0.75"/>
+  
+  <!-- Center Signal Dot -->
+  <circle cx="256" cy="256" r="75" fill="#10b981" filter="url(#glow512)"/>
+  <circle cx="256" cy="256" r="75" fill="#10b981"/>
+  
+  <!-- Core Inner White Highlight -->
+  <circle cx="236" cy="236" r="22" fill="#ffffff" opacity="0.6"/>
+</svg>

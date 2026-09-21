@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-20T11:16:55.070Z",
-  "timestampThai": "20 ก.ย. 2569 เวลา 18:16:56 น.",
+  "timestamp": "2026-09-21T01:44:58.397Z",
+  "timestampThai": "21 ก.ย. 2569 เวลา 08:44:59 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
@@ -10,15 +10,15 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "0d 10h 2m",
-    "hostUptimeThai": "0 วัน 10 ชั่วโมง 2 นาที",
-    "hostVitals": "SSD 188Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "188Gi",
-    "swapUsage": "3012.62M",
+    "hostUptime": "1d 0h 30m",
+    "hostUptimeThai": "1 วัน 0 ชั่วโมง 30 นาที",
+    "hostVitals": "SSD 203Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "203Gi",
+    "swapUsage": "4016.94M",
     "battery": "80%",
-    "cpuLoad": "10.39, 10.21, 7.45",
+    "cpuLoad": "5.87, 5.71, 6.22",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "25ms"
+    "pingLatency": "42ms"
   },
   "network": {
     "downloadMbps": 81.9,
@@ -115,20 +115,20 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "0d 10h 2m",
-    "uptimeThai": "0 วัน 10 ชั่วโมง 2 นาที",
+    "uptime": "1d 0h 30m",
+    "uptimeThai": "1 วัน 0 ชั่วโมง 30 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "10.39",
-      "10.21",
-      "7.45"
+      "5.87",
+      "5.71",
+      "6.22"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "3012.62M",
-    "diskAvailable": "188Gi",
-    "diskUsedPercent": "80%"
+    "swapUsed": "4016.94M",
+    "diskAvailable": "203Gi",
+    "diskUsedPercent": "78%"
   },
   "googleDrive": {
     "personal": {
@@ -221,11 +221,11 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "168ms",
+      "latency": "177ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 54,
+        "daysLeft": 53,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       }
@@ -236,11 +236,11 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "197ms",
+      "latency": "209ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 55,
+        "daysLeft": 54,
         "validTo": "Nov 14 02:23:22 2026 GMT",
         "issuer": "Google Trust Services"
       }
@@ -251,11 +251,11 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "89ms",
+      "latency": "68ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 61,
+        "daysLeft": 60,
         "validTo": "Nov 20 04:12:38 2026 GMT",
         "issuer": "Google Trust Services"
       }
@@ -266,11 +266,11 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "118ms",
+      "latency": "82ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 54,
+        "daysLeft": 53,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       }
@@ -281,11 +281,11 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "70ms",
+      "latency": "89ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 54,
+        "daysLeft": 53,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       }
@@ -296,11 +296,11 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "392ms",
+      "latency": "439ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 59,
+        "daysLeft": 58,
         "validTo": "Nov 18 10:05:38 2026 GMT",
         "issuer": "Let's Encrypt"
       }
@@ -384,7 +384,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "20 ก.ย. 2569 เวลา 18:16:56 น.",
+    "lastSyncThai": "21 ก.ย. 2569 เวลา 08:44:59 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -428,8 +428,8 @@
         ],
         "submittedDate": "2026-09-14 19:40",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 19:40 น.",
-        "daysInReview": 5,
-        "daysInReviewText": "ยื่นมาแล้ว 5 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
+        "daysInReview": 6,
+        "daysInReviewText": "ยื่นมาแล้ว 6 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
         "demoVideo": "https://youtu.be/Khzz_76OfoE",
         "demoVideoDuration": "2:16 นาที (ภาษาอังกฤษ)",
         "interimShield": "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
@@ -461,8 +461,8 @@
       "launch": {
         "launchDate": "2026-09-29T00:00:00+07:00",
         "launchDateThai": "29 กันยายน 2569 เวลา 00:00 น.",
-        "daysRemaining": 9,
-        "launchCountdownText": "อีก 9 วันเปิดตัวอย่างเป็นทางการ"
+        "daysRemaining": 8,
+        "launchCountdownText": "อีก 8 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
   }
