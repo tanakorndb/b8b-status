@@ -353,10 +353,10 @@ async function gather() {
       powerStatus: `AC Power (${batteryPct} · Sleep Disabled · Always-On)`
     },
     workspaces: [
-      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🪐', badge: 'Active' },
+      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active' },
       { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active' },
       { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active' },
-      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🌐', badge: 'Active' }
+      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🪐', badge: 'Active' }
     ],
     chromeConfig: {
       defaultProfile: 'Default (tanakorn.db@gmail.com)',
