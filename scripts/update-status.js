@@ -204,6 +204,29 @@ async function gather() {
     { name: 'Banii Bazi', ref: 'cqnjislvbcixfttheqjp', status: 'PAUSED_SAVED', tier: 'Slot Preserved' }
   ];
 
+  // Local Autonomous Daemons
+  const agRemoteRunning = !!(exec('lsof -i :7890') && exec('lsof -i :7890').includes('node'));
+  const airdropMoverRunning = !!(exec('launchctl list | grep com.b8b.airdrop_mover'));
+
+  const localDaemons = [
+    {
+      name: 'Antigravity Mobile Gateway',
+      service: 'iPad & iPhone Control Hub',
+      port: 7890,
+      status: agRemoteRunning ? 'ONLINE' : 'OFFLINE',
+      urls: ['http://192.168.1.126:7890', 'http://100.126.177.124:7890'],
+      desc: 'สั่งงานด้วยเสียงภาษาไทย & ทางลัดคำสั่งด่วนผ่านมือถือ'
+    },
+    {
+      name: 'Autonomous AirDrop & Capture',
+      service: 'Smart File Router Engine',
+      port: null,
+      status: airdropMoverRunning ? 'ACTIVE' : 'IDLE',
+      target: '/Users/user/Downloads/Airdrop&Capture',
+      desc: 'จัดเก็บรูป/PDF/แคปหน้าจอ เรียงไฟล์ใหม่สุดบนสุดอัตโนมัติ'
+    }
+  ];
+
   // Thai Date formatting helper
   const nowDate = new Date();
   const thaiMonthsShort = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
@@ -367,6 +390,7 @@ async function gather() {
     endpoints: endpointResults,
     mcpServers: mcps,
     supabase: supabase,
+    localDaemons: localDaemons,
     trustAndVerification: trustAndVerification
   };
 

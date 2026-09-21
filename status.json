@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-21T01:44:58.397Z",
-  "timestampThai": "21 ก.ย. 2569 เวลา 08:44:59 น.",
+  "timestamp": "2026-09-21T10:05:12.411Z",
+  "timestampThai": "21 ก.ย. 2569 เวลา 17:05:13 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "metrics": {
@@ -10,15 +10,15 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "1d 0h 30m",
-    "hostUptimeThai": "1 วัน 0 ชั่วโมง 30 นาที",
-    "hostVitals": "SSD 203Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "203Gi",
-    "swapUsage": "4016.94M",
+    "hostUptime": "1d 8h 50m",
+    "hostUptimeThai": "1 วัน 8 ชั่วโมง 50 นาที",
+    "hostVitals": "SSD 200Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "200Gi",
+    "swapUsage": "4451.94M",
     "battery": "80%",
-    "cpuLoad": "5.87, 5.71, 6.22",
+    "cpuLoad": "2.77, 2.51, 2.44",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "42ms"
+    "pingLatency": "21ms"
   },
   "network": {
     "downloadMbps": 81.9,
@@ -115,19 +115,19 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "1d 0h 30m",
-    "uptimeThai": "1 วัน 0 ชั่วโมง 30 นาที",
+    "uptime": "1d 8h 50m",
+    "uptimeThai": "1 วัน 8 ชั่วโมง 50 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "5.87",
-      "5.71",
-      "6.22"
+      "2.77",
+      "2.51",
+      "2.44"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "4016.94M",
-    "diskAvailable": "203Gi",
+    "swapUsed": "4451.94M",
+    "diskAvailable": "200Gi",
     "diskUsedPercent": "78%"
   },
   "googleDrive": {
@@ -221,7 +221,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "177ms",
+      "latency": "176ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -236,7 +236,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "209ms",
+      "latency": "150ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -251,7 +251,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "68ms",
+      "latency": "87ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -266,7 +266,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "82ms",
+      "latency": "93ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -281,7 +281,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "89ms",
+      "latency": "125ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -296,7 +296,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "439ms",
+      "latency": "455ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -382,9 +382,30 @@
       "tier": "Slot Preserved"
     }
   ],
+  "localDaemons": [
+    {
+      "name": "Antigravity Mobile Gateway",
+      "service": "iPad & iPhone Control Hub",
+      "port": 7890,
+      "status": "ONLINE",
+      "urls": [
+        "http://192.168.1.126:7890",
+        "http://100.126.177.124:7890"
+      ],
+      "desc": "สั่งงานด้วยเสียงภาษาไทย & ทางลัดคำสั่งด่วนผ่านมือถือ"
+    },
+    {
+      "name": "Autonomous AirDrop & Capture",
+      "service": "Smart File Router Engine",
+      "port": null,
+      "status": "ACTIVE",
+      "target": "/Users/user/Downloads/Airdrop&Capture",
+      "desc": "จัดเก็บรูป/PDF/แคปหน้าจอ เรียงไฟล์ใหม่สุดบนสุดอัตโนมัติ"
+    }
+  ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "21 ก.ย. 2569 เวลา 08:44:59 น.",
+    "lastSyncThai": "21 ก.ย. 2569 เวลา 17:05:13 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -399,8 +420,8 @@
         "applicationRef": "002434229",
         "submittedDate": "2026-09-14 14:20",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 14:20 น.",
-        "daysInReview": 6,
-        "daysInReviewText": "ยื่นมาแล้ว 6 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
+        "daysInReview": 7,
+        "daysInReviewText": "ยื่นมาแล้ว 7 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
         "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด",
         "entityRegNo": "0105559126054",
         "contactPhone": "062-928-6289",
