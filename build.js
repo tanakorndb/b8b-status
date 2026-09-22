@@ -68,6 +68,22 @@ async function run() {
   currentData.endpoints = endpointResults;
   currentData.lastBuild = new Date().toISOString();
 
+  // Ensure expenses and travel data are merged into status.json
+  const expPath = path.join(__dirname, 'expenses_2026.json');
+  if (fs.existsSync(expPath)) {
+    if (!currentData.financials) currentData.financials = {};
+    try {
+      currentData.financials.history2026 = JSON.parse(fs.readFileSync(expPath, 'utf8'));
+    } catch (e) {}
+  }
+  const trvPath = path.join(__dirname, 'travel_expenses_2026.json');
+  if (fs.existsSync(trvPath)) {
+    if (!currentData.financials) currentData.financials = {};
+    try {
+      currentData.financials.travelExpenses2026 = JSON.parse(fs.readFileSync(trvPath, 'utf8'));
+    } catch (e) {}
+  }
+
   fs.writeFileSync(STATUS_PATH, JSON.stringify(currentData, null, 2), 'utf8');
   console.log('✅ Netlify build completed successfully. status.json updated.');
 }

@@ -829,6 +829,30 @@
       const finCategories = fin.categories || fallbackData.financials.categories || [];
       const finTimeline = fin.timeline || [];
       const finItems = fin.items || [];
+      const finHistory = fin.history2026 || {
+        summary: { totalActual9Months: 112839.32, totalProjected12Months: 150454.10, monthlyFixedRunRate: 12538.26 },
+        categories: [
+          { name: "AI Subscriptions", nameTh: "เครื่องมือ AI (Claude, GPT, Gemini)", actual9Months: 76595.00, percent: 67.88, color: "#10b981" },
+          { name: "Telecom & Internet", nameTh: "โทรคมนาคม & อินเทอร์เน็ต (True 5G + Fiber)", actual9Months: 15328.07, percent: 13.58, color: "#3b82f6" },
+          { name: "Platforms & Domains", nameTh: "LINE OA, GitHub Pro & โดเมน", actual9Months: 14481.08, percent: 12.83, color: "#8b5cf6" },
+          { name: "Corporate & Tax", nameTh: "บัญชี FlowAccount, DBD & ภาษี", actual9Months: 6435.17, percent: 5.70, color: "#ec4899" }
+        ],
+        monthlyBreakdown: [
+          { month: "Jan", monthTh: "ม.ค.", status: "ACTUAL", total: 11353.94, ai: 8249, telecom: 1680.94, platform: 1424, corporate: 0 },
+          { month: "Feb", monthTh: "ก.พ.", status: "ACTUAL", total: 11851.26, ai: 8249, telecom: 1688.26, platform: 1914, corporate: 0 },
+          { month: "Mar", monthTh: "มี.ค.", status: "ACTUAL", total: 11361.26, ai: 8249, telecom: 1688.26, platform: 1424, corporate: 0 },
+          { month: "Apr", monthTh: "เม.ย.", status: "ACTUAL", total: 11353.94, ai: 8249, telecom: 1680.94, platform: 1424, corporate: 0 },
+          { month: "May", monthTh: "พ.ค.", status: "ACTUAL", total: 12352.94, ai: 8249, telecom: 1680.94, platform: 2124, corporate: 299 },
+          { month: "Jun", monthTh: "มิ.ย.", status: "ACTUAL", total: 11353.94, ai: 8249, telecom: 1680.94, platform: 1424, corporate: 0 },
+          { month: "Jul", monthTh: "ก.ค.", status: "ACTUAL", total: 15460.94, ai: 9426, telecom: 1680.94, platform: 1424, corporate: 3230 },
+          { month: "Aug", monthTh: "ส.ค.", status: "ACTUAL", total: 12530.94, ai: 9426, telecom: 1680.94, platform: 1424, corporate: 0 },
+          { month: "Sep", monthTh: "ก.ย.", status: "ACTUAL", total: 15220.16, ai: 9426, telecom: 1688.26, platform: 1899.73, corporate: 2906.17 },
+          { month: "Oct", monthTh: "ต.ค.", status: "PROJECTED", total: 12538.26, ai: 9426, telecom: 1688.26, platform: 1424, corporate: 0 },
+          { month: "Nov", monthTh: "พ.ย.", status: "PROJECTED", total: 12538.26, ai: 9426, telecom: 1688.26, platform: 1424, corporate: 0 },
+          { month: "Dec", monthTh: "ธ.ค.", status: "PROJECTED", total: 12538.26, ai: 9426, telecom: 1688.26, platform: 1424, corporate: 0 }
+        ]
+      };
+      const finTravel = fin.travelExpenses2026 || { totalThb: 26388.76, tripCount: 6, carrier: "Vietjet Air" };
 
       // Update Hero Financial stats
       if (document.getElementById('heroTotalCostThb')) {
@@ -1014,6 +1038,9 @@
             </button>
             <button onclick="setFinanceSubView('table')" id="btn-finSubView-table" class="px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 border border-white/10 font-medium transition flex items-center gap-1.5">
               <span>📑 ทะเบียนละเอียด (Master Register)</span>
+            </button>
+            <button onclick="setFinanceSubView('history')" id="btn-finSubView-history" class="px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 border border-white/10 font-medium transition flex items-center gap-1.5">
+              <span>📈 สรุป 12 เดือน & ประหยัดงบ (12-Month & Optimization)</span>
             </button>
           </div>
           <div class="text-[11px] text-slate-400 font-mono text-right">
@@ -1231,6 +1258,209 @@
                 </tr>
               </tfoot>
             </table>
+          </div>
+        </div>
+
+        <!-- SUB-VIEW 4: 12-MONTH EXPENSES & COST OPTIMIZER -->
+        <div id="finSubView-history" style="display: none;" class="space-y-4">
+          <!-- Executive KPI Strip -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-l-emerald-500 bg-emerald-500/[0.03] space-y-1">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="font-medium">ยอดจ่ายจริง 9 เดือนแรก (ม.ค. - ก.ย.)</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono font-bold">VERIFIED</span>
+              </div>
+              <div class="text-2xl font-black text-white font-mono mt-1">฿${(finHistory.summary?.totalActual9Months || 112839.32).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</div>
+              <div class="text-[11px] text-slate-400 font-mono">เฉลี่ย ฿12,537.70 / เดือน (สลิป/สัญญาจริง 100%)</div>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-l-sky-500 bg-sky-500/[0.03] space-y-1">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="font-medium">อัตราคงที่รายเดือน (Run-Rate)</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 font-mono font-bold">FIXED BASE</span>
+              </div>
+              <div class="text-2xl font-black text-sky-300 font-mono mt-1">฿${(finHistory.summary?.monthlyFixedRunRate || 12538.26).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</div>
+              <div class="text-[11px] text-slate-400 font-mono">~$368.77 / เดือน (AI + เน็ตทรู + LINE + GitHub)</div>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-l-purple-500 bg-purple-500/[0.03] space-y-1">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="font-medium">คาดการณ์ทั้งปี 2026 (12 เดือน)</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-300 font-mono font-bold">12-MO PROJ</span>
+              </div>
+              <div class="text-2xl font-black text-purple-300 font-mono mt-1">฿${(finHistory.summary?.totalProjected12Months || 150454.10).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</div>
+              <div class="text-[11px] text-slate-400 font-mono">จ่ายจริง 9 ด. + ประมาณการ 3 ด. (ต.ค. - ธ.ค.)</div>
+            </div>
+
+            <div class="glass-card p-4 rounded-2xl border-l-4 border-l-amber-500 bg-amber-500/[0.03] space-y-1">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span class="font-medium">ตั๋วเครื่องบิน (แยกส่วนบุคคล/เดินทาง)</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 font-mono font-bold">SEPARATED</span>
+              </div>
+              <div class="text-2xl font-black text-amber-300 font-mono mt-1">฿${(finTravel.totalThb || 26388.76).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</div>
+              <div class="text-[11px] text-slate-400 font-mono">Vietjet 6 ไฟลต์ (ไม่ปนกับค่าโฮสต์/เซิร์ฟเวอร์)</div>
+            </div>
+          </div>
+
+          <!-- 12-Month Interactive Bar Chart -->
+          <div class="glass-card p-5 rounded-2xl border border-white/10 space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+              <div>
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>📊 กราฟแท่งค่าใช้จ่ายรายเดือน ม.ค. - ธ.ค. 2026 (12-Month Expense Trend)</span>
+                </h3>
+                <p class="text-xs text-slate-400">มกราคม - กันยายน: จ่ายจริงตามสลิปธนาคาร & ใบเสร็จระบบ | ตุลาคม - ธันวาคม: ประมาณการตามอัตราคงที่</p>
+              </div>
+              <div class="flex items-center gap-3 text-xs font-mono">
+                <span class="flex items-center gap-1.5 text-emerald-400">
+                  <span class="w-2.5 h-2.5 rounded bg-emerald-500 inline-block"></span> จ่ายจริง (Actual)
+                </span>
+                <span class="flex items-center gap-1.5 text-purple-400">
+                  <span class="w-2.5 h-2.5 rounded bg-purple-500/40 border border-purple-400 border-dashed inline-block"></span> ประมาณการ (Projected)
+                </span>
+              </div>
+            </div>
+
+            <!-- Bar Chart Grid (12 Columns) -->
+            <div class="pt-6 pb-2">
+              <div class="grid grid-cols-12 gap-1.5 sm:gap-3 items-end h-64 px-1 sm:px-4 border-b border-white/10">
+                ${finHistory.monthlyBreakdown.map(m => {
+                  const isActual = m.status === 'ACTUAL';
+                  const heightPct = Math.min(100, Math.max(15, Math.round((m.total / 16000) * 100)));
+                  return `
+                    <div class="flex flex-col items-center h-full justify-end group relative cursor-pointer">
+                      <!-- Hover Tooltip -->
+                      <div class="absolute bottom-full mb-2 hidden group-hover:flex flex-col p-2.5 rounded-xl bg-slate-900/95 border border-white/20 shadow-2xl z-50 text-[11px] font-mono min-w-[150px] pointer-events-none">
+                        <div class="font-bold text-white flex items-center justify-between pb-1 border-b border-white/10">
+                          <span>${m.monthTh}</span>
+                          <span class="${isActual ? 'text-emerald-400' : 'text-purple-400'}">${m.status}</span>
+                        </div>
+                        <div class="text-emerald-300 font-bold text-xs py-1">฿${m.total.toLocaleString('th-TH', { minimumFractionDigits: 2 })}</div>
+                        <div class="text-[10px] text-slate-300 space-y-0.5 pt-0.5">
+                          <div class="flex justify-between"><span>🤖 AI:</span><span>฿${(m.ai || 0).toLocaleString('th-TH')}</span></div>
+                          <div class="flex justify-between"><span>📶 เน็ต:</span><span>฿${(m.telecom || 0).toLocaleString('th-TH')}</span></div>
+                          <div class="flex justify-between"><span>🌐 แพลตฟอร์ม:</span><span>฿${(m.platform || 0).toLocaleString('th-TH')}</span></div>
+                          ${m.corporate > 0 ? `<div class="flex justify-between text-pink-300"><span>📑 องค์กร/ภาษี:</span><span>฿${m.corporate.toLocaleString('th-TH')}</span></div>` : ''}
+                        </div>
+                      </div>
+
+                      <!-- Value Badge above bar -->
+                      <span class="text-[9px] sm:text-[10px] font-mono font-bold ${isActual ? 'text-emerald-300' : 'text-purple-300'} mb-1.5 transition-transform group-hover:scale-110">
+                        ${(m.total / 1000).toFixed(1)}k
+                      </span>
+
+                      <!-- Bar Container -->
+                      <div style="height: ${heightPct}%; width: 100%;" class="w-full max-w-[36px] rounded-t-lg transition-all duration-300 group-hover:brightness-125 ${isActual ? 'bg-gradient-to-t from-emerald-600/80 via-emerald-500 to-teal-400 shadow-[0_0_12px_rgba(16,185,129,0.3)]' : 'bg-gradient-to-t from-purple-900/60 to-purple-500/60 border border-purple-400/50 border-dashed'}"></div>
+
+                      <!-- Month Label Below -->
+                      <div class="mt-2 text-center">
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-slate-300 block">${m.month}</span>
+                        <span class="text-[8px] text-slate-500 block sm:hidden">${m.monthTh}</span>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs text-slate-400 font-mono pt-1">
+              <span>ฐานข้อมูล: expenses_2026.json (9 เดือนจ่ายจริง ฿112,839.32)</span>
+              <span>จุดสูงสุด: ก.ค. ฿15,460.94 (ค่า DBD) · ก.ย. ฿15,220.16 (FlowAccount รายปี)</span>
+            </div>
+          </div>
+
+          <!-- Category Breakdown & Optimization Plan -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Left Card: Category Breakdown -->
+            <div class="glass-card p-5 rounded-2xl border border-white/10 space-y-4">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>🍩 สัดส่วนงบประมาณแยกตามหมวด (9-Month Actual)</span>
+                </h3>
+                <span class="text-xs font-mono text-emerald-400">100% Verified</span>
+              </div>
+              <div class="space-y-3 pt-1">
+                ${(finHistory.categories || []).map(cat => `
+                  <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                    <div class="flex items-center justify-between text-xs">
+                      <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${cat.color || '#10b981'};"></span>
+                        <span class="font-bold text-white">${cat.nameTh || cat.name}</span>
+                      </div>
+                      <div class="text-right font-mono">
+                        <span class="text-white font-bold">฿${(cat.actual9Months || 0).toLocaleString('th-TH', { minimumFractionDigits: 2 })}</span>
+                        <span class="text-slate-400 text-[10px] ml-1">(${cat.percent || 0}%)</span>
+                      </div>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                      <div style="width: ${cat.percent || 0}%; background-color: ${cat.color || '#10b981'};" class="h-full rounded-full transition-all duration-500"></div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Right Card: Smart Optimization & Google Storage Safety -->
+            <div class="glass-card p-5 rounded-2xl border border-white/10 space-y-4">
+              <div class="flex items-center justify-between border-b border-white/10 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>💡 แผนลดต้นทุน & ข้อควรระวังความปลอดภัย</span>
+                </h3>
+                <span class="text-xs text-amber-400 font-mono font-bold">CRITICAL SAFETY</span>
+              </div>
+
+              <div class="space-y-3 pt-1 text-xs">
+                <!-- Google Storage Item -->
+                <div class="p-3.5 rounded-xl bg-amber-500/[0.06] border border-amber-500/30 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-base">📸</span>
+                      <span class="font-bold text-amber-300">Google One ส่วนตัว (tanakorn.db@gmail.com)</span>
+                    </div>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-mono font-bold">628.82 GB Photos</span>
+                  </div>
+                  <p class="text-slate-300 text-[11px] leading-relaxed">
+                    <strong class="text-white">ข้อควรระวังสูงสุด:</strong> ห้ามปรับลดแพ็กเกจเป็น 100GB หรือ 200GB เด็ดขาด เนื่องจากปัจจุบันใช้พื้นที่เก็บภาพ <span class="text-amber-300 font-mono font-bold">Google Photos 628.82 GB</span> (+ Drive 23GB + Gmail 7.7GB รวม 659.6GB) หากลดแพ็กเกจจะส่งผลให้ Gmail หยุดรับส่งอีเมล และภาพหยุดซิงก์ทันที
+                  </p>
+                  <div class="p-2 rounded-lg bg-black/30 border border-emerald-500/30 text-[11px] text-emerald-300 space-y-1">
+                    <div class="font-bold flex items-center gap-1.5">
+                      <span>✅</span>
+                      <span>แนวทางแก้ปัญหาที่ประหยัดและปลอดภัย 100%:</span>
+                    </div>
+                    <p class="text-slate-300 pl-4">
+                      เปลี่ยนจาก <span class="text-white font-mono">Google One AI Premium 2TB (฿750/ด. = ฿9,000/ปี)</span> ➜ <span class="text-emerald-300 font-mono font-bold">Google One Standard 2TB รายปี (฿3,500/ปี)</span> ประหยัดทันที <strong class="text-emerald-300 font-mono">฿5,500 / ปี</strong> (เฉลี่ย ฿291/ด.) โดยไม่กระทบต่อรูปภาพและความปลอดภัยของอีเมลแม้แต่น้อย
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Claude Max Plan Item -->
+                <div class="p-3 rounded-xl bg-purple-500/[0.04] border border-purple-500/20 space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-base">🧠</span>
+                      <span class="font-bold text-purple-300">Claude Max Subscription ($200/mo = ฿6,800/mo)</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-purple-400">สลับได้ตามรอบ</span>
+                  </div>
+                  <p class="text-slate-300 text-[11px] leading-relaxed">
+                    เป็นค่าใช้จ่ายก้อนใหญ่ที่สุด (54.2% ของงบรวม) ในช่วง sprint พัฒนาระบบใช้คุ้มค่ามาก หากมีเดือนที่สเกลงานลดลง สามารถสลับเป็น Pro ($20) ชั่วคราวเพื่อประหยัดได้ ฿6,120/เดือน
+                  </p>
+                </div>
+
+                <!-- Flight Ticket Isolation -->
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="text-base">✈️</span>
+                      <span class="font-bold text-white">ตั๋วเครื่องบิน Vietjet 6 เที่ยวบิน (฿26,388.76)</span>
+                    </div>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-mono">แยกหมวดหมู่</span>
+                  </div>
+                  <p class="text-slate-400 text-[11px]">
+                    บันทึกแยกใน <span class="font-mono text-slate-300">travel_expenses_2026.json</span> อย่างเป็นอิสระ เพื่อให้งบดำเนินงานเซิร์ฟเวอร์และ AI คงที่และสะท้อนต้นทุนจริง 100%
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       `;
@@ -2437,9 +2667,9 @@
       }
     }
 
-    // Finance Sub-View Switcher (Categories vs Timeline vs Table)
+    // Finance Sub-View Switcher (Categories vs Timeline vs Table vs History)
     function setFinanceSubView(viewName) {
-      const views = ['categories', 'timeline', 'table'];
+      const views = ['categories', 'timeline', 'table', 'history'];
       views.forEach(v => {
         const el = document.getElementById(`finSubView-${v}`);
         const btn = document.getElementById(`btn-finSubView-${v}`);

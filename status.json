@@ -1,26 +1,356 @@
 {
-  "timestamp": "2026-09-21T15:51:39.256Z",
-  "timestampThai": "21 ก.ย. 2569 เวลา 22:51:40 น.",
+  "timestamp": "2026-09-22T01:33:09.699Z",
+  "timestampThai": "22 ก.ย. 2569 เวลา 08:33:11 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
     "summary": {
-      "totalMonthlyThb": 12677.01,
-      "totalMonthlyUsd": 372.85,
-      "dailyRunRateThb": 422.57,
+      "totalMonthlyThb": 12538.26,
+      "totalMonthlyUsd": 368.77,
+      "dailyRunRateThb": 417.94,
+      "totalActual9Months": 112839.32,
+      "totalProjected12Months": 150454.1,
       "paidServicesCount": 11,
       "freeServicesCount": 7,
       "totalServicesCount": 18,
       "breakdown": {
         "aiThb": 9426,
         "telecomThb": 1688.26,
-        "businessThb": 1323.59,
-        "infraThb": 239.16,
+        "businessThb": 1284,
+        "infraThb": 140,
         "freeThb": 0
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "21 ก.ย. 2569 เวลา 22:51:40 น."
+      "lastUpdatedThai": "22 ก.ย. 2569 เวลา 08:33:11 น."
+    },
+    "history2026": {
+      "currency": "THB",
+      "year": 2026,
+      "lastUpdated": "2026-09-21T23:08:00+07:00",
+      "scope": "Operational, AI & Cloud Infrastructure (Excluding Personal & Travel Expenses)",
+      "verifiedMonths": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "projectedMonths": [
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "usdRate": 34,
+      "summary": {
+        "totalActual9Months": 112839.32,
+        "totalProjected3Months": 37614.78,
+        "totalProjected12Months": 150454.1,
+        "monthlyFixedRunRate": 12538.26,
+        "annualFixedRunRate": 150459.12
+      },
+      "categories": [
+        {
+          "id": "ai",
+          "name": "AI Subscriptions",
+          "nameTh": "เครื่องมือ AI (Claude, ChatGPT, Gemini)",
+          "color": "#10b981",
+          "actual9Months": 76595,
+          "percent": 67.88,
+          "items": [
+            {
+              "name": "Claude (Anthropic) Max Plan",
+              "costMonthly": 6800,
+              "usd": 200,
+              "billingDay": 18,
+              "monthsActive": 9,
+              "total": 61200
+            },
+            {
+              "name": "ChatGPT (OpenAI) Plus Plan",
+              "costMonthly": 699,
+              "usd": 20,
+              "billingDay": 20,
+              "monthsActive": 9,
+              "total": 6291
+            },
+            {
+              "name": "Gemini Personal (Google One 2TB AI)",
+              "costMonthly": 750,
+              "billingDay": 25,
+              "monthsActive": 9,
+              "total": 6750
+            },
+            {
+              "name": "Gemini Company (Google Workspace via AIS)",
+              "costMonthly": 1177,
+              "billingDay": 6,
+              "monthsActive": 2,
+              "total": 2354
+            }
+          ]
+        },
+        {
+          "id": "telecom",
+          "name": "Telecom & Internet",
+          "nameTh": "โทรคมนาคม & อินเทอร์เน็ต (True 5G + Fiber)",
+          "color": "#3b82f6",
+          "actual9Months": 15328.07,
+          "percent": 13.58,
+          "items": [
+            {
+              "name": "True 5G Postpaid (094-2688868)",
+              "costMonthlyAvg": 1104.12,
+              "monthsActive": 9,
+              "total": 9937.07
+            },
+            {
+              "name": "True GigaTex Fiber 500/500",
+              "costMonthly": 599,
+              "monthsActive": 9,
+              "total": 5391
+            }
+          ]
+        },
+        {
+          "id": "platform",
+          "name": "Platforms & Domains",
+          "nameTh": "แพลตฟอร์ม, LINE OA & โดเมน",
+          "color": "#8b5cf6",
+          "actual9Months": 14481.08,
+          "percent": 12.83,
+          "items": [
+            {
+              "name": "LINE Official Account Basic Plan",
+              "costMonthly": 1284,
+              "monthsActive": 9,
+              "total": 11556
+            },
+            {
+              "name": "LINE OA Premium ID (@bwork)",
+              "costAnnual": 475.08,
+              "date": "2026-09-14",
+              "total": 475.08
+            },
+            {
+              "name": "GitHub Pro (tanakorndb)",
+              "costMonthly": 140,
+              "usd": 4,
+              "monthsActive": 9,
+              "total": 1260
+            },
+            {
+              "name": "Domain b8b.homes",
+              "costAnnual": 490,
+              "date": "2026-02-16",
+              "total": 490
+            },
+            {
+              "name": "Domain b8b.group",
+              "costAnnual": 700,
+              "date": "2026-05-19",
+              "total": 700
+            }
+          ]
+        },
+        {
+          "id": "corporate",
+          "name": "Corporate & Operations",
+          "nameTh": "ซอฟต์แวร์บัญชี, นิติบุคคล & ภาษี",
+          "color": "#ec4899",
+          "actual9Months": 6435.17,
+          "percent": 5.7,
+          "items": [
+            {
+              "name": "FlowAccount Pro (Monthly)",
+              "date": "2026-05-25",
+              "total": 299
+            },
+            {
+              "name": "Company Address Amendment & DBD Fee",
+              "date": "2026-07-01",
+              "total": 2930
+            },
+            {
+              "name": "Withholding Tax P.N.D. 53",
+              "date": "2026-07-15",
+              "total": 300
+            },
+            {
+              "name": "FlowAccount Pro (Annual 2026-2027)",
+              "date": "2026-09-15",
+              "total": 2906.17
+            }
+          ]
+        }
+      ],
+      "monthlyBreakdown": [
+        {
+          "month": "Jan",
+          "monthTh": "มกราคม 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1680.94,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 11353.94
+        },
+        {
+          "month": "Feb",
+          "monthTh": "กุมภาพันธ์ 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1688.26,
+          "platform": 1914,
+          "corporate": 0,
+          "total": 11851.26
+        },
+        {
+          "month": "Mar",
+          "monthTh": "มีนาคม 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1688.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 11361.26
+        },
+        {
+          "month": "Apr",
+          "monthTh": "เมษายน 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1678.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 11351.26
+        },
+        {
+          "month": "May",
+          "monthTh": "พฤษภาคม 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1728.39,
+          "platform": 2124,
+          "corporate": 299,
+          "total": 13400.39
+        },
+        {
+          "month": "Jun",
+          "monthTh": "มิถุนายน 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1774.4,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 11447.4
+        },
+        {
+          "month": "Jul",
+          "monthTh": "กรกฎาคม 2026",
+          "status": "ACTUAL",
+          "ai": 8249,
+          "telecom": 1713.04,
+          "platform": 1424,
+          "corporate": 3230,
+          "total": 14615.04
+        },
+        {
+          "month": "Aug",
+          "monthTh": "สิงหาคม 2026",
+          "status": "ACTUAL",
+          "ai": 9426,
+          "telecom": 1688.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 12538.26
+        },
+        {
+          "month": "Sep",
+          "monthTh": "กันยายน 2026",
+          "status": "ACTUAL",
+          "ai": 9426,
+          "telecom": 1688.26,
+          "platform": 1899.08,
+          "corporate": 2906.17,
+          "total": 15919.51
+        },
+        {
+          "month": "Oct",
+          "monthTh": "ตุลาคม 2026",
+          "status": "PROJECTED",
+          "ai": 9426,
+          "telecom": 1688.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 12538.26
+        },
+        {
+          "month": "Nov",
+          "monthTh": "พฤศจิกายน 2026",
+          "status": "PROJECTED",
+          "ai": 9426,
+          "telecom": 1688.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 12538.26
+        },
+        {
+          "month": "Dec",
+          "monthTh": "ธันวาคม 2026",
+          "status": "PROJECTED",
+          "ai": 9426,
+          "telecom": 1688.26,
+          "platform": 1424,
+          "corporate": 0,
+          "total": 12538.26
+        }
+      ]
+    },
+    "travelExpenses2026": {
+      "currency": "THB",
+      "year": 2026,
+      "category": "Non-Operational / Business Travel (Flights)",
+      "note": "แยกออกจากงบประมาณระบบ Cloud AI และค่าใช้จ่ายรายเดือนของบริษัท",
+      "total": 26388.76,
+      "items": [
+        {
+          "date": "2026-01-10",
+          "airline": "Thai Vietjet",
+          "route": "BKK - CNX - BKK",
+          "passengers": [
+            "Darika",
+            "Pichaya"
+          ],
+          "amount": 15728.76,
+          "taxInvoice": "ET202601232171"
+        },
+        {
+          "date": "2026-02-22",
+          "airline": "Bangkok Airways",
+          "route": "BKK - HKT - BKK",
+          "passengers": [
+            "Tanakorn",
+            "Faozee"
+          ],
+          "amount": 7960,
+          "taxInvoice": "BBKKCC2602220001"
+        },
+        {
+          "date": "2026-05-17",
+          "airline": "Thai Airways",
+          "route": "BKK - HKT",
+          "passengers": [
+            "Tanakorn Pathumrattanadechakorn"
+          ],
+          "amount": 2700,
+          "taxInvoice": "00706047"
+        }
+      ]
     },
     "categories": [
       {
@@ -493,17 +823,17 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "1d 14h 36m",
-    "hostUptimeThai": "1 วัน 14 ชั่วโมง 36 นาที",
-    "hostVitals": "SSD 198Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "198Gi",
-    "swapUsage": "5446.00M",
+    "hostUptime": "2d 0h 18m",
+    "hostUptimeThai": "2 วัน 0 ชั่วโมง 18 นาที",
+    "hostVitals": "SSD 212Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "212Gi",
+    "swapUsage": "5142.00M",
     "battery": "80%",
-    "cpuLoad": "2.65, 3.23, 2.99",
+    "cpuLoad": "1.64, 2.15, 2.55",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "22ms",
-    "totalMonthlyThb": 12677.01,
-    "totalMonthlyUsd": 372.85,
+    "pingLatency": "76ms",
+    "totalMonthlyThb": 12538.26,
+    "totalMonthlyUsd": 368.77,
     "monthlySavingsThb": 12500
   },
   "network": {
@@ -604,31 +934,31 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "1d 14h 36m",
-    "uptimeThai": "1 วัน 14 ชั่วโมง 36 นาที",
+    "uptime": "2d 0h 18m",
+    "uptimeThai": "2 วัน 0 ชั่วโมง 18 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "2.65",
-      "3.23",
-      "2.99"
+      "1.64",
+      "2.15",
+      "2.55"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "5446.00M",
-    "diskAvailable": "198Gi",
-    "diskUsedPercent": "78%"
+    "swapUsed": "5142.00M",
+    "diskAvailable": "212Gi",
+    "diskUsedPercent": "77%"
   },
   "macbookProM2": {
     "model": "MacBook Pro 14\" (Apple Silicon M2 Pro 12C / 16GB)",
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "1 วัน 14 ชั่วโมง 36 นาที",
-      "cpuLoad": "2.65, 3.23, 2.99",
-      "freeDisk": "198Gi",
-      "usedDiskPercent": "78%",
-      "swapUsed": "5446.00M",
+      "uptimeThai": "2 วัน 0 ชั่วโมง 18 นาที",
+      "cpuLoad": "1.64, 2.15, 2.55",
+      "freeDisk": "212Gi",
+      "usedDiskPercent": "77%",
+      "swapUsed": "5142.00M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
@@ -853,110 +1183,50 @@
     {
       "name": "B8B Group (Landing)",
       "url": "https://b8b.group",
-      "domain": "b8b.group",
-      "type": "Platform Hub",
+      "type": "Frontend / Landing",
       "code": 200,
-      "latency": "143ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 53,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": "~฿58 / เดือน (฿700/ปี ต่ออายุ 19 พ.ค.)"
+      "latency": "118ms",
+      "ok": true
     },
     {
       "name": "Banii Bazi (Fortune)",
       "url": "https://b8b.homes",
-      "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "259ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 53,
-        "validTo": "Nov 14 02:23:22 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": "~฿41 / เดือน (฿490/ปี ต่ออายุ 16 ก.พ.)"
+      "latency": "128ms",
+      "ok": true
     },
     {
       "name": "Banii Trip (Travel OS)",
       "url": "https://trip.b8b.homes",
-      "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "83ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 60,
-        "validTo": "Nov 20 04:12:38 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Worker)",
-      "billingDate": "ฟรี 100,000 req/วัน",
-      "domainCost": null
+      "latency": "89ms",
+      "ok": true
     },
     {
       "name": "B8B Lands (Real Estate)",
       "url": "https://b8b.group/lands/",
-      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "82ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 53,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": null
+      "latency": "97ms",
+      "ok": true
     },
     {
       "name": "B8B Power Passive",
       "url": "https://b8b.group/pp/",
-      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "102ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 53,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": null
+      "latency": "67ms",
+      "ok": true
     },
     {
       "name": "Bwork LINE Bot API",
       "url": "https://bwork.b8b.group/healthz",
-      "domain": "bwork.b8b.group",
-      "type": "Worker Health",
+      "type": "API Backend",
       "code": 200,
-      "latency": "412ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 58,
-        "validTo": "Nov 18 10:05:38 2026 GMT",
-        "issuer": "Let's Encrypt"
-      },
-      "cost": "฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)",
-      "billingDate": "รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน",
-      "domainCost": null
+      "latency": "392ms",
+      "ok": true
     }
   ],
   "mcpServers": [
@@ -1082,7 +1352,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "21 ก.ย. 2569 เวลา 22:51:40 น.",
+    "lastSyncThai": "22 ก.ย. 2569 เวลา 08:33:11 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -1170,9 +1440,10 @@
       "launch": {
         "launchDate": "2026-09-29T00:00:00+07:00",
         "launchDateThai": "29 กันยายน 2569 เวลา 00:00 น.",
-        "daysRemaining": 8,
-        "launchCountdownText": "อีก 8 วันเปิดตัวอย่างเป็นทางการ"
+        "daysRemaining": 7,
+        "launchCountdownText": "อีก 7 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
-  }
+  },
+  "lastBuild": "2026-09-22T01:52:13.298Z"
 }

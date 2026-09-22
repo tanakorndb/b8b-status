@@ -1,0 +1,195 @@
+{
+  "currency": "THB",
+  "year": 2026,
+  "lastUpdated": "2026-09-21T23:08:00+07:00",
+  "scope": "Operational, AI & Cloud Infrastructure (Excluding Personal & Travel Expenses)",
+  "verifiedMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+  "projectedMonths": ["Oct", "Nov", "Dec"],
+  "usdRate": 34.0,
+  "summary": {
+    "totalActual9Months": 112839.32,
+    "totalProjected3Months": 37614.78,
+    "totalProjected12Months": 150454.10,
+    "monthlyFixedRunRate": 12538.26,
+    "annualFixedRunRate": 150459.12
+  },
+  "categories": [
+    {
+      "id": "ai",
+      "name": "AI Subscriptions",
+      "nameTh": "เครื่องมือ AI (Claude, ChatGPT, Gemini)",
+      "color": "#10b981",
+      "actual9Months": 76595.00,
+      "percent": 67.88,
+      "items": [
+        { "name": "Claude (Anthropic) Max Plan", "costMonthly": 6800.00, "usd": 200.00, "billingDay": 18, "monthsActive": 9, "total": 61200.00 },
+        { "name": "ChatGPT (OpenAI) Plus Plan", "costMonthly": 699.00, "usd": 20.00, "billingDay": 20, "monthsActive": 9, "total": 6291.00 },
+        { "name": "Gemini Personal (Google One 2TB AI)", "costMonthly": 750.00, "billingDay": 25, "monthsActive": 9, "total": 6750.00 },
+        { "name": "Gemini Company (Google Workspace via AIS)", "costMonthly": 1177.00, "billingDay": 6, "monthsActive": 2, "total": 2354.00 }
+      ]
+    },
+    {
+      "id": "telecom",
+      "name": "Telecom & Internet",
+      "nameTh": "โทรคมนาคม & อินเทอร์เน็ต (True 5G + Fiber)",
+      "color": "#3b82f6",
+      "actual9Months": 15328.07,
+      "percent": 13.58,
+      "items": [
+        { "name": "True 5G Postpaid (094-2688868)", "costMonthlyAvg": 1104.12, "monthsActive": 9, "total": 9937.07 },
+        { "name": "True GigaTex Fiber 500/500", "costMonthly": 599.00, "monthsActive": 9, "total": 5391.00 }
+      ]
+    },
+    {
+      "id": "platform",
+      "name": "Platforms & Domains",
+      "nameTh": "แพลตฟอร์ม, LINE OA & โดเมน",
+      "color": "#8b5cf6",
+      "actual9Months": 14481.08,
+      "percent": 12.83,
+      "items": [
+        { "name": "LINE Official Account Basic Plan", "costMonthly": 1284.00, "monthsActive": 9, "total": 11556.00 },
+        { "name": "LINE OA Premium ID (@bwork)", "costAnnual": 475.08, "date": "2026-09-14", "total": 475.08 },
+        { "name": "GitHub Pro (tanakorndb)", "costMonthly": 140.00, "usd": 4.00, "monthsActive": 9, "total": 1260.00 },
+        { "name": "Domain b8b.homes", "costAnnual": 490.00, "date": "2026-02-16", "total": 490.00 },
+        { "name": "Domain b8b.group", "costAnnual": 700.00, "date": "2026-05-19", "total": 700.00 }
+      ]
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate & Operations",
+      "nameTh": "ซอฟต์แวร์บัญชี, นิติบุคคล & ภาษี",
+      "color": "#ec4899",
+      "actual9Months": 6435.17,
+      "percent": 5.70,
+      "items": [
+        { "name": "FlowAccount Pro (Monthly)", "date": "2026-05-25", "total": 299.00 },
+        { "name": "Company Address Amendment & DBD Fee", "date": "2026-07-01", "total": 2930.00 },
+        { "name": "Withholding Tax P.N.D. 53", "date": "2026-07-15", "total": 300.00 },
+        { "name": "FlowAccount Pro (Annual 2026-2027)", "date": "2026-09-15", "total": 2906.17 }
+      ]
+    }
+  ],
+  "monthlyBreakdown": [
+    {
+      "month": "Jan",
+      "monthTh": "มกราคม 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1680.94,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 11353.94
+    },
+    {
+      "month": "Feb",
+      "monthTh": "กุมภาพันธ์ 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1688.26,
+      "platform": 1914.00,
+      "corporate": 0.00,
+      "total": 11851.26
+    },
+    {
+      "month": "Mar",
+      "monthTh": "มีนาคม 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1688.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 11361.26
+    },
+    {
+      "month": "Apr",
+      "monthTh": "เมษายน 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1678.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 11351.26
+    },
+    {
+      "month": "May",
+      "monthTh": "พฤษภาคม 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1728.39,
+      "platform": 2124.00,
+      "corporate": 299.00,
+      "total": 13400.39
+    },
+    {
+      "month": "Jun",
+      "monthTh": "มิถุนายน 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1774.40,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 11447.40
+    },
+    {
+      "month": "Jul",
+      "monthTh": "กรกฎาคม 2026",
+      "status": "ACTUAL",
+      "ai": 8249.00,
+      "telecom": 1713.04,
+      "platform": 1424.00,
+      "corporate": 3230.00,
+      "total": 14615.04
+    },
+    {
+      "month": "Aug",
+      "monthTh": "สิงหาคม 2026",
+      "status": "ACTUAL",
+      "ai": 9426.00,
+      "telecom": 1688.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 12538.26
+    },
+    {
+      "month": "Sep",
+      "monthTh": "กันยายน 2026",
+      "status": "ACTUAL",
+      "ai": 9426.00,
+      "telecom": 1688.26,
+      "platform": 1899.08,
+      "corporate": 2906.17,
+      "total": 15919.51
+    },
+    {
+      "month": "Oct",
+      "monthTh": "ตุลาคม 2026",
+      "status": "PROJECTED",
+      "ai": 9426.00,
+      "telecom": 1688.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 12538.26
+    },
+    {
+      "month": "Nov",
+      "monthTh": "พฤศจิกายน 2026",
+      "status": "PROJECTED",
+      "ai": 9426.00,
+      "telecom": 1688.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 12538.26
+    },
+    {
+      "month": "Dec",
+      "monthTh": "ธันวาคม 2026",
+      "status": "PROJECTED",
+      "ai": 9426.00,
+      "telecom": 1688.26,
+      "platform": 1424.00,
+      "corporate": 0.00,
+      "total": 12538.26
+    }
+  ]
+}

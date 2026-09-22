@@ -1,0 +1,12 @@
+{
+  "currency": "THB",
+  "year": 2026,
+  "category": "Non-Operational / Business Travel (Flights)",
+  "note": "แยกออกจากงบประมาณระบบ Cloud AI และค่าใช้จ่ายรายเดือนของบริษัท",
+  "total": 26388.76,
+  "items": [
+    { "date": "2026-01-10", "airline": "Thai Vietjet", "route": "BKK - CNX - BKK", "passengers": ["Darika", "Pichaya"], "amount": 15728.76, "taxInvoice": "ET202601232171" },
+    { "date": "2026-02-22", "airline": "Bangkok Airways", "route": "BKK - HKT - BKK", "passengers": ["Tanakorn", "Faozee"], "amount": 7960.00, "taxInvoice": "BBKKCC2602220001" },
+    { "date": "2026-05-17", "airline": "Thai Airways", "route": "BKK - HKT", "passengers": ["Tanakorn Pathumrattanadechakorn"], "amount": 2700.00, "taxInvoice": "00706047" }
+  ]
+}

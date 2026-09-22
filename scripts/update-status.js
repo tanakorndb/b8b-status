@@ -510,23 +510,43 @@ async function gather() {
 
   const financials = {
     summary: {
-      totalMonthlyThb: 12677.01,
-      totalMonthlyUsd: 372.85,
-      dailyRunRateThb: 422.57,
+      totalMonthlyThb: 12538.26,
+      totalMonthlyUsd: 368.77,
+      dailyRunRateThb: 417.94,
+      totalActual9Months: 112839.32,
+      totalProjected12Months: 150454.10,
       paidServicesCount: 11,
       freeServicesCount: 7,
       totalServicesCount: 18,
       breakdown: {
         aiThb: 9426.00,
         telecomThb: 1688.26,
-        businessThb: 1323.59,
-        infraThb: 239.16,
+        businessThb: 1284.00,
+        infraThb: 140.00,
         freeThb: 0.00
       },
       estimatedMonthlySavingsThb: 12500,
       policy: "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
       lastUpdatedThai: timestampThai
     },
+    history2026: (() => {
+      try {
+        const expPath = path.join(__dirname, '..', 'expenses_2026.json');
+        if (fs.existsSync(expPath)) {
+          return JSON.parse(fs.readFileSync(expPath, 'utf8'));
+        }
+      } catch (e) {}
+      return null;
+    })(),
+    travelExpenses2026: (() => {
+      try {
+        const trvPath = path.join(__dirname, '..', 'travel_expenses_2026.json');
+        if (fs.existsSync(trvPath)) {
+          return JSON.parse(fs.readFileSync(trvPath, 'utf8'));
+        }
+      } catch (e) {}
+      return null;
+    })(),
     categories: financialCategories,
     timeline: [
       { day: 1, name: "Railway Hobby Credit", cost: "เครดิตฟรี $5.00/ด. (จ่ายจริง $0)", category: "Cloud Infra", categoryId: "free", status: "Free Active", icon: "🚂", cycle: "ทุกวันที่ 1 ของเดือน" },
