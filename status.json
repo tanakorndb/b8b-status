@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-22T02:03:32.377Z",
-  "timestampThai": "22 ก.ย. 2569 เวลา 09:03:34 น.",
+  "timestamp": "2026-09-22T04:04:40.961Z",
+  "timestampThai": "22 ก.ย. 2569 เวลา 11:04:42 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
@@ -22,7 +22,7 @@
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "22 ก.ย. 2569 เวลา 09:03:34 น."
+      "lastUpdatedThai": "22 ก.ย. 2569 เวลา 11:04:42 น."
     },
     "history2026": {
       "currency": "THB",
@@ -823,15 +823,15 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "2d 0h 48m",
-    "hostUptimeThai": "2 วัน 0 ชั่วโมง 48 นาที",
-    "hostVitals": "SSD 220Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "220Gi",
-    "swapUsage": "5086.00M",
+    "hostUptime": "2d 2h 49m",
+    "hostUptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
+    "hostVitals": "SSD 221Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "221Gi",
+    "swapUsage": "3871.56M",
     "battery": "80%",
-    "cpuLoad": "11.25, 5.25, 3.54",
+    "cpuLoad": "1.22, 1.56, 1.68",
     "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "29ms",
+    "pingLatency": "20ms",
     "totalMonthlyThb": 12538.26,
     "totalMonthlyUsd": 368.77,
     "monthlySavingsThb": 12500
@@ -934,19 +934,19 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "2d 0h 48m",
-    "uptimeThai": "2 วัน 0 ชั่วโมง 48 นาที",
+    "uptime": "2d 2h 49m",
+    "uptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "11.25",
-      "5.25",
-      "3.54"
+      "1.22",
+      "1.56",
+      "1.68"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "5086.00M",
-    "diskAvailable": "220Gi",
+    "swapUsed": "3871.56M",
+    "diskAvailable": "221Gi",
     "diskUsedPercent": "76%"
   },
   "macbookProM2": {
@@ -954,11 +954,11 @@
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "2 วัน 0 ชั่วโมง 48 นาที",
-      "cpuLoad": "11.25, 5.25, 3.54",
-      "freeDisk": "220Gi",
+      "uptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
+      "cpuLoad": "1.22, 1.56, 1.68",
+      "freeDisk": "221Gi",
       "usedDiskPercent": "76%",
-      "swapUsed": "5086.00M",
+      "swapUsed": "3871.56M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
@@ -1183,110 +1183,50 @@
     {
       "name": "B8B Group (Landing)",
       "url": "https://b8b.group",
-      "domain": "b8b.group",
-      "type": "Platform Hub",
+      "type": "Frontend / Landing",
       "code": 200,
-      "latency": "302ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 52,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": "~฿58 / เดือน (฿700/ปี ต่ออายุ 19 พ.ค.)"
+      "latency": "112ms",
+      "ok": true
     },
     {
       "name": "Banii Bazi (Fortune)",
       "url": "https://b8b.homes",
-      "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "202ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 53,
-        "validTo": "Nov 14 02:23:22 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": "~฿41 / เดือน (฿490/ปี ต่ออายุ 16 ก.พ.)"
+      "latency": "214ms",
+      "ok": true
     },
     {
       "name": "Banii Trip (Travel OS)",
       "url": "https://trip.b8b.homes",
-      "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "169ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 59,
-        "validTo": "Nov 20 04:12:38 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Worker)",
-      "billingDate": "ฟรี 100,000 req/วัน",
-      "domainCost": null
+      "latency": "85ms",
+      "ok": true
     },
     {
       "name": "B8B Lands (Real Estate)",
       "url": "https://b8b.group/lands/",
-      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "112ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 52,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": null
+      "latency": "79ms",
+      "ok": true
     },
     {
       "name": "B8B Power Passive",
       "url": "https://b8b.group/pp/",
-      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "103ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 52,
-        "validTo": "Nov 13 13:19:33 2026 GMT",
-        "issuer": "Google Trust Services"
-      },
-      "cost": "฿0 / เดือน (Cloudflare Pages)",
-      "billingDate": "ฟรีตลอดชีพ",
-      "domainCost": null
+      "latency": "95ms",
+      "ok": true
     },
     {
       "name": "Bwork LINE Bot API",
       "url": "https://bwork.b8b.group/healthz",
-      "domain": "bwork.b8b.group",
-      "type": "Worker Health",
+      "type": "API Backend",
       "code": 200,
-      "latency": "582ms",
-      "ok": true,
-      "ssl": {
-        "ok": true,
-        "daysLeft": 57,
-        "validTo": "Nov 18 10:05:38 2026 GMT",
-        "issuer": "Let's Encrypt"
-      },
-      "cost": "฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)",
-      "billingDate": "รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน",
-      "domainCost": null
+      "latency": "387ms",
+      "ok": true
     }
   ],
   "mcpServers": [
@@ -1412,7 +1352,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "22 ก.ย. 2569 เวลา 09:03:34 น.",
+    "lastSyncThai": "22 ก.ย. 2569 เวลา 11:04:42 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -1504,5 +1444,6 @@
         "launchCountdownText": "อีก 7 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
-  }
+  },
+  "lastBuild": "2026-09-22T04:27:27.048Z"
 }
