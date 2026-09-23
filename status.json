@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-22T04:04:40.961Z",
-  "timestampThai": "22 ก.ย. 2569 เวลา 11:04:42 น.",
+  "timestamp": "2026-09-23T15:09:46.397Z",
+  "timestampThai": "23 ก.ย. 2569 เวลา 22:09:49 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
@@ -22,7 +22,7 @@
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "22 ก.ย. 2569 เวลา 11:04:42 น."
+      "lastUpdatedThai": "23 ก.ย. 2569 เวลา 22:09:49 น."
     },
     "history2026": {
       "currency": "THB",
@@ -823,30 +823,38 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "2d 2h 49m",
-    "hostUptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
-    "hostVitals": "SSD 221Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "221Gi",
-    "swapUsage": "3871.56M",
+    "hostUptime": "3d 13h 54m",
+    "hostUptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
+    "hostVitals": "SSD 196Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "196Gi",
+    "swapUsage": "15678.25M",
     "battery": "80%",
-    "cpuLoad": "1.22, 1.56, 1.68",
-    "internetSpeed": "81.9 ⬇️ / 193.7 ⬆️ Mbps",
-    "pingLatency": "20ms",
+    "cpuLoad": "5.31, 6.95, 7.48",
+    "internetSpeed": "279.3 ⬇️ / 695.4 ⬆️ Mbps",
+    "internetCeiling": "500 Mbps (MikroTik PCQ)",
+    "pingLatency": "656ms",
     "totalMonthlyThb": 12538.26,
     "totalMonthlyUsd": 368.77,
     "monthlySavingsThb": 12500
   },
   "network": {
-    "downloadMbps": 81.9,
-    "uploadMbps": 193.7,
-    "pingMs": "29ms",
-    "dnsPingMs": "16ms",
-    "responsivenessRpm": 21.2,
-    "testedAt": "2026-09-20T10:08:50Z",
-    "testedAtThai": "20 ก.ย. 2569 เวลา 17:08 น.",
-    "testServer": "Apple Edge CDN (sgsin4-edge-fx-030.aaplimg.com)",
-    "interface": "Wi-Fi (en0 · 802.11n 2.4GHz)",
-    "detected5G": "Channel 44 (5GHz Wi-Fi 6 802.11ax · 40MHz)",
+    "downloadMbps": 279.3,
+    "uploadMbps": 695.4,
+    "pingMs": "656ms",
+    "dnsPingMs": "2.1ms",
+    "responsivenessRpm": 65.6,
+    "rateLimitCeilingMbps": 500,
+    "dailyRestSchedule": {
+      "enabled": true,
+      "timeRange": "04:00 - 05:00 น.",
+      "durationHours": 1,
+      "description": "ปิดพักพอร์ต ether3 (AP1), ether4 (AP2) และบล็อกทราฟฟิก AP3 อัตโนมัติทุกวัน"
+    },
+    "testedAt": "2026-09-23 10:06:31.341",
+    "testedAtThai": "23 ก.ย. 2569 เวลา 10:07 น.",
+    "testServer": "Apple Edge CDN (sgsin4-edge-fx-007.aaplimg.com)",
+    "interface": "Wi-Fi (en0 · 802.11ax Wi-Fi 6)",
+    "detected5G": "Channel 44 (5GHz 80MHz Channel Width · Maximum Speed Profile)",
     "signalDbm": "-59 dBm",
     "isp": "TRUE INTERNET CORPORATION CO. LTD.",
     "publicIp": "115.87.58.146",
@@ -868,54 +876,61 @@
     },
     "devices": [
       {
-        "name": "MikroTik Router",
+        "name": "MikroTik RB450Gx4",
         "type": "Core Gateway / Router",
         "ip": "192.168.1.1",
         "secondaryIp": "10.10.10.1",
         "mac": "dc:2c:6e:d7:e3:c5",
         "vendor": "Routerboard.com (MikroTik)",
-        "ports": "WinBox (8291), WebFig (443), DNS (53)",
-        "role": "NAT Gateway, DHCP Master, Bandwidth & Routing Engine"
+        "ports": "WinBox (8291), WebFig (443), DNS (53), ether1-5 Gigabit",
+        "role": "NAT Gateway, DHCP Master, PCQ 500M Bandwidth Limiter & Firewall",
+        "features": "PCQ 500 Mbps Per-Device · Daily Rest 04:00-05:00 · Auto Backup",
+        "backupFile": "/Users/user/AI/Backups/mikrotik_RB450Gx4_clean.rsc"
       },
       {
-        "name": "Ubiquiti Infrastructure / Switch",
-        "type": "PoE Switch / Infrastructure Device",
+        "name": "AP 1: UniFi AC-LR (ชั้น 1)",
+        "type": "Wireless Access Point",
         "ip": "192.168.1.3",
         "mac": "fc:ec:da:e8:7a:88",
-        "vendor": "Ubiquiti Inc",
-        "status": "Dormant / Pending Adoption",
-        "role": "PoE Switch / Subnet Hardware Node (รอเชื่อม Cloud Key)"
+        "port": "ether3 (MikroTik)",
+        "vendor": "Ubiquiti Inc.",
+        "status": "Online (Managed by Another Console · รอ Reset/Adopt)",
+        "role": "Wi-Fi AP Long-Range ครอบคลุมพื้นที่ชั้น 1",
+        "pinholeReset": "กดปุ่ม Reset 10 วินาที เพื่อให้ขึ้นไฟขาวค้างแล้วกด Adopt บน CloudKey"
       },
       {
-        "name": "UniFi Cloud Key Gen2 Plus",
+        "name": "AP 2: UniFi U6-Lite (ชั้น 2 ตัวที่ 1)",
+        "type": "Wireless Access Point (Wi-Fi 6)",
+        "ip": "192.168.1.4",
+        "mac": "78:45:58:4b:5a:e8",
+        "port": "ether4 (MikroTik)",
+        "vendor": "Ubiquiti Inc.",
+        "status": "Online (Managed by Another Console · รอ Reset/Adopt)",
+        "role": "Wi-Fi 6 AP ชั้น 2 ตัวหลัก (v6.6.55)",
+        "pinholeReset": "กดปุ่ม Reset 10 วินาที เพื่อให้ขึ้นไฟขาวค้างแล้วกด Adopt บน CloudKey"
+      },
+      {
+        "name": "AP 3: UniFi U6-Lite (ชั้น 2 ตัวที่ 2)",
+        "type": "Wireless Access Point (Wi-Fi 6)",
+        "ip": "192.168.1.5",
+        "mac": "78:45:58:4e:f1:d0",
+        "port": "ether2 (ผ่าน Switch Hub)",
+        "vendor": "Ubiquiti Inc.",
+        "status": "Online (Managed by Another Console · รอ Reset/Adopt)",
+        "role": "Wi-Fi 6 AP ชั้น 2 ในห้องทำงาน (v6.6.55)",
+        "pinholeReset": "กดปุ่ม Reset 10 วินาที เพื่อให้ขึ้นไฟขาวค้างแล้วกด Adopt บน CloudKey"
+      },
+      {
+        "name": "UniFi CloudKey Gen2 Plus",
         "type": "Central Controller & NVR",
         "ip": "192.168.1.143",
         "mac": "78:45:58:de:bb:29",
-        "vendor": "Ubiquiti Inc",
+        "port": "ether5 (MikroTik)",
+        "vendor": "Ubiquiti Inc.",
         "storage": "512GB SSD Apacer AS350",
-        "status": "isSetup: false (Awaiting Web Setup)",
-        "ports": "Web Console (443), Network v10.5.67",
-        "role": "Centralized Wi-Fi Controller & UniFi Protect NVR"
-      },
-      {
-        "name": "UniFi 6 Lite (U6-Lite-F2)",
-        "type": "Wireless Access Point",
-        "ip": "192.168.1.4",
-        "mac": "78:45:58:4b:5a:e8",
-        "vendor": "Ubiquiti Inc",
-        "status": "Pending Adoption (State 2)",
-        "ports": "Inform (8080), Dropbear SSH (22)",
-        "role": "Wi-Fi 6 AP Floor 2 (v6.6.55)"
-      },
-      {
-        "name": "UniFi 6 Lite (U6-Lite-inroom)",
-        "type": "Wireless Access Point",
-        "ip": "192.168.1.5",
-        "mac": "78:45:58:4e:f1:d0",
-        "vendor": "Ubiquiti Inc",
-        "status": "Pending Adoption (State 2)",
-        "ports": "Inform (8080), Dropbear SSH (22)",
-        "role": "Wi-Fi 6 AP In-Room (v6.6.55)"
+        "status": "Online 100% (UniFi Network v10.5.67 พร้อมใช้งาน)",
+        "ssid": "KAEWTHIPRAK (Fast Roaming 802.11r/v, WPA2/WPA3)",
+        "role": "Controller จัดการ Wi-Fi รวมศูนย์ & UniFi Protect NVR"
       },
       {
         "name": "Tailscale Mesh Node",
@@ -934,37 +949,99 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "2d 2h 49m",
-    "uptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
+    "uptime": "3d 13h 54m",
+    "uptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "1.22",
-      "1.56",
-      "1.68"
+      "5.31",
+      "6.95",
+      "7.48"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "3871.56M",
-    "diskAvailable": "221Gi",
-    "diskUsedPercent": "76%"
+    "swapUsed": "15678.25M",
+    "diskAvailable": "196Gi",
+    "diskUsedPercent": "78%"
   },
   "macbookProM2": {
     "model": "MacBook Pro 14\" (Apple Silicon M2 Pro 12C / 16GB)",
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "2 วัน 2 ชั่วโมง 49 นาที",
-      "cpuLoad": "1.22, 1.56, 1.68",
-      "freeDisk": "221Gi",
-      "usedDiskPercent": "76%",
-      "swapUsed": "3871.56M",
+      "uptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
+      "cpuLoad": "5.31, 6.95, 7.48",
+      "freeDisk": "196Gi",
+      "usedDiskPercent": "78%",
+      "swapUsed": "15678.25M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
+    "spacesBaseline": {
+      "order": [
+        {
+          "space": 1,
+          "name": "Desktop",
+          "app": "Finder & Utilities",
+          "mode": "Standard Desktop",
+          "icon": "🖥️",
+          "role": "WinBox, Jump Desktop, Keychain Passwords & File Management",
+          "status": "ACTIVE_ONLINE"
+        },
+        {
+          "space": 2,
+          "name": "Google Chrome",
+          "app": "Google Chrome",
+          "mode": "Full-Screen Space",
+          "icon": "🌐",
+          "role": "Production Work Hub (tanakorn.db@gmail.com, CDP Port 9222)",
+          "status": "ACTIVE_ONLINE"
+        },
+        {
+          "space": 3,
+          "name": "Claude Desktop",
+          "app": "Claude",
+          "mode": "Full-Screen Space",
+          "icon": "🤖",
+          "role": "Anthropic AI, Artifacts & Deep Reasoning (Claude Max)",
+          "status": "ACTIVE_ONLINE"
+        },
+        {
+          "space": 4,
+          "name": "ChatGPT Desktop",
+          "app": "ChatGPT",
+          "mode": "Full-Screen Space",
+          "icon": "💬",
+          "role": "OpenAI Canvas & Advanced Voice Mode (Plus Plan)",
+          "status": "ACTIVE_ONLINE"
+        },
+        {
+          "space": 5,
+          "name": "Antigravity",
+          "app": "Antigravity",
+          "mode": "Full-Screen Space",
+          "icon": "🚀",
+          "role": "Autonomous Coding IDE & AI Agent Control Hub",
+          "status": "ACTIVE_ONLINE"
+        }
+      ],
+      "enforcement": "com.b8b.spaces.baseline (mru-spaces = false, Never reorders automatically)",
+      "gesture": "3-Finger Swipe Left / Right via Jump Desktop Fluid Engine on iPad & iPhone",
+      "verifiedOrder": "Space 1 ➔ Space 2 ➔ Space 3 ➔ Space 4 ➔ Space 5 (100% Verified)"
+    },
     "workspaces": [
       {
-        "name": "Google Chrome",
+        "name": "Desktop (Space 1)",
+        "role": "Finder & Utilities (WinBox, Jump Desktop, Passwords)",
+        "mode": "Main Desktop (Space 1)",
+        "status": "ONLINE",
+        "icon": "🖥️",
+        "badge": "Active",
+        "cost": "฿0 / เดือน",
+        "billingDate": "ไม่มีค่าบริการ"
+      },
+      {
+        "name": "Google Chrome (Space 2)",
         "role": "Production Work Hub (tanakorn.db@gmail.com)",
         "mode": "Full-Screen Space (Space 2)",
         "status": "ONLINE",
@@ -974,17 +1051,17 @@
         "billingDate": "ไม่มีค่าบริการ (ฟรี)"
       },
       {
-        "name": "Claude Desktop",
+        "name": "Claude Desktop (Space 3)",
         "role": "Anthropic AI, Artifacts & Deep Reasoning (Claude Max)",
         "mode": "Full-Screen Space (Space 3)",
         "status": "ONLINE",
-        "icon": "🧠",
+        "icon": "🤖",
         "badge": "Active",
         "cost": "$200.00 / เดือน (~฿6,800)",
         "billingDate": "ทุกวันที่ 18 ของเดือน (Claude Max)"
       },
       {
-        "name": "ChatGPT Desktop",
+        "name": "ChatGPT Desktop (Space 4)",
         "role": "OpenAI Canvas & Advanced Voice Mode (Plus Plan)",
         "mode": "Full-Screen Space (Space 4)",
         "status": "ONLINE",
@@ -994,11 +1071,11 @@
         "billingDate": "ทุกวันที่ 19-20 ของเดือน (ChatGPT Plus)"
       },
       {
-        "name": "Antigravity",
+        "name": "Antigravity (Space 5)",
         "role": "Autonomous Coding IDE & AI Control Hub",
         "mode": "Full-Screen Space (Space 5)",
         "status": "ONLINE",
-        "icon": "🪐",
+        "icon": "🚀",
         "badge": "Active",
         "cost": "฿0 / เดือน",
         "billingDate": "ไม่มีค่าบริการ (Free Technical Preview)"
@@ -1183,50 +1260,110 @@
     {
       "name": "B8B Group (Landing)",
       "url": "https://b8b.group",
-      "type": "Frontend / Landing",
+      "domain": "b8b.group",
+      "type": "Platform Hub",
       "code": 200,
-      "latency": "112ms",
-      "ok": true
+      "latency": "179ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 51,
+        "validTo": "Nov 13 13:19:33 2026 GMT",
+        "issuer": "Google Trust Services"
+      },
+      "cost": "฿0 / เดือน (Cloudflare Pages)",
+      "billingDate": "ฟรีตลอดชีพ",
+      "domainCost": "~฿58 / เดือน (฿700/ปี ต่ออายุ 19 พ.ค.)"
     },
     {
       "name": "Banii Bazi (Fortune)",
       "url": "https://b8b.homes",
+      "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "214ms",
-      "ok": true
+      "latency": "159ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 51,
+        "validTo": "Nov 14 02:23:22 2026 GMT",
+        "issuer": "Google Trust Services"
+      },
+      "cost": "฿0 / เดือน (Cloudflare Pages)",
+      "billingDate": "ฟรีตลอดชีพ",
+      "domainCost": "~฿41 / เดือน (฿490/ปี ต่ออายุ 16 ก.พ.)"
     },
     {
       "name": "Banii Trip (Travel OS)",
       "url": "https://trip.b8b.homes",
+      "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "85ms",
-      "ok": true
+      "latency": "139ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 58,
+        "validTo": "Nov 20 04:12:38 2026 GMT",
+        "issuer": "Google Trust Services"
+      },
+      "cost": "฿0 / เดือน (Cloudflare Worker)",
+      "billingDate": "ฟรี 100,000 req/วัน",
+      "domainCost": null
     },
     {
       "name": "B8B Lands (Real Estate)",
       "url": "https://b8b.group/lands/",
+      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "79ms",
-      "ok": true
+      "latency": "199ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 51,
+        "validTo": "Nov 13 13:19:33 2026 GMT",
+        "issuer": "Google Trust Services"
+      },
+      "cost": "฿0 / เดือน (Cloudflare Pages)",
+      "billingDate": "ฟรีตลอดชีพ",
+      "domainCost": null
     },
     {
       "name": "B8B Power Passive",
       "url": "https://b8b.group/pp/",
+      "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "95ms",
-      "ok": true
+      "latency": "957ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 51,
+        "validTo": "Nov 13 13:19:33 2026 GMT",
+        "issuer": "Google Trust Services"
+      },
+      "cost": "฿0 / เดือน (Cloudflare Pages)",
+      "billingDate": "ฟรีตลอดชีพ",
+      "domainCost": null
     },
     {
       "name": "Bwork LINE Bot API",
       "url": "https://bwork.b8b.group/healthz",
-      "type": "API Backend",
+      "domain": "bwork.b8b.group",
+      "type": "Worker Health",
       "code": 200,
-      "latency": "387ms",
-      "ok": true
+      "latency": "997ms",
+      "ok": true,
+      "ssl": {
+        "ok": true,
+        "daysLeft": 56,
+        "validTo": "Nov 18 10:05:38 2026 GMT",
+        "issuer": "Let's Encrypt"
+      },
+      "cost": "฿0.00 สุทธิ (ในเครดิตฟรี $5/ด)",
+      "billingDate": "รีเซ็ตเครดิตทุกวันที่ 1 ของเดือน",
+      "domainCost": null
     }
   ],
   "mcpServers": [
@@ -1352,7 +1489,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "22 ก.ย. 2569 เวลา 11:04:42 น.",
+    "lastSyncThai": "23 ก.ย. 2569 เวลา 22:09:49 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -1367,8 +1504,8 @@
         "applicationRef": "002434229",
         "submittedDate": "2026-09-14 14:20",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 14:20 น.",
-        "daysInReview": 7,
-        "daysInReviewText": "ยื่นมาแล้ว 7 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
+        "daysInReview": 9,
+        "daysInReviewText": "ยื่นมาแล้ว 9 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
         "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด",
         "entityRegNo": "0105559126054",
         "contactPhone": "062-928-6289",
@@ -1401,8 +1538,8 @@
         ],
         "submittedDate": "2026-09-14 19:40",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 19:40 น.",
-        "daysInReview": 7,
-        "daysInReviewText": "ยื่นมาแล้ว 7 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
+        "daysInReview": 9,
+        "daysInReviewText": "ยื่นมาแล้ว 9 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
         "demoVideo": "https://youtu.be/Khzz_76OfoE",
         "demoVideoDuration": "2:16 นาที (ภาษาอังกฤษ)",
         "interimShield": "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
@@ -1440,10 +1577,9 @@
       "launch": {
         "launchDate": "2026-09-29T00:00:00+07:00",
         "launchDateThai": "29 กันยายน 2569 เวลา 00:00 น.",
-        "daysRemaining": 7,
-        "launchCountdownText": "อีก 7 วันเปิดตัวอย่างเป็นทางการ"
+        "daysRemaining": 6,
+        "launchCountdownText": "อีก 6 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
-  },
-  "lastBuild": "2026-09-22T04:27:27.048Z"
+  }
 }

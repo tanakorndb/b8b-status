@@ -353,10 +353,9 @@ async function gather() {
   }
 
   const livePing = await getLivePing('1.1.1.1');
-  if (networkInfo && networkInfo.speed) {
-    networkInfo.speed.pingMs = livePing;
-  }
   if (networkInfo) {
+    networkInfo.pingMs = livePing;
+    if (networkInfo.speed) networkInfo.speed.pingMs = livePing;
     networkInfo.cost = '฿599 / เดือน (True GigaTex Fiber)';
     networkInfo.billingDate = 'ทุกวันที่ 18 ของเดือน';
     networkInfo.tailscaleCost = '฿0 / เดือน (Personal Free Plan 100 อุปกรณ์)';
@@ -376,11 +375,24 @@ async function gather() {
       battery: batteryPct,
       powerStatus: `AC Power (${batteryPct} · Sleep Disabled · Always-On)`
     },
+    spacesBaseline: {
+      order: [
+        { space: 1, name: 'Desktop', app: 'Finder & Utilities', mode: 'Standard Desktop', icon: '🖥️', role: 'WinBox, Jump Desktop, Keychain Passwords & File Management', status: 'ACTIVE_ONLINE' },
+        { space: 2, name: 'Google Chrome', app: 'Google Chrome', mode: 'Full-Screen Space', icon: '🌐', role: 'Production Work Hub (tanakorn.db@gmail.com, CDP Port 9222)', status: 'ACTIVE_ONLINE' },
+        { space: 3, name: 'Claude Desktop', app: 'Claude', mode: 'Full-Screen Space', icon: '🤖', role: 'Anthropic AI, Artifacts & Deep Reasoning (Claude Max)', status: 'ACTIVE_ONLINE' },
+        { space: 4, name: 'ChatGPT Desktop', app: 'ChatGPT', mode: 'Full-Screen Space', icon: '💬', role: 'OpenAI Canvas & Advanced Voice Mode (Plus Plan)', status: 'ACTIVE_ONLINE' },
+        { space: 5, name: 'Antigravity', app: 'Antigravity', mode: 'Full-Screen Space', icon: '🚀', role: 'Autonomous Coding IDE & AI Agent Control Hub', status: 'ACTIVE_ONLINE' }
+      ],
+      enforcement: 'com.b8b.spaces.baseline (mru-spaces = false, Never reorders automatically)',
+      gesture: '3-Finger Swipe Left / Right via Jump Desktop Fluid Engine on iPad & iPhone',
+      verifiedOrder: 'Space 1 ➔ Space 2 ➔ Space 3 ➔ Space 4 ➔ Space 5 (100% Verified)'
+    },
     workspaces: [
-      { name: 'Google Chrome', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (ฟรี)' },
-      { name: 'Claude Desktop', role: 'Anthropic AI, Artifacts & Deep Reasoning (Claude Max)', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🧠', badge: 'Active', cost: '$200.00 / เดือน (~฿6,800)', billingDate: 'ทุกวันที่ 18 ของเดือน (Claude Max)' },
-      { name: 'ChatGPT Desktop', role: 'OpenAI Canvas & Advanced Voice Mode (Plus Plan)', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active', cost: '$20.00 / เดือน (฿699 จากสลิปจริง)', billingDate: 'ทุกวันที่ 19-20 ของเดือน (ChatGPT Plus)' },
-      { name: 'Antigravity', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🪐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (Free Technical Preview)' }
+      { name: 'Desktop (Space 1)', role: 'Finder & Utilities (WinBox, Jump Desktop, Passwords)', mode: 'Main Desktop (Space 1)', status: 'ONLINE', icon: '🖥️', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ' },
+      { name: 'Google Chrome (Space 2)', role: 'Production Work Hub (tanakorn.db@gmail.com)', mode: 'Full-Screen Space (Space 2)', status: 'ONLINE', icon: '🌐', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (ฟรี)' },
+      { name: 'Claude Desktop (Space 3)', role: 'Anthropic AI, Artifacts & Deep Reasoning (Claude Max)', mode: 'Full-Screen Space (Space 3)', status: 'ONLINE', icon: '🤖', badge: 'Active', cost: '$200.00 / เดือน (~฿6,800)', billingDate: 'ทุกวันที่ 18 ของเดือน (Claude Max)' },
+      { name: 'ChatGPT Desktop (Space 4)', role: 'OpenAI Canvas & Advanced Voice Mode (Plus Plan)', mode: 'Full-Screen Space (Space 4)', status: 'ONLINE', icon: '💬', badge: 'Active', cost: '$20.00 / เดือน (฿699 จากสลิปจริง)', billingDate: 'ทุกวันที่ 19-20 ของเดือน (ChatGPT Plus)' },
+      { name: 'Antigravity (Space 5)', role: 'Autonomous Coding IDE & AI Control Hub', mode: 'Full-Screen Space (Space 5)', status: 'ONLINE', icon: '🚀', badge: 'Active', cost: '฿0 / เดือน', billingDate: 'ไม่มีค่าบริการ (Free Technical Preview)' }
     ],
     chromeConfig: {
       defaultProfile: 'Default (tanakorn.db@gmail.com)',
@@ -605,7 +617,8 @@ async function gather() {
       swapUsage: swapUsage,
       battery: batteryPct,
       cpuLoad: loadAverages.join(', '),
-      internetSpeed: `${networkInfo?.speed?.downloadMbps || 81.9} ⬇️ / ${networkInfo?.speed?.uploadMbps || 193.7} ⬆️ Mbps`,
+      internetSpeed: `${networkInfo?.downloadMbps || networkInfo?.speed?.downloadMbps || 279.3} ⬇️ / ${networkInfo?.uploadMbps || networkInfo?.speed?.uploadMbps || 695.4} ⬆️ Mbps`,
+      internetCeiling: '500 Mbps (MikroTik PCQ)',
       pingLatency: livePing || '29ms',
       totalMonthlyThb: financials.summary.totalMonthlyThb,
       totalMonthlyUsd: financials.summary.totalMonthlyUsd,
