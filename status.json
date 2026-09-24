@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-23T15:09:46.397Z",
-  "timestampThai": "23 ก.ย. 2569 เวลา 22:09:49 น.",
+  "timestamp": "2026-09-24T01:57:08.361Z",
+  "timestampThai": "24 ก.ย. 2569 เวลา 08:57:09 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
@@ -22,7 +22,7 @@
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "23 ก.ย. 2569 เวลา 22:09:49 น."
+      "lastUpdatedThai": "24 ก.ย. 2569 เวลา 08:57:09 น."
     },
     "history2026": {
       "currency": "THB",
@@ -823,16 +823,16 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "3d 13h 54m",
-    "hostUptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
-    "hostVitals": "SSD 196Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "196Gi",
-    "swapUsage": "15678.25M",
+    "hostUptime": "4d 0h 42m",
+    "hostUptimeThai": "4 วัน 0 ชั่วโมง 42 นาที",
+    "hostVitals": "SSD 183Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "183Gi",
+    "swapUsage": "20355.88M",
     "battery": "80%",
-    "cpuLoad": "5.31, 6.95, 7.48",
+    "cpuLoad": "45.07, 19.16, 12.35",
     "internetSpeed": "279.3 ⬇️ / 695.4 ⬆️ Mbps",
     "internetCeiling": "500 Mbps (MikroTik PCQ)",
-    "pingLatency": "656ms",
+    "pingLatency": "36ms",
     "totalMonthlyThb": 12538.26,
     "totalMonthlyUsd": 368.77,
     "monthlySavingsThb": 12500
@@ -840,7 +840,7 @@
   "network": {
     "downloadMbps": 279.3,
     "uploadMbps": 695.4,
-    "pingMs": "656ms",
+    "pingMs": "36ms",
     "dnsPingMs": "2.1ms",
     "responsivenessRpm": 65.6,
     "rateLimitCeilingMbps": 500,
@@ -949,31 +949,31 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "3d 13h 54m",
-    "uptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
+    "uptime": "4d 0h 42m",
+    "uptimeThai": "4 วัน 0 ชั่วโมง 42 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "5.31",
-      "6.95",
-      "7.48"
+      "45.07",
+      "19.16",
+      "12.35"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "15678.25M",
-    "diskAvailable": "196Gi",
-    "diskUsedPercent": "78%"
+    "swapUsed": "20355.88M",
+    "diskAvailable": "183Gi",
+    "diskUsedPercent": "80%"
   },
   "macbookProM2": {
     "model": "MacBook Pro 14\" (Apple Silicon M2 Pro 12C / 16GB)",
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "3 วัน 13 ชั่วโมง 54 นาที",
-      "cpuLoad": "5.31, 6.95, 7.48",
-      "freeDisk": "196Gi",
-      "usedDiskPercent": "78%",
-      "swapUsed": "15678.25M",
+      "uptimeThai": "4 วัน 0 ชั่วโมง 42 นาที",
+      "cpuLoad": "45.07, 19.16, 12.35",
+      "freeDisk": "183Gi",
+      "usedDiskPercent": "80%",
+      "swapUsed": "20355.88M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
@@ -1263,11 +1263,11 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "179ms",
+      "latency": "129ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 51,
+        "daysLeft": 50,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       },
@@ -1281,7 +1281,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "159ms",
+      "latency": "185ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1299,11 +1299,11 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "139ms",
+      "latency": "111ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 58,
+        "daysLeft": 57,
         "validTo": "Nov 20 04:12:38 2026 GMT",
         "issuer": "Google Trust Services"
       },
@@ -1317,11 +1317,11 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "199ms",
+      "latency": "101ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 51,
+        "daysLeft": 50,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       },
@@ -1335,11 +1335,11 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "957ms",
+      "latency": "141ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 51,
+        "daysLeft": 50,
         "validTo": "Nov 13 13:19:33 2026 GMT",
         "issuer": "Google Trust Services"
       },
@@ -1353,11 +1353,11 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "997ms",
+      "latency": "371ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 56,
+        "daysLeft": 55,
         "validTo": "Nov 18 10:05:38 2026 GMT",
         "issuer": "Let's Encrypt"
       },
@@ -1488,8 +1488,8 @@
     }
   ],
   "trustAndVerification": {
-    "summary": "LINE & Google อยู่ระหว่างตรวจสอบ · Stripe เปิดรับเงิน 100%",
-    "lastSyncThai": "23 ก.ย. 2569 เวลา 22:09:49 น.",
+    "summary": "LINE ผ่านการรับรองโล่น้ำเงิน 100% 🔵 · Stripe พร้อมรับเงิน · Google ตรวจสอบ Scopes",
+    "lastSyncThai": "24 ก.ย. 2569 เวลา 08:57:09 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -1497,23 +1497,23 @@
         "basicId": "@254yglkl",
         "premiumId": "@bwork",
         "target": "Blue Shield (บัญชีรับรอง / Verified Account)",
-        "currentBadge": "Grey Shield (บัญชีทั่วไป)",
-        "status": "UNDER_REVIEW",
-        "statusLabel": "อยู่ระหว่างการตรวจสอบ (รอสายยืนยันตัวตน)",
-        "statusTag": "รอรับสาย 5–10 วันทำการ",
+        "currentBadge": "Blue Shield (บัญชีรับรองทางการ)",
+        "status": "VERIFIED",
+        "statusLabel": "อนุมัติสมบูรณ์แล้ว 100% (บัญชีรับรอง Blue Shield 🔵)",
+        "statusTag": "อนุมัติแล้ว 🔵 Verified",
         "applicationRef": "002434229",
         "submittedDate": "2026-09-14 14:20",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 14:20 น.",
         "daysInReview": 9,
-        "daysInReviewText": "ยื่นมาแล้ว 9 วัน (กรอบเวลาปกติ 5–10 วันทำการ)",
+        "daysInReviewText": "อนุมัติเรียบร้อยสมบูรณ์ (โล่น้ำเงินทางการ)",
         "entity": "บริษัท บีเอทบี สแตรทิจิก แอดไวซอรี จำกัด",
         "entityRegNo": "0105559126054",
         "contactPhone": "062-928-6289",
         "applicantName": "ธนกร ปทุมรัตนเดชากร",
         "applicantEmail": "tanakorn.db@gmail.com",
-        "actionRequired": "รอรับสายบันทึกเสียงยืนยันตัวตนจากทีมงาน LINE ประเทศไทย ที่เบอร์ 062-928-6289",
-        "benefits": "ปลดล็อกค้นหาชื่อ Bwork บนแอป LINE, ยิงแอดเพิ่มเพื่อนได้, ปลดคำเตือนความเสี่ยงทั้งหมด",
-        "badgeColor": "amber",
+        "actionRequired": "ไม่มี — ผ่านการรับรองตัวตนและเอกสาร DBD จาก LINE ประเทศไทย เรียบร้อยสมบูรณ์",
+        "benefits": "ค้นหาชื่อ Bwork บนแอป LINE ได้ทันที, ยิงโฆษณา LINE Ads Platform เพิ่มเพื่อนได้เต็มระบบ, ปลดล็อกสิทธิ์ความน่าเชื่อถือสูงสุด",
+        "badgeColor": "sky",
         "cost": "฿1,284.00 / เดือน (Basic 15,000 ข้อความ) + ID ฿39.59/ด.",
         "billingDate": "Basic ตัดรอบบิลรายเดือน · ID ต่ออายุรายปี 14 ก.ย.",
         "monthlyBasicThb": 1284,
@@ -1577,8 +1577,8 @@
       "launch": {
         "launchDate": "2026-09-29T00:00:00+07:00",
         "launchDateThai": "29 กันยายน 2569 เวลา 00:00 น.",
-        "daysRemaining": 6,
-        "launchCountdownText": "อีก 6 วันเปิดตัวอย่างเป็นทางการ"
+        "daysRemaining": 5,
+        "launchCountdownText": "อีก 5 วันเปิดตัวอย่างเป็นทางการ"
       }
     }
   }
