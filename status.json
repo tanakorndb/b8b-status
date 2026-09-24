@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-24T11:03:23.904Z",
-  "timestampThai": "24 ก.ย. 2569 เวลา 18:03:25 น.",
+  "timestamp": "2026-09-24T11:04:08.776Z",
+  "timestampThai": "24 ก.ย. 2569 เวลา 18:04:10 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
@@ -25,7 +25,7 @@
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "24 ก.ย. 2569 เวลา 18:03:25 น."
+      "lastUpdatedThai": "24 ก.ย. 2569 เวลา 18:04:10 น."
     },
     "history2026": {
       "currency": "THB",
@@ -826,16 +826,16 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "4d 9h 48m",
-    "hostUptimeThai": "4 วัน 9 ชั่วโมง 48 นาที",
+    "hostUptime": "4d 9h 49m",
+    "hostUptimeThai": "4 วัน 9 ชั่วโมง 49 นาที",
     "hostVitals": "SSD 179Gi ว่าง · RAM 16GB · M2 Pro",
     "freeDisk": "179Gi",
-    "swapUsage": "15002.69M",
+    "swapUsage": "14938.69M",
     "battery": "80%",
-    "cpuLoad": "6.27, 7.34, 8.79",
+    "cpuLoad": "5.19, 6.94, 8.57",
     "internetSpeed": "279.3 ⬇️ / 695.4 ⬆️ Mbps",
     "internetCeiling": "500 Mbps (MikroTik PCQ)",
-    "pingLatency": "86ms",
+    "pingLatency": "156ms",
     "totalMonthlyThb": 12677.01,
     "totalMonthlyUsd": 372.85,
     "monthlySavingsThb": 12500
@@ -843,7 +843,7 @@
   "network": {
     "downloadMbps": 279.3,
     "uploadMbps": 695.4,
-    "pingMs": "86ms",
+    "pingMs": "156ms",
     "dnsPingMs": "2.1ms",
     "responsivenessRpm": 42.5,
     "rateLimitCeilingMbps": 500,
@@ -952,18 +952,18 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "4d 9h 48m",
-    "uptimeThai": "4 วัน 9 ชั่วโมง 48 นาที",
+    "uptime": "4d 9h 49m",
+    "uptimeThai": "4 วัน 9 ชั่วโมง 49 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "6.27",
-      "7.34",
-      "8.79"
+      "5.19",
+      "6.94",
+      "8.57"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "15002.69M",
+    "swapUsed": "14938.69M",
     "diskAvailable": "179Gi",
     "diskUsedPercent": "80%"
   },
@@ -972,11 +972,11 @@
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "4 วัน 9 ชั่วโมง 48 นาที",
-      "cpuLoad": "6.27, 7.34, 8.79",
+      "uptimeThai": "4 วัน 9 ชั่วโมง 49 นาที",
+      "cpuLoad": "5.19, 6.94, 8.57",
       "freeDisk": "179Gi",
       "usedDiskPercent": "80%",
-      "swapUsed": "15002.69M",
+      "swapUsed": "14938.69M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
@@ -1274,7 +1274,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "122ms",
+      "latency": "298ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1292,7 +1292,7 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "101ms",
+      "latency": "137ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1310,7 +1310,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "205ms",
+      "latency": "233ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1328,7 +1328,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "85ms",
+      "latency": "94ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1346,7 +1346,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "85ms",
+      "latency": "108ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1364,7 +1364,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "626ms",
+      "latency": "536ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1500,7 +1500,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE ผ่านการรับรองโล่น้ำเงิน 100% 🔵 · Stripe พร้อมรับเงิน · Google ตรวจสอบ Scopes",
-    "lastSyncThai": "24 ก.ย. 2569 เวลา 18:03:25 น.",
+    "lastSyncThai": "24 ก.ย. 2569 เวลา 18:04:10 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
