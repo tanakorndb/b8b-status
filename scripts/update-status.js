@@ -143,13 +143,24 @@ async function gather() {
 
   const runnersList = [];
   const pids = exec('launchctl list | grep actions.runner') || '';
+  const runnerPids = {};
+  pids.split('\n').forEach(line => {
+    const parts = line.trim().split(/\s+/);
+    if (parts.length >= 3) {
+      runnerPids[parts[2]] = parts[0];
+    }
+  });
+
   for (const r of repos) {
-    const isLaunchAgent = pids.includes(`actions.runner.tanakorndb-${r.repo}.${r.name}`);
+    const serviceName = `actions.runner.tanakorndb-${r.repo}.${r.name}`;
+    const pid = runnerPids[serviceName] && runnerPids[serviceName] !== '-' ? runnerPids[serviceName] : null;
+    const isLaunchAgent = !!pid;
     runnersList.push({
       repo: r.repo,
       runner: r.name,
       service: r.service,
-      status: 'online',
+      status: pid ? 'online' : 'offline',
+      pid: pid,
       launchAgent: isLaunchAgent,
       busy: false,
       cost: '฿0 / เดือน (Self-Hosted บน Mac M2)',
@@ -522,19 +533,22 @@ async function gather() {
 
   const financials = {
     summary: {
-      totalMonthlyThb: 12538.26,
-      totalMonthlyUsd: 368.77,
-      dailyRunRateThb: 417.94,
+      totalMonthlyThb: 12677.01,
+      directMonthlyRunRateThb: 12538.26,
+      amortizedAnnualThb: 138.75,
+      totalMonthlyUsd: 372.85,
+      dailyRunRateThb: 422.57,
       totalActual9Months: 112839.32,
-      totalProjected12Months: 150454.10,
+      totalProjected12Months: 152124.12,
       paidServicesCount: 11,
       freeServicesCount: 7,
       totalServicesCount: 18,
       breakdown: {
         aiThb: 9426.00,
         telecomThb: 1688.26,
-        businessThb: 1284.00,
-        infraThb: 140.00,
+        businessThb: 1323.59,
+        infraThb: 239.16,
+        networkBusinessThb: 3011.85,
         freeThb: 0.00
       },
       estimatedMonthlySavingsThb: 12500,
