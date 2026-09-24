@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-24T11:11:55.150Z",
-  "timestampThai": "24 ก.ย. 2569 เวลา 18:11:58 น.",
+  "timestamp": "2026-09-24T15:26:27.375Z",
+  "timestampThai": "24 ก.ย. 2569 เวลา 22:26:30 น.",
   "systemState": "OPERATIONAL",
   "systemStateMessage": "ทุกระบบหลักทำงานปกติสมบูรณ์ (100% Operational)",
   "financials": {
@@ -25,7 +25,7 @@
       },
       "estimatedMonthlySavingsThb": 12500,
       "policy": "FREE-FIRST / ZERO-COST-FIRST — ทุกตัวเลขตรวจสอบจากสัญญา AIS, สลิปธนาคาร, และใบเสร็จจริง 100%",
-      "lastUpdatedThai": "24 ก.ย. 2569 เวลา 18:11:58 น."
+      "lastUpdatedThai": "24 ก.ย. 2569 เวลา 22:26:30 น."
     },
     "history2026": {
       "currency": "THB",
@@ -826,16 +826,16 @@
     "endpointsTotal": 6,
     "mcpConnected": 8,
     "mcpTotal": 9,
-    "hostUptime": "4d 9h 57m",
-    "hostUptimeThai": "4 วัน 9 ชั่วโมง 57 นาที",
-    "hostVitals": "SSD 179Gi ว่าง · RAM 16GB · M2 Pro",
-    "freeDisk": "179Gi",
-    "swapUsage": "15259.06M",
+    "hostUptime": "4d 14h 11m",
+    "hostUptimeThai": "4 วัน 14 ชั่วโมง 11 นาที",
+    "hostVitals": "SSD 173Gi ว่าง · RAM 16GB · M2 Pro",
+    "freeDisk": "173Gi",
+    "swapUsage": "23201.31M",
     "battery": "80%",
-    "cpuLoad": "5.54, 5.95, 7.43",
+    "cpuLoad": "14.79, 14.73, 15.93",
     "internetSpeed": "279.3 ⬇️ / 695.4 ⬆️ Mbps",
     "internetCeiling": "500 Mbps (MikroTik PCQ)",
-    "pingLatency": "32ms",
+    "pingLatency": "92ms",
     "totalMonthlyThb": 12677.01,
     "totalMonthlyUsd": 372.85,
     "monthlySavingsThb": 12500
@@ -843,7 +843,7 @@
   "network": {
     "downloadMbps": 279.3,
     "uploadMbps": 695.4,
-    "pingMs": "32ms",
+    "pingMs": "92ms",
     "dnsPingMs": "2.1ms",
     "responsivenessRpm": 42.5,
     "rateLimitCeilingMbps": 500,
@@ -952,31 +952,31 @@
     "hostname": "MacBook-Pro-2.local",
     "platform": "MacBook Pro Apple Silicon M2 Pro (12 Cores)",
     "osVersion": "27.0",
-    "uptime": "4d 9h 57m",
-    "uptimeThai": "4 วัน 9 ชั่วโมง 57 นาที",
+    "uptime": "4d 14h 11m",
+    "uptimeThai": "4 วัน 14 ชั่วโมง 11 นาที",
     "sleepDisabled": true,
     "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)",
     "cpuCores": 12,
     "cpuLoad": [
-      "5.54",
-      "5.95",
-      "7.43"
+      "14.79",
+      "14.73",
+      "15.93"
     ],
     "ramTotal": "16 GB Unified Memory",
-    "swapUsed": "15259.06M",
-    "diskAvailable": "179Gi",
-    "diskUsedPercent": "80%"
+    "swapUsed": "23201.31M",
+    "diskAvailable": "173Gi",
+    "diskUsedPercent": "81%"
   },
   "macbookProM2": {
     "model": "MacBook Pro 14\" (Apple Silicon M2 Pro 12C / 16GB)",
     "cost": "฿0 / เดือน (Hardware ซื้อขาด)",
     "billingDate": "ไม่มีค่าบริการรายเดือน",
     "vitals": {
-      "uptimeThai": "4 วัน 9 ชั่วโมง 57 นาที",
-      "cpuLoad": "5.54, 5.95, 7.43",
-      "freeDisk": "179Gi",
-      "usedDiskPercent": "80%",
-      "swapUsed": "15259.06M",
+      "uptimeThai": "4 วัน 14 ชั่วโมง 11 นาที",
+      "cpuLoad": "14.79, 14.73, 15.93",
+      "freeDisk": "173Gi",
+      "usedDiskPercent": "81%",
+      "swapUsed": "23201.31M",
       "battery": "80%",
       "powerStatus": "AC Power (80% · Sleep Disabled · Always-On)"
     },
@@ -1247,7 +1247,7 @@
       "runner": "mac-owner-lands",
       "service": "B8B Real Estate Asset Portal",
       "status": "online",
-      "pid": "4410",
+      "pid": "69738",
       "launchAgent": true,
       "busy": false,
       "cost": "฿0 / เดือน (Self-Hosted บน Mac M2)",
@@ -1274,7 +1274,7 @@
       "domain": "b8b.group",
       "type": "Platform Hub",
       "code": 200,
-      "latency": "85ms",
+      "latency": "610ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1292,11 +1292,11 @@
       "domain": "b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "289ms",
+      "latency": "181ms",
       "ok": true,
       "ssl": {
         "ok": true,
-        "daysLeft": 51,
+        "daysLeft": 50,
         "validTo": "Nov 14 02:23:22 2026 GMT",
         "issuer": "Google Trust Services"
       },
@@ -1310,7 +1310,7 @@
       "domain": "trip.b8b.homes",
       "type": "Cloudflare Pages",
       "code": 200,
-      "latency": "88ms",
+      "latency": "450ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1328,7 +1328,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "85ms",
+      "latency": "131ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1346,7 +1346,7 @@
       "domain": "b8b.group",
       "type": "Web Platform",
       "code": 200,
-      "latency": "109ms",
+      "latency": "587ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1364,7 +1364,7 @@
       "domain": "bwork.b8b.group",
       "type": "Worker Health",
       "code": 200,
-      "latency": "2098ms",
+      "latency": "460ms",
       "ok": true,
       "ssl": {
         "ok": true,
@@ -1500,7 +1500,7 @@
   ],
   "trustAndVerification": {
     "summary": "LINE ผ่านการรับรองโล่น้ำเงิน 100% 🔵 · Stripe พร้อมรับเงิน · Google ตรวจสอบ Scopes",
-    "lastSyncThai": "24 ก.ย. 2569 เวลา 18:11:58 น.",
+    "lastSyncThai": "24 ก.ย. 2569 เวลา 22:26:30 น.",
     "bwork": {
       "line": {
         "name": "LINE Official Account (@bwork / @254yglkl)",
@@ -1549,8 +1549,8 @@
         ],
         "submittedDate": "2026-09-14 19:40",
         "submittedDateThai": "14 ก.ย. 2569 เวลา 19:40 น.",
-        "daysInReview": 9,
-        "daysInReviewText": "ยื่นมาแล้ว 9 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
+        "daysInReview": 10,
+        "daysInReviewText": "ยื่นมาแล้ว 10 วัน (กรอบเวลาปกติ 3–5 วันทำการ)",
         "demoVideo": "https://youtu.be/Khzz_76OfoE",
         "demoVideoDuration": "2:16 นาที (ภาษาอังกฤษ)",
         "interimShield": "GOOGLE_VERIFIED=0 (เปิดหน้าต่างนำทาง 3 ขั้นตอน คุ้มครองผู้ใช้)",
