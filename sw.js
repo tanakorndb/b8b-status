@@ -1,4 +1,4 @@
-const CACHE_NAME = 'b8b-status-v1.1';
+const CACHE_NAME = 'b8b-status-v1.2';
 const STATIC_ASSETS = [
   './',
   './index.html',
